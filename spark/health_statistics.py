@@ -9,7 +9,7 @@ spark = SparkSession.builder \
 odsDF = spark.read \
     .option("header", "true") \
     .option("encoding", "utf-8") \
-    .csv("hdfs://de2:9000/health_portal/clean/health_statistics.csv")
+    .csv("hdfs://de2:9000/health_portal/clean/health_statistics/health_statistics.csv")
 
 # 原始数据探查
 print("原始数据总行数：", odsDF.count())
