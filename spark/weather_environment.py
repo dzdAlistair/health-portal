@@ -1,5 +1,9 @@
 # PySpark 前置依赖导入，首次运行执行一次即可
-from pyspark.sql import functions as F
+from pyspark.sql import SparkSession, functions as F
+
+spark = SparkSession.builder \
+    .appName("weather_environment") \
+    .getOrCreate()
 
 # ========== ODS层：读取原始数据 ==========
 odsDF = spark.read \

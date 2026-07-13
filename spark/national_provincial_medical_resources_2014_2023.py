@@ -1,5 +1,9 @@
 # 前置依赖导入（首次运行执行一次即可）
-from pyspark.sql import functions as F
+from pyspark.sql import SparkSession, functions as F
+
+spark = SparkSession.builder \
+    .appName("medical_resources") \
+    .getOrCreate()
 
 # ========== ODS层：读取原始数据 ==========
 csv_path = "hdfs://de2:9000/health_portal/clean/medical/medical_institutions.csv"

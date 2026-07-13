@@ -1,5 +1,9 @@
 # PySpark 前置导入，运行前执行一次
-from pyspark.sql import functions as F
+from pyspark.sql import SparkSession, functions as F
+
+spark = SparkSession.builder \
+    .appName("health_statistics") \
+    .getOrCreate()
 
 # ========== ODS层：读取原始数据 ==========
 odsDF = spark.read \

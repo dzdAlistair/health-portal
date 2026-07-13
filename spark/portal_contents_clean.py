@@ -1,5 +1,10 @@
 # 导入依赖函数（执行代码前先运行这一行）
+from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, count, countDistinct, date_format
+
+spark = SparkSession.builder \
+    .appName("portal_contents") \
+    .getOrCreate()
 
 # ========== ODS层：读取原始数据 ==========
 odsDF = spark.read \
