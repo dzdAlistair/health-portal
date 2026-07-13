@@ -1,0 +1,501 @@
+industry_id,industry_type,product_name,category,registrant_region,approval_date,status,source,source_url
+DEV-K003387,医疗器械,AUROFILM NP,口腔医疗,US / MA / North Attleborough,2001-01-09,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K003387
+DEV-K012226,医疗器械,"MONITORING SYSTEM,MODEL ARGUS PB-1000",心脑血管,CH / Baar,2002-04-08,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K012226
+DEV-K020479,医疗器械,"DATEX-OHMEDA S/5 NELLCOR COMPATIBLE SATURATION MODULE, M-NSAT AND ACCESSORIES",心脑血管,US / MA / Needham,2002-03-26,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K020479
+DEV-K022100,医疗器械,"NAVIGUS MANUAL DISPOSABLE MICRODRIVE WITH DIGITAL DISPLAY, MODELS MI-1000 & MI-1010",心脑血管,US / FL / Melbourne,2002-09-25,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K022100
+DEV-K023198,医疗器械,CERANUM 90,口腔医疗,US / CA / Anaheim,2002-11-01,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K023198
+DEV-K030472,医疗器械,"MAMMOTOME BIOPSY SYSTEM PROBE & HOUSING, MAMMOTOME HAND-HELD SYSTEM",消化与泌尿,US / OH / Cincinnati,2003-10-09,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K030472
+DEV-K030639,医疗器械,XIVE 3.0 DENTAL IMPLANT SYSTEM,口腔医疗,US / CA / Lake Forest,2003-08-12,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K030639
+DEV-K030766,医疗器械,OXINIUM FEMORAL HEADS,骨科与康复,US / TN / Memphis,2003-07-25,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K030766
+DEV-K031578,医疗器械,"MICRUS MICROCOIL SYSTEMS, MODELS HEL, SPH, STR, FSR AND HSR",心脑血管,US / CA / Sunnyvale,2003-08-01,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K031578
+DEV-K033023,医疗器械,INTERMITTENT URETHRAL CATHETERS,消化与泌尿,US / NH / Jaffrey,2003-12-23,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K033023
+DEV-K033177,医疗器械,"POWERGRIP BIPOLAR COAGULATION FORCEPS, MODEL 824XXXXX",妇产科,"NL / Amsterdam, Nh",2004-03-11,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K033177
+DEV-K033556,医疗器械,SYNTHES (USA) LCP DYNAMIC HELICAL HIP SYSTEM,骨科与康复,US / PA / Paoli,2004-01-13,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K033556
+DEV-K041035,医疗器械,HOFFRICHTER TREND 110 CPAP DEVICE WITH AQUATREND III CPAP HUMIDIFIER ACCESSORY FOR TREND,外科与综合医疗,US / WI / Egale,2004-06-09,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K041035
+DEV-K043377,医疗器械,ZENO,外科与综合医疗,US / TX / Woodlands,2005-06-01,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K043377
+DEV-K050256,医疗器械,APPLE MEDICAL/OB MOBIUS ELASTIC RETRACTOR,外科与综合医疗,US / MA / Boston,2005-04-26,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K050256
+DEV-K050342,医疗器械,THERALASE TLC-1000 THERAPEUTIC MEDICAL LASER SYSTEM,骨科与康复,"CA / Markham, Ontario",2005-07-11,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K050342
+DEV-K051565,医疗器械,"PROTON DIGITAL BLOOD PRESSURE MONITOR, MODELS PH168A, PH168E, PH168W, PHC888JA, PH888HA",心脑血管,US / CO / Littleton,2005-09-12,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K051565
+DEV-K052506,医疗器械,"RUBICOR ENCAPSULE BREAST BIOPSY DEVICE, MODEL 31108",外科与综合医疗,US / CA / San Carlos,2005-10-06,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K052506
+DEV-K060791,医疗器械,"TRIAGE TOX DRUG SCREEN, MODEL 94400",医学检验与诊断,US / CA / San Diego,2006-06-22,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K060791
+DEV-K061079,医疗器械,"MEDTRADE PRODUCTS CELOX TOPICAL HEMOSTATIC GRANULES, MEDTRADE PRODUCTS CELOX 762 HEMOSTATIC GRANULES",其他或未知,GB / Crewe,2006-06-02,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K061079
+DEV-K062392,医疗器械,PHILIPS MP5 INTELLIVUE PATIENT MONITOR,心脑血管,"DE / Boeblingen, Baden-Wuerttemberg",2006-09-06,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K062392
+DEV-K062548,医疗器械,MODIFICATION TO OPTIMUM GP (OXYGEN PERMEABLE) DAILY WEAR CONTACT LENSES,眼耳鼻喉,US / CO / Grand Junction,2006-11-01,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K062548
+DEV-K062915,医疗器械,VERITAS COLLAGEN MATRIX,外科与综合医疗,US / MN / St. Paul,2006-12-06,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K062915
+DEV-K062948,医疗器械,"SMART GBS AND SMARTCYCLE DX SYSTEM AND SOFTWARE, VERSION 1.7B",医学检验与诊断,US / CA / Sunnyvale,2006-12-08,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K062948
+DEV-K063316,医疗器械,FUJINON MODEL EG-530N TRANS NASAL INSERTION,消化与泌尿,US / CT / Shelton,2007-03-16,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K063316
+DEV-K071439,医疗器械,"ZIMMER PATIENT-SPECIFIC ABUTMENT, INTERNAL HEX, TITANIUM",口腔医疗,US / CA / Carlsbad,2007-09-20,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K071439
+DEV-K072795,医疗器械,"MODELS EMS 5.0, EMS 5.1",骨科与康复,US / FL / Tampa,2007-11-27,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K072795
+DEV-K080337,医疗器械,"MICROLIFE UPPER ARM AUTOMATIC DIGITAL BLOOD PRESSURE MONITOR, MODEL BP3MQ1-2D",心脑血管,US / NY / Great Neck,2008-05-13,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K080337
+DEV-K082630,医疗器械,"VITALCHECK BLOOD PRESSURE CUFF, MODEL ZVC4000 SERIES",心脑血管,US / FL / Ocala,2008-12-19,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K082630
+DEV-K091310,医疗器械,"ABLATION INSTRUMENT, MODEL 1635; ABLATION MULTIPLEX CATHETER, MODEL 1682",外科与综合医疗,US / CA / San Jose,2010-08-11,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K091310
+DEV-K092627,医疗器械,CT2011 SONICSTIMU PAIN RELIEF DEVICE,骨科与康复,"CN / Shenzhen, Guangdong",2010-01-14,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K092627
+DEV-K093007,医疗器械,ENTELLUS MEDICAL BALLOON DEVICE,眼耳鼻喉,US / MN / Plymouth,2010-02-05,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K093007
+DEV-K093309,医疗器械,PRO-LINE CT (BASIC TRAY) MODEL MR28036101,外科与综合医疗,US / PA / Harleysville,2009-11-24,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K093309
+DEV-K100430,医疗器械,"URGOTUL AG, ANTIMICROBIAL WOUND DRESSING WITH SILVER",其他或未知,FR / 21300 Chenove,2010-06-11,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K100430
+DEV-K101382,医疗器械,DPL NUVE,外科与综合医疗,US / CO / Boulder,2010-11-09,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K101382
+DEV-K102480,医疗器械,INJECTION PIPETTE; HOLDING PIPETTE; BIOPSY PIPETTE; DENUDING PIPETTE; PARTIAL ZONA DISSECTION (PZD) PIPETTE; ASSISTED HA,妇产科,US / CA / Irvine,2011-04-19,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K102480
+DEV-K102939,医疗器械,FULLY AUTOMATIC ELECTRONIC BLOOD PRESSURE MONITOR MODEL KD-931,心脑血管,CN / Tianjin,2011-02-23,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K102939
+DEV-K121710,医疗器械,XPERT CT/NG,医学检验与诊断,US / CA / Sunnyvale,2012-12-27,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K121710
+DEV-K123604,医疗器械,ABG III MONOLITHIC HIP STEM,骨科与康复,US / NJ / Mahwah,2013-08-16,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K123604
+DEV-K132921,医疗器械,GALAXY PLUS,医学影像,US / FL / Naples,2014-01-17,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K132921
+DEV-K133327,医疗器械,SATURNO(TM) OVERDENTURE IMPLANT SYSTEM,口腔医疗,US / CA / San Diego,2014-06-25,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K133327
+DEV-K142784,医疗器械,"Affinity Fusion Oxygenator with Integrated Arterial Filter and Balance Biosurface, Affinity Fusion Oxygenator with Integrated Arterial Filter and Carmeda BioActive Surface",心脑血管,US / MN / Mounds View,2014-10-24,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K142784
+DEV-K150711,医疗器械,Salem Sump Dual Lumen Stomach Tube with Multi-functional Port,消化与泌尿,US / MA / Mansfield,2015-10-08,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K150711
+DEV-K152046,医疗器械,"Intelliwave4 with HPT, Silicone Hydrogel Daily Wear Soft Contact Lens (safrofilcon A)",眼耳鼻喉,US / MI / Walker,2015-11-24,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K152046
+DEV-K153745,医疗器械,Medline ReNewal Reprocessed LigaSure Impact Open Sealer/Divider,外科与综合医疗,US / OR / Redmond,2016-05-02,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K153745
+DEV-K160365,医疗器械,"BLE Smart Blood Glucose Monitoring System, BLE Smart Professional Blood Glucose Monitoring System",医学检验与诊断,KR / Anyang,2016-09-28,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K160365
+DEV-K160591,医疗器械,D.O.R.C. Disposable Cryo Probe,眼耳鼻喉,NL / Zuidland,2017-01-23,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K160591
+DEV-K162076,医疗器械,chromID MRSA,医学检验与诊断,US / MO / Hazelwood,2016-10-25,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K162076
+DEV-K163168,医疗器械,"Vinyl Examination Gloves (White), Vinyl Examination Gloves (Blue), Vinyl Examination Gloves (Yellow)",外科与综合医疗,CN / Xingtai,2017-02-23,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K163168
+DEV-K170959,医疗器械,DIXI Medical Microdeep Depth Electrode,心脑血管,FR / Chaudefontaine,2017-11-24,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K170959
+DEV-K172338,医疗器械,Catasyn Advanced Technology Wound Hydrogel,其他或未知,US / CA / Claremont,2018-02-21,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K172338
+DEV-K182247,医疗器械,"ILICON (ocufilcon D) Soft (Hydrophilic) Daily Wear Contact Lenses (Tinted, Color)",眼耳鼻喉,TW / Zhunan Township,2018-10-12,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K182247
+DEV-K190344,医疗器械,DePuy Corail AMT Hip Prosthesis,骨科与康复,IE / Cork,2019-11-01,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K190344
+DEV-K191647,医疗器械,QLAB Advanced Quantification Software,医学影像,US / WA / Bothell,2019-12-20,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K191647
+DEV-K200470,医疗器械,Shofu Block HC Hard,口腔医疗,US / CA / San Marcos,2021-02-05,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K200470
+DEV-K201078,医疗器械,NuVasive® ACP System,骨科与康复,US / CA / San Diego,2020-05-20,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K201078
+DEV-K202456,医疗器械,M5 Recorder,心脑血管,US / NY / Manlius,2020-12-29,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K202456
+DEV-K202921,医疗器械,Uro-G Cystoscope,消化与泌尿,US / WA / Bellevue,2021-05-04,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K202921
+DEV-K220608,医疗器械,Accu-Chek FastClix Blood Lancing System,外科与综合医疗,US / IN / Indianapolis,2022-04-29,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K220608
+DEV-K222591,医疗器械,BD BACTEC Plus Aerobic/F Culture Vials,医学检验与诊断,US / MD / Sparks,2023-03-24,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K222591
+DEV-K232677,医疗器械,Reia pessary,妇产科,US / NH / Lyme,2024-05-21,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K232677
+DEV-K240583,医疗器械,"IPL Home Use Hair Removal Device (D-1199, D-T099, D-T018, D-T019, D-T003B, D-T003W, D-T018Y, D-T019Y, D-1196B, D-1196W, D-1196C, D-1196C1, D-T099K, D-T099KW, D-T012, D-T012W)",外科与综合医疗,CN / Shenzhen,2024-06-18,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K240583
+DEV-K241883,医疗器械,"DORO Sterile Disposable Skull Pins Stainless Steel, Adult (36 pcs) (3006-00); DORO Sterile Disposable Skull Pins Stainless Steel, Pediatric (36 pcs) (3006-10); DORO Sterile Disposable Skull Pin Titanium, Adult (36 pcs) (3006-20); DORO Sterile Disposable Skull Pin Titanium, Pediatric (36 pcs) (3006-30); DORO Sterile Disposable Skull Pin Stainless Steel, Adult (36 pcs) (3006-50)",心脑血管,DE / Freiburg,2024-07-26,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K241883
+DEV-K243742,医疗器械,Arthrex DynaNite Nitinol Staples,骨科与康复,US / FL / Naples,2025-01-31,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K243742
+DEV-K250013,医疗器械,"VentiV 7Fr -12Fr MP Mechanical Thrombectomy System (VS7-MP60S, VS7-MP90S, VS8-MP60S, VS8-MP90S, VS8-MP100B, VS10-MP100B, VS11-MP60S, VS11-MP90S, VS12-MP100B, 7F-MP60S, 7F-MP90S, 8F-MP60S, 8F-MP100B, 10F-MP100B, 11F-MP60S, 11F-MP90S, 11P-MP60S, 11P-MP90S, 12F-MP100B, V30-ASP)",心脑血管,US / UT / Salt Lake City,2025-03-24,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K250013
+DEV-K260130,医疗器械,Willow 18 Guidewire,心脑血管,US / CA / San Jose,2026-02-13,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K260130
+DEV-K260191,医疗器械,Safety lancet (XXXVII),外科与综合医疗,CN / Tianjin,2026-03-31,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K260191
+DEV-K260286,医疗器械,Dynamo Spinal Cement; Salvo® Spine System,骨科与康复,US / CT / Shelton,2026-06-15,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K260286
+DEV-K760356,医疗器械,"DISH, STERILE DISPOSABLE POLYSTYRENE",其他或未知,US / IL / Mchenry,1976-11-09,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K760356
+DEV-K770220,医疗器械,RADIONUCLIDE COMPUTED TOMOGRAPHY SYS.,医学影像,US / IL / Mchenry,1977-02-28,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K770220
+DEV-K771353,医疗器械,PLATELET COUNTER & HEMATOCRIT ACCES.,医学检验与诊断,US / IL / Mchenry,1977-08-10,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K771353
+DEV-K790112,医疗器械,"MOBILE UNITS, I,II,III,IV",口腔医疗,US / IL / Mchenry,1979-02-26,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K790112
+DEV-K790689,医疗器械,REVISED BATTERY CHARGER,外科与综合医疗,US / IL / Mchenry,1979-05-29,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K790689
+DEV-K791799,医疗器械,CONPHAR AIRWAYS,外科与综合医疗,US / IL / Mchenry,1979-09-19,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K791799
+DEV-K792303,医疗器械,MW 8000-I,口腔医疗,US / IL / Mchenry,1979-11-27,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K792303
+DEV-K801748,医疗器械,3M I-125 SEEDS IN ABSORBABLE CARRIER,医学影像,US / OR / White City,1980-12-18,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K801748
+DEV-K802676,医疗器械,ORHTOPEDIC REAMER 87 HTD,外科与综合医疗,US / IL / Mchenry,1980-11-12,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K802676
+DEV-K810988,医疗器械,IBM 5885 DIGITAL ECG ACQUISITION CART,心脑血管,US / IL / Mchenry,1981-05-01,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K810988
+DEV-K811206,医疗器械,SELF HEATING DISPOSABLE HEAT PAD,骨科与康复,US / IL / Mchenry,1981-05-21,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K811206
+DEV-K821147,医疗器械,COOK #326T PROGRAM/TELEMETRY BIPOLAR,心脑血管,US / IL / Mchenry,1982-05-07,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K821147
+DEV-K821265,医疗器械,PNEUMOPULSSOR (PPS II),外科与综合医疗,US / IL / Mchenry,1982-07-26,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K821265
+DEV-K821276,医疗器械,MAYO SCISSOR CURYED 5 1/2,口腔医疗,US / IL / Mchenry,1982-05-28,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K821276
+DEV-K821453,医疗器械,CARDIOCASSETTE II #363,心脑血管,US / IL / Mchenry,1982-05-25,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K821453
+DEV-K823691,医疗器械,PHOSPHORUS REAGENT SET,医学检验与诊断,US / IL / Mchenry,1983-01-07,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K823691
+DEV-K832482,医疗器械,COMBO UVB/UVA TANNING BOOTHS 8-40-12-36,其他或未知,US / MI / Walker,1984-04-24,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K832482
+DEV-K833376,医疗器械,RIANEN LUTEINIZING HORMONE RIA KIT,医学检验与诊断,US / IL / Mchenry,1983-12-20,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K833376
+DEV-K834288,医疗器械,DIGITILT LS-30 REMOTE CONTROL,医学影像,US / MI / Walker,1983-12-29,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K834288
+DEV-K841064,医疗器械,ALKALINE PHOSPHOTASE REAGENT SET,医学检验与诊断,US / IL / Mchenry,1984-05-01,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K841064
+DEV-K841066,医疗器械,SGOT-UV REAGENT SET,医学检验与诊断,US / IL / Mchenry,1984-05-01,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K841066
+DEV-K841300,医疗器械,ANTRUM NEEDLE-WOLF TYPE,其他或未知,US / IL / Mchenry,1984-06-05,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K841300
+DEV-K842518,医疗器械,UNILOC-CEMENTLESS & SELF TAP ACETABULAR,骨科与康复,US / NY / Poughkeepsie,1985-01-30,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K842518
+DEV-K843099,医疗器械,MAMIYA SLIT LAMP P-1,眼耳鼻喉,"US / Tokyo, Jap",1984-11-21,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K843099
+DEV-K843659,医疗器械,INFLUENZA A2 VIRUS,医学检验与诊断,US / IL / Mchenry,1985-09-26,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K843659
+DEV-K843893,医疗器械,MAGNESIUM REAGENT SET,医学检验与诊断,US / MI / Livonia,1984-10-30,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K843893
+DEV-K850148,医疗器械,KCP PAK CONVENIENCE PACK,眼耳鼻喉,US / CA / Irvine,1985-04-15,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K850148
+DEV-K851626,医疗器械,SCX-35 THREE CHANNEL ACCESS. FOR MODULE G-2000 ELE,心脑血管,US / MI / Eaton,1985-06-26,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K851626
+DEV-K852225,医疗器械,BELIEVE DEODORANT LABIAL PADS,妇产科,US / WI / Neenah,1985-08-13,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K852225
+DEV-K853113,医疗器械,TD TRICYCLIC ANTIDEPRESSANTS,医学检验与诊断,US / IL / Abbott Park,1985-08-12,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K853113
+DEV-K853348,医疗器械,L-CATH EXPANDO CATH,外科与综合医疗,US / CA / Santa Ana,1986-01-09,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K853348
+DEV-K854136,医疗器械,ARRHYTHMIA REVIEW STATION,心脑血管,US / WI / Milwaukee,1985-12-04,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K854136
+DEV-K854523,医疗器械,ANALYST PHYSICIAN'S OFFICE PROFILER,医学检验与诊断,US / DE / Wilmington,1986-01-08,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K854523
+DEV-K854691,医疗器械,DIAMOND BURS-HANDPIECE,口腔医疗,US / OR / Portland,1986-03-25,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K854691
+DEV-K854723,医疗器械,SKD ELECTROCHEMICAL SYSTEM (ECS),医学检验与诊断,US / CA / Sunnyvale,1986-03-05,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K854723
+DEV-K863028,医疗器械,ROSSTEC IMPLANT SYSTEM FOR EDOSTEAL IMPLANTOLOGY,口腔医疗,US / DC / Washington,1986-10-06,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K863028
+DEV-K872271,医疗器械,VARIOUS SIZES & STYLES OF MONOPOLAR FORCEPS,外科与综合医疗,US / MA / Rockland,1987-06-26,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K872271
+DEV-K872755,医疗器械,KARYOTEC 100,医学检验与诊断,IL / Herzeliya,1987-09-01,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K872755
+DEV-K874258,医疗器械,"VENTRESCREEN, HCG URINE",医学检验与诊断,US / ME / Portland,1987-11-23,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K874258
+DEV-K880676,医疗器械,INORGANIC PHOSPHORUS REAGENT SET,医学检验与诊断,US / IL / Chicago,1988-03-24,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K880676
+DEV-K882308,医疗器械,CR-39 PLASTIC LENSES FOR EYEGLASSES,眼耳鼻喉,US / FL / Miami,1988-07-22,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K882308
+DEV-K890053,医疗器械,MARDX LYME DISEASE IGG IFA TEST SYSTEM,医学检验与诊断,US / NJ / Scotch Plains,1989-04-18,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K890053
+DEV-K893150,医疗器械,PLYMOUTH & LAWANA EXAM GLOVES,外科与综合医疗,US / MA / Norwood,1989-06-02,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K893150
+DEV-K895422,医疗器械,TOWER SELF SEAL STERILIZATION POUCH,外科与综合医疗,US / IL / Deerfield Lake,1989-11-29,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K895422
+DEV-K895916,医疗器械,PE INTERCARDIAC MAPPING SYSTEM (ICMS),心脑血管,US / TX / Bellaire,1989-12-13,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K895916
+DEV-K896741,医疗器械,SCHNEIDER MONORAIL-PMC PRESSURE MONITORING CATH.,心脑血管,US / MN / Minneapolis,1990-02-28,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K896741
+DEV-K910451,医疗器械,"CARD GUARD, MODEL CG-2000A",心脑血管,US / DC / Washington,1991-06-10,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K910451
+DEV-K911196,医疗器械,SCHNEIDER TOTAL CROSS .021 PERCU TRANS ANGIO (PTA),心脑血管,US / MN / Plymouth,1991-06-10,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K911196
+DEV-K911484,医疗器械,LAPAROSCOPIC SUCTION IRRIGATION TUBING SET,消化与泌尿,US / OH / Mentor,1991-04-23,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K911484
+DEV-K912283,医疗器械,"DETACHABLE, DISPOSABLE MONOPOLAR NEEDLE ELECTRODE",骨科与康复,US / CA / Gilroy,1992-03-16,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K912283
+DEV-K913606,医疗器械,CHRYS XX CO2 SURGICAL LASER SYSTEM,外科与综合医疗,US / CA / San Diego,1991-12-19,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K913606
+DEV-K914390,医疗器械,TRANSFERRIN RID KIT,医学检验与诊断,US / CA / Los Angeles,1991-12-09,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K914390
+DEV-K914699,医疗器械,URESIL FIXATION DEVICE,消化与泌尿,US / IL / Skokie,1992-02-19,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K914699
+DEV-K921665,医疗器械,AVK CONTROL I & II,医学检验与诊断,US / NJ / Parsippany,1992-06-09,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K921665
+DEV-K921998,医疗器械,"ABUSCREEN(R) ONLINE(TM) FOR AMPHETAMINES, MODIFIED",医学检验与诊断,US / NJ / Branchburg,1992-05-26,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K921998
+DEV-K922161,医疗器械,GRICE SOFT TISSUE BIOPSY KIT,消化与泌尿,US / FL / Clearwater,1992-10-13,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K922161
+DEV-K923531,医疗器械,OPTOSCALPEL I LASER SYSTEM,眼耳鼻喉,US / TX / Austin,1993-11-12,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K923531
+DEV-K925617,医疗器械,MDA PROTEIN ASSAY,医学检验与诊断,US / NC / Durham,1994-01-27,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K925617
+DEV-K925630,医疗器械,ELASTOPLAST HEAT PLASTER,骨科与康复,US / CT / Norwalk,1994-02-25,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K925630
+DEV-K926222,医疗器械,OWREN'S VERONAL BUFFER #5375 & FIBRONOGEN KIT#5376,医学检验与诊断,US / TX / Beaumont,1993-02-12,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K926222
+DEV-K932728,医疗器械,KODAK EKTACHEM CLINICAL CHEMISTRY SLIDES (URIC),医学检验与诊断,US / NY / Rochester,1994-04-25,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K932728
+DEV-K936081,医疗器械,I-STAT TESTS FOR ACID-BASE PARAMETERS,医学检验与诊断,"CA / Ontario K2l 1t9, Canada",1994-02-24,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K936081
+DEV-K941122,医疗器械,AUDIOTONE MODEL A-54SR,眼耳鼻喉,US / MN / Golden Valley,1994-05-12,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K941122
+DEV-K941955,医疗器械,LOREX TRACHEOSTOMY GAUZE SPONGES - STERILE 1'S AND 2'S,其他或未知,US / NJ / Secaucus,1994-05-12,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K941955
+DEV-K942322,医疗器械,SUNGLASSES,眼耳鼻喉,TW / Taipei-104,1994-09-06,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K942322
+DEV-K942635,医疗器械,MEADOX SURGIMED NOPROFILE OLBERT CATHETER SYSTEM,心脑血管,US / NJ / Oakland,1994-11-01,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K942635
+DEV-K945087,医疗器械,ORTHOLOC ADVANTIM POROUS COATED TIBIAL BASE,骨科与康复,US / TN / Arlington,1995-03-17,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K945087
+DEV-K951944,医疗器械,NASALFLAIR,外科与综合医疗,US / NJ / Matawan,1997-03-28,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K951944
+DEV-K954294,医疗器械,HIGH TRANSMISSION CELLULAR (HTC) GRIDS 18X24 CM & 24X30 CM SIZES,医学影像,US / CT / Danbury,1996-02-02,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K954294
+DEV-K955143,医疗器械,RPR LIQUID CONTROLS,医学检验与诊断,US / GA / Augusta,1996-07-30,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K955143
+DEV-K960054,医疗器械,900UDX URINE PATHOLOGY SYSTEM,医学检验与诊断,US / CA / Chatsworth,1996-03-22,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K960054
+DEV-K963203,医疗器械,BENTLEY QUICK-PRIME HEMOCONCENTRATOR WITH DURAFLO TREATMENT,消化与泌尿,US / CA / Santa Ana,1997-03-25,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K963203
+DEV-K964534,医疗器械,OTOSILK OTOLOGICAL GRAFT DRESSING,外科与综合医疗,US / MA / Westborough,1997-04-09,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K964534
+DEV-K965001,医疗器械,INTUITIVE SURGICAL MONARCH LAPAROSCOPIC MANIPULATOR,消化与泌尿,US / CA / Mountain View,1997-07-31,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K965001
+DEV-K973379,医疗器械,STERILE SUPRAFOIL SMOOTH NYLON FOIL SHEETS,外科与综合医疗,US / VA / Alexandria,1997-09-25,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K973379
+DEV-K973523,医疗器械,ACCUSTAT H. PYLORI ONE STEP TEST,医学检验与诊断,US / IN / Indianapolis,1998-03-03,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K973523
+DEV-K974445,医疗器械,"3M RED DOT RESTING EKG ELECTRODE, CATALOG 2360",心脑血管,US / MN / St. Paul,1998-07-26,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K974445
+DEV-K982925,医疗器械,LAMINOSS DENTAL IMPLANT,口腔医疗,US / NY / Hollis,1999-05-18,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K982925
+DEV-K983313,医疗器械,ADVANCED AUTOMATIC DETECTOR SELECTION OPTION FOR GLORY,医学影像,US / NJ / Rockleigh,1998-12-11,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K983313
+DEV-K990579,医疗器械,"CRYOCHECK LA CHECK, MODELS CHK25-10 (25 X1.0 ML), CHK80-10 (80 X 1.0 ML)",医学检验与诊断,"CA / Dartmouth, N.S.",1999-07-23,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K990579
+DEV-K990814,医疗器械,"CRYO CHECK FACTOR 2 DEFICIENT PLASMA, MODELS FDPO2-10, FDP02-15",医学检验与诊断,"CA / Dartmouth, N.S.",1999-06-07,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K990814
+DEV-K994198,医疗器械,"HEMOFEEL-CH, MODELS CH-0.35L, CH-0.6L, CH-1.0L",消化与泌尿,US / TX / Bellaire,2000-08-25,有效,美国食品药品监督管理局 openFDA 510(k),https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K994198
+DRUG-ANDA040274-001,药品制造,HYDROXYCHLOROQUINE SULFATE,获批仿制药,未公开,1998-05-29,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=040274
+DRUG-ANDA040551-001,药品制造,BETHANECHOL CHLORIDE,获批仿制药,未公开,2004-10-28,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=040551
+DRUG-ANDA040870-001,药品制造,METHIMAZOLE,获批仿制药,未公开,2007-09-25,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=040870
+DRUG-ANDA040870-002,药品制造,METHIMAZOLE,获批仿制药,未公开,2007-09-25,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=040870
+DRUG-ANDA060567-001,药品制造,TERRAMYCIN,获批仿制药,未公开,1964-09-15,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=060567
+DRUG-ANDA060567-002,药品制造,TERRAMYCIN,获批仿制药,未公开,1964-09-15,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=060567
+DRUG-ANDA076369-001,药品制造,PERMETHRIN,获批仿制药,未公开,2003-04-21,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=076369
+DRUG-ANDA076650-001,药品制造,METFORMIN HYDROCHLORIDE,获批仿制药,未公开,2005-09-13,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=076650
+DRUG-ANDA076921-001,药品制造,MIRTAZAPINE,获批仿制药,未公开,2004-10-22,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=076921
+DRUG-ANDA076921-002,药品制造,MIRTAZAPINE,获批仿制药,未公开,2004-10-22,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=076921
+DRUG-ANDA076921-003,药品制造,MIRTAZAPINE,获批仿制药,未公开,2004-10-22,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=076921
+DRUG-ANDA076921-004,药品制造,MIRTAZAPINE,获批仿制药,未公开,2004-10-22,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=076921
+DRUG-ANDA077530-001,药品制造,VALSARTAN,获批仿制药,未公开,2016-01-04,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=077530
+DRUG-ANDA077530-002,药品制造,VALSARTAN,获批仿制药,未公开,2016-01-04,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=077530
+DRUG-ANDA077530-003,药品制造,VALSARTAN,获批仿制药,未公开,2016-01-04,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=077530
+DRUG-ANDA077530-004,药品制造,VALSARTAN,获批仿制药,未公开,2016-01-04,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=077530
+DRUG-ANDA077827-001,药品制造,OXANDROLONE,获批仿制药,未公开,2007-06-22,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=077827
+DRUG-ANDA077827-002,药品制造,OXANDROLONE,获批仿制药,未公开,2007-06-22,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=077827
+DRUG-ANDA078128-001,药品制造,ZIDOVUDINE,获批仿制药,未公开,2006-03-27,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=078128
+DRUG-ANDA080762-001,药品制造,DIPHENHYDRAMINE HYDROCHLORIDE,获批仿制药,未公开,1972-05-09,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=080762
+DRUG-ANDA080762-002,药品制造,DIPHENHYDRAMINE HYDROCHLORIDE,获批仿制药,未公开,1972-05-09,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=080762
+DRUG-ANDA083149-001,药品制造,PBZ,获批仿制药,未公开,1973-09-06,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=083149
+DRUG-ANDA083750-001,药品制造,TRIAMCINOLONE,获批仿制药,未公开,1974-03-11,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=083750
+DRUG-ANDA084827-001,药品制造,"\"HYDRO-SERP \"\"25\"\"\"",获批仿制药,未公开,1981-04-16,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=084827
+DRUG-ANDA085282-001,药品制造,HYDROCORTISONE,获批仿制药,未公开,1978-06-05,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=085282
+DRUG-ANDA085282-002,药品制造,HYDROCORTISONE,获批仿制药,未公开,1978-06-05,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=085282
+DRUG-ANDA085768-001,药品制造,PHENDIMETRAZINE TARTRATE,获批仿制药,未公开,1977-11-28,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=085768
+DRUG-ANDA087756-001,药品制造,PHENYLBUTAZONE,获批仿制药,未公开,1982-12-17,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=087756
+DRUG-ANDA088735-001,药品制造,TRIPROLIDINE HYDROCHLORIDE,获批仿制药,未公开,1985-01-17,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=088735
+DRUG-ANDA089095-001,药品制造,URECHOLINE,获批仿制药,未公开,1985-12-19,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=089095
+DRUG-ANDA089983-001,药品制造,PREDNISONE,获批仿制药,未公开,1989-01-12,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=089983
+DRUG-ANDA090331-001,药品制造,LANSOPRAZOLE,获批仿制药,未公开,2010-04-23,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=090331
+DRUG-ANDA090331-002,药品制造,LANSOPRAZOLE,获批仿制药,未公开,2010-04-23,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=090331
+DRUG-ANDA090652-001,药品制造,DEXTROAMPHETAMINE SULFATE,获批仿制药,未公开,2014-03-07,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=090652
+DRUG-ANDA090652-002,药品制造,DEXTROAMPHETAMINE SULFATE,获批仿制药,未公开,2014-03-07,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=090652
+DRUG-ANDA090978-001,药品制造,LANTHANUM CARBONATE,获批仿制药,未公开,2017-08-11,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=090978
+DRUG-ANDA090978-002,药品制造,LANTHANUM CARBONATE,获批仿制药,未公开,2017-08-11,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=090978
+DRUG-ANDA090978-003,药品制造,LANTHANUM CARBONATE,获批仿制药,未公开,2017-08-11,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=090978
+DRUG-ANDA200383-001,药品制造,NORGESTIMATE AND ETHINYL ESTRADIOL,获批仿制药,未公开,2015-04-07,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=200383
+DRUG-ANDA201191-001,药品制造,TOPOTECAN HYDROCHLORIDE,获批仿制药,未公开,2011-03-09,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=201191
+DRUG-ANDA201970-001,药品制造,RASAGILINE MESYLATE,获批仿制药,未公开,2016-03-15,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=201970
+DRUG-ANDA201970-002,药品制造,RASAGILINE MESYLATE,获批仿制药,未公开,2016-03-15,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=201970
+DRUG-ANDA202334-001,药品制造,LEVONORGESTREL,获批仿制药,未公开,2014-08-20,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=202334
+DRUG-ANDA202687-001,药品制造,METHOXSALEN,获批仿制药,未公开,2014-06-05,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=202687
+DRUG-ANDA203032-001,药品制造,FELODIPINE,获批仿制药,未公开,2015-05-21,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=203032
+DRUG-ANDA203032-002,药品制造,FELODIPINE,获批仿制药,未公开,2015-05-21,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=203032
+DRUG-ANDA203032-003,药品制造,FELODIPINE,获批仿制药,未公开,2015-05-21,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=203032
+DRUG-ANDA203428-001,药品制造,FUROSEMIDE,获批仿制药,未公开,2014-08-26,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=203428
+DRUG-ANDA203816-001,药品制造,FLUDEOXYGLUCOSE F18,获批仿制药,未公开,2014-10-30,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=203816
+DRUG-ANDA204189-001,药品制造,GEMFIBROZIL,获批仿制药,未公开,2018-08-28,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=204189
+DRUG-ANDA204562-001,药品制造,TOLTERODINE TARTRATE,获批仿制药,未公开,2019-08-19,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=204562
+DRUG-ANDA204562-002,药品制造,TOLTERODINE TARTRATE,获批仿制药,未公开,2019-08-19,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=204562
+DRUG-ANDA204923-001,药品制造,OMEPRAZOLE AND SODIUM BICARBONATE,获批仿制药,未公开,2016-11-07,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=204923
+DRUG-ANDA206532-001,药品制造,ALBUTEROL SULFATE AND IPRATROPIUM BROMIDE,获批仿制药,未公开,2020-07-09,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=206532
+DRUG-ANDA206931-001,药品制造,DEXMETHYLPHENIDATE HYDROCHLORIDE,获批仿制药,未公开,2015-12-04,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=206931
+DRUG-ANDA206931-002,药品制造,DEXMETHYLPHENIDATE HYDROCHLORIDE,获批仿制药,未公开,2015-12-04,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=206931
+DRUG-ANDA206931-003,药品制造,DEXMETHYLPHENIDATE HYDROCHLORIDE,获批仿制药,未公开,2015-12-04,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=206931
+DRUG-ANDA207304-001,药品制造,INCASSIA,获批仿制药,未公开,2016-09-23,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=207304
+DRUG-ANDA207664-001,药品制造,DARIFENACIN HYDROBROMIDE,获批仿制药,未公开,2016-09-01,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=207664
+DRUG-ANDA207664-002,药品制造,DARIFENACIN HYDROBROMIDE,获批仿制药,未公开,2016-09-01,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=207664
+DRUG-ANDA208066-001,药品制造,LURASIDONE HYDROCHLORIDE,获批仿制药,未公开,2019-01-04,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=208066
+DRUG-ANDA208066-002,药品制造,LURASIDONE HYDROCHLORIDE,获批仿制药,未公开,2019-01-04,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=208066
+DRUG-ANDA208066-003,药品制造,LURASIDONE HYDROCHLORIDE,获批仿制药,未公开,2019-01-04,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=208066
+DRUG-ANDA208066-004,药品制造,LURASIDONE HYDROCHLORIDE,获批仿制药,未公开,2019-01-04,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=208066
+DRUG-ANDA208066-005,药品制造,LURASIDONE HYDROCHLORIDE,获批仿制药,未公开,2019-01-04,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=208066
+DRUG-ANDA208445-001,药品制造,POTASSIUM CHLORIDE,获批仿制药,未公开,2019-03-11,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=208445
+DRUG-ANDA208445-002,药品制造,POTASSIUM CHLORIDE,获批仿制药,未公开,2019-03-11,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=208445
+DRUG-ANDA209161-001,药品制造,RANITIDINE HYDROCHLORIDE,获批仿制药,未公开,2018-02-22,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=209161
+DRUG-ANDA209509-001,药品制造,AMBRISENTAN,获批仿制药,未公开,2019-04-10,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=209509
+DRUG-ANDA209509-002,药品制造,AMBRISENTAN,获批仿制药,未公开,2019-04-10,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=209509
+DRUG-ANDA210856-001,药品制造,CLADRIBINE,获批仿制药,未公开,2019-11-25,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=210856
+DRUG-ANDA211204-001,药品制造,ERYTHROMYCIN ETHYLSUCCINATE,获批仿制药,未公开,2019-11-01,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=211204
+DRUG-ANDA211204-002,药品制造,ERYTHROMYCIN ETHYLSUCCINATE,获批仿制药,未公开,2019-11-01,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=211204
+DRUG-ANDA211549-001,药品制造,AZACITIDINE,获批仿制药,未公开,2022-02-03,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=211549
+DRUG-ANDA211865-001,药品制造,RANOLAZINE,获批仿制药,未公开,2020-03-23,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=211865
+DRUG-ANDA211865-002,药品制造,RANOLAZINE,获批仿制药,未公开,2020-03-23,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=211865
+DRUG-ANDA212244-001,药品制造,LURASIDONE HYDROCHLORIDE,获批仿制药,未公开,2022-12-13,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=212244
+DRUG-ANDA212244-002,药品制造,LURASIDONE HYDROCHLORIDE,获批仿制药,未公开,2022-12-13,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=212244
+DRUG-ANDA212244-003,药品制造,LURASIDONE HYDROCHLORIDE,获批仿制药,未公开,2022-12-13,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=212244
+DRUG-ANDA212244-004,药品制造,LURASIDONE HYDROCHLORIDE,获批仿制药,未公开,2022-12-13,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=212244
+DRUG-ANDA212244-005,药品制造,LURASIDONE HYDROCHLORIDE,获批仿制药,未公开,2022-12-13,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=212244
+DRUG-ANDA212582-001,药品制造,AMPHETAMINE SULFATE,获批仿制药,未公开,2020-02-04,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=212582
+DRUG-ANDA212582-002,药品制造,AMPHETAMINE SULFATE,获批仿制药,未公开,2020-02-04,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=212582
+DRUG-ANDA212947-001,药品制造,MEMANTINE HYDROCHLORIDE,获批仿制药,未公开,2020-04-03,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=212947
+DRUG-ANDA212947-002,药品制造,MEMANTINE HYDROCHLORIDE,获批仿制药,未公开,2020-04-03,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=212947
+DRUG-ANDA213694-001,药品制造,PERPHENAZINE,获批仿制药,未公开,2025-03-18,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=213694
+DRUG-ANDA213694-002,药品制造,PERPHENAZINE,获批仿制药,未公开,2025-03-18,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=213694
+DRUG-ANDA213694-003,药品制造,PERPHENAZINE,获批仿制药,未公开,2025-03-18,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=213694
+DRUG-ANDA213694-004,药品制造,PERPHENAZINE,获批仿制药,未公开,2025-03-18,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=213694
+DRUG-ANDA214528-001,药品制造,EPHEDRINE SULFATE,获批仿制药,未公开,2023-03-09,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=214528
+DRUG-ANDA214941-001,药品制造,CHLORZOXAZONE,获批仿制药,未公开,2022-10-20,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=214941
+DRUG-ANDA214941-002,药品制造,CHLORZOXAZONE,获批仿制药,未公开,2022-10-20,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=214941
+DRUG-ANDA214941-003,药品制造,CHLORZOXAZONE,获批仿制药,未公开,2022-10-20,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=214941
+DRUG-ANDA215377-001,药品制造,NICARDIPINE HYDROCHLORIDE,获批仿制药,未公开,2023-07-17,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=215377
+DRUG-ANDA215377-002,药品制造,NICARDIPINE HYDROCHLORIDE,获批仿制药,未公开,2023-07-17,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=215377
+DRUG-ANDA216232-001,药品制造,FLUOXETINE HYDROCHLORIDE,获批仿制药,未公开,2022-03-29,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=216232
+DRUG-ANDA216232-002,药品制造,FLUOXETINE HYDROCHLORIDE,获批仿制药,未公开,2022-03-29,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=216232
+DRUG-ANDA216232-003,药品制造,FLUOXETINE HYDROCHLORIDE,获批仿制药,未公开,2022-03-29,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=216232
+DRUG-ANDA216629-001,药品制造,FUROSEMIDE,获批仿制药,未公开,2022-10-17,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=216629
+DRUG-ANDA216629-002,药品制造,FUROSEMIDE,获批仿制药,未公开,2022-10-17,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=216629
+DRUG-ANDA216629-003,药品制造,FUROSEMIDE,获批仿制药,未公开,2022-10-17,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=216629
+DRUG-ANDA217903-001,药品制造,OFLOXACIN,获批仿制药,未公开,2024-01-05,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=217903
+DRUG-ANDA218397-001,药品制造,ACETYLCYSTEINE,获批仿制药,未公开,2024-06-07,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=218397
+DRUG-ANDA218868-001,药品制造,CISPLATIN,获批仿制药,未公开,2024-05-10,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=218868
+DRUG-BLA017833-001,药品制造,MACROTEC,获批生物制品,未公开,1976-02-23,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=017833
+DRUG-NDA007409-001,药品制造,BENTYL,获批新药,未公开,1950-05-11,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=007409
+DRUG-NDA007409-003,药品制造,BENTYL,获批新药,未公开,1950-05-11,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=007409
+DRUG-NDA017714-001,药品制造,AN-DTPA,获批新药,未公开,1976-11-16,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=017714
+DRUG-NDA020065-001,药品制造,OPCON-A,获批新药,未公开,1994-06-08,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=020065
+DRUG-NDA020103-001,药品制造,ZOFRAN,获批新药,未公开,1992-12-31,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=020103
+DRUG-NDA020103-002,药品制造,ZOFRAN,获批新药,未公开,1992-12-31,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=020103
+DRUG-NDA020103-003,药品制造,ZOFRAN,获批新药,未公开,1992-12-31,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=020103
+DRUG-NDA020865-001,药品制造,MAXALT-MLT,获批新药,未公开,1998-06-29,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=020865
+DRUG-NDA020865-002,药品制造,MAXALT-MLT,获批新药,未公开,1998-06-29,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=020865
+DRUG-NDA020900-001,药品制造,PYLORI-CHEK BREATH TEST,获批新药,未公开,1999-02-04,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=020900
+DRUG-NDA020933-001,药品制造,VIRAMUNE,获批新药,未公开,1998-09-11,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=020933
+DRUG-NDA021074-001,药品制造,AVAGARD,获批新药,未公开,2001-06-07,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=021074
+DRUG-NDA021399-001,药品制造,IRESSA,获批新药,未公开,2003-05-05,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=021399
+DRUG-NDA021756-001,药品制造,MACUGEN,获批新药,未公开,2004-09-17,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=021756
+DRUG-NDA022128-001,药品制造,SELZENTRY,获批新药,未公开,2007-08-06,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=022128
+DRUG-NDA022128-002,药品制造,SELZENTRY,获批新药,未公开,2007-08-06,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=022128
+DRUG-NDA022128-003,药品制造,SELZENTRY,获批新药,未公开,2007-08-06,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=022128
+DRUG-NDA022128-004,药品制造,SELZENTRY,获批新药,未公开,2007-08-06,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=022128
+DRUG-NDA022527-001,药品制造,GILENYA,获批新药,未公开,2010-09-21,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=022527
+DRUG-NDA022527-002,药品制造,GILENYA,获批新药,未公开,2010-09-21,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=022527
+DRUG-NDA050594-001,药品制造,ERYCETTE,获批新药,未公开,1985-02-15,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=050594
+DRUG-NDA205353-001,药品制造,FARYDAK,获批新药,未公开,2015-02-23,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=205353
+DRUG-NDA205353-002,药品制造,FARYDAK,获批新药,未公开,2015-02-23,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=205353
+DRUG-NDA205353-003,药品制造,FARYDAK,获批新药,未公开,2015-02-23,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=205353
+DRUG-NDA206111-001,药品制造,SYNJARDY,获批新药,未公开,2015-08-26,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=206111
+DRUG-NDA206111-002,药品制造,SYNJARDY,获批新药,未公开,2015-08-26,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=206111
+DRUG-NDA206111-003,药品制造,SYNJARDY,获批新药,未公开,2015-08-26,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=206111
+DRUG-NDA206111-004,药品制造,SYNJARDY,获批新药,未公开,2015-08-26,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=206111
+DRUG-NDA208799-001,药品制造,AIRDUO RESPICLICK,获批新药,未公开,2017-01-27,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=208799
+DRUG-NDA208799-002,药品制造,AIRDUO RESPICLICK,获批新药,未公开,2017-01-27,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=208799
+DRUG-NDA208799-003,药品制造,AIRDUO RESPICLICK,获批新药,未公开,2017-01-27,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=208799
+DRUG-NDA208799-004,药品制造,AIRDUO DIGIHALER,获批新药,未公开,2017-01-27,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=208799
+DRUG-NDA208799-005,药品制造,AIRDUO DIGIHALER,获批新药,未公开,2017-01-27,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=208799
+DRUG-NDA208799-006,药品制造,AIRDUO DIGIHALER,获批新药,未公开,2017-01-27,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=208799
+DRUG-NDA213330-001,药品制造,LABETALOL HYDROCHLORIDE IN DEXTROSE,获批新药,未公开,2020-11-09,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=213330
+DRUG-NDA213330-002,药品制造,LABETALOL HYDROCHLORIDE IN SODIUM CHLORIDE,获批新药,未公开,2020-11-09,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=213330
+DRUG-NDA213330-003,药品制造,LABETALOL HYDROCHLORIDE IN SODIUM CHLORIDE,获批新药,未公开,2020-11-09,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=213330
+DRUG-NDA213330-004,药品制造,LABETALOL HYDROCHLORIDE IN SODIUM CHLORIDE,获批新药,未公开,2020-11-09,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=213330
+DRUG-NDA213330-005,药品制造,LABETALOL HYDROCHLORIDE,获批新药,未公开,2020-11-09,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=213330
+DRUG-NDA213330-006,药品制造,LABETALOL HYDROCHLORIDE,获批新药,未公开,2020-11-09,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=213330
+DRUG-NDA214121-001,药品制造,METHOTREXATE,获批新药,未公开,2020-08-24,已停产,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=214121
+DRUG-NDA217064-001,药品制造,RYZUMVI,获批新药,未公开,2023-09-25,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=217064
+DRUG-NDA217512-001,药品制造,PANTOPRAZOLE SODIUM IN 0.9% SODIUM CHLORIDE,获批新药,未公开,2024-02-14,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=217512
+DRUG-NDA217512-002,药品制造,PANTOPRAZOLE SODIUM IN 0.9% SODIUM CHLORIDE,获批新药,未公开,2024-02-14,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=217512
+DRUG-NDA217512-003,药品制造,PANTOPRAZOLE SODIUM IN 0.9% SODIUM CHLORIDE,获批新药,未公开,2024-02-14,有效,美国食品药品监督管理局 Drugs@FDA,https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=217512
+MFG-0093-7164,药品制造,Tolterodine Tartrate,其他药品制造,未公开,2020-10-20,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%220093-7164%22&limit=1
+MFG-0406-1550,药品制造,Codeine Phosphate,原料药制造,未公开,1986-12-30,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%220406-1550%22&limit=1
+MFG-0591-2436,药品制造,Isotretinoin,处方药制造,未公开,2021-04-29,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%220591-2436%22&limit=1
+MFG-0591-2805,药品制造,clarithromycin,处方药制造,未公开,2014-02-27,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%220591-2805%22&limit=1
+MFG-0591-3369,药品制造,"Butalbital, Acetaminophen, and Caffeine",处方药制造,未公开,2007-12-13,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%220591-3369%22&limit=1
+MFG-0591-5643,药品制造,Minoxidil,其他药品制造,未公开,2009-10-26,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%220591-5643%22&limit=1
+MFG-0641-0493,药品制造,Phenytoin Sodium,处方药制造,未公开,1975-07-16,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%220641-0493%22&limit=1
+MFG-0641-6014,药品制造,Diltiazem Hydrochloride,处方药制造,未公开,2008-12-17,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%220641-6014%22&limit=1
+MFG-0781-8135,药品制造,macitentan,处方药制造,未公开,2025-08-20,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%220781-8135%22&limit=1
+MFG-0781-9404,药品制造,Ampicillin,处方药制造,未公开,1971-03-03,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%220781-9404%22&limit=1
+MFG-0904-7209,药品制造,sevelamer hydrochloride,处方药制造,未公开,2024-08-19,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%220904-7209%22&limit=1
+MFG-0904-7254,药品制造,Dabigatran Etexilate,处方药制造,未公开,2025-06-23,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%220904-7254%22&limit=1
+MFG-0904-7305,药品制造,Carvedilol,处方药制造,未公开,2024-07-01,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%220904-7305%22&limit=1
+MFG-10096-1514,药品制造,AVON OnDuty Sport Essence Roll-On Anti-Perspirant Deodorant,非处方药制造,未公开,2024-03-20,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2210096-1514%22&limit=1
+MFG-10096-2975,药品制造,AVON Night Magic Evening Musk Roll-On Anti-Perspirant Deodorant,非处方药制造,未公开,2024-05-24,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2210096-2975%22&limit=1
+MFG-10107-420,药品制造,Herb Street Sore Muscle Relief,非处方药制造,未公开,2021-03-25,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2210107-420%22&limit=1
+MFG-10695-151,药品制造,Finasteride,原料药制造,未公开,2023-06-20,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2210695-151%22&limit=1
+MFG-10920-590,药品制造,Buprenorphine hydrochloride,原料药制造,未公开,2011-03-02,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2210920-590%22&limit=1
+MFG-11014-0579,药品制造,Cyclosporine,其他药品制造,未公开,2023-05-08,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2211014-0579%22&limit=1
+MFG-12497-1019,药品制造,L-Tryptophan,原料药制造,未公开,1978-03-15,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2212497-1019%22&limit=1
+MFG-12707-037,药品制造,Naloxone Hydrochloride Dihydrate,原料药制造,未公开,2017-12-11,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2212707-037%22&limit=1
+MFG-12860-0133,药品制造,posaconazole,其他药品制造,未公开,2021-06-08,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2212860-0133%22&limit=1
+MFG-14501-0003,药品制造,Alfuzosin Hydrochloride,原料药制造,未公开,2010-03-22,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2214501-0003%22&limit=1
+MFG-17504-0012,药品制造,EMAPALUMAB 25 mg/ml,其他药品制造,未公开,2023-06-07,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2217504-0012%22&limit=1
+MFG-24584-1116,药品制造,NALOXEGOL,其他药品制造,未公开,2022-08-17,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2224584-1116%22&limit=1
+MFG-36998-5940,药品制造,levetiracetam,其他药品制造,未公开,2000-04-24,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2236998-5940%22&limit=1
+MFG-38779-2413,药品制造,Mometasone Furoate,原料药制造,未公开,2014-05-27,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2238779-2413%22&limit=1
+MFG-41701-011,药品制造,Cetrorelix Powder (Synthetic),原料药制造,未公开,2011-03-18,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2241701-011%22&limit=1
+MFG-42765-014,药品制造,Vonoprazan Fumarate,原料药制造,未公开,2020-08-31,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2242765-014%22&limit=1
+MFG-43265-7772,药品制造,Resmetirom,其他药品制造,未公开,2025-02-06,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2243265-7772%22&limit=1
+MFG-43742-1830,药品制造,Epstein-Barr Virus Nosode,其他药品制造,未公开,2021-03-29,已过期,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2243742-1830%22&limit=1
+MFG-43742-2225,药品制造,"Epstein Barr Virus Nosode, Epstein Barr Virus DNA",其他药品制造,未公开,2024-12-10,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2243742-2225%22&limit=1
+MFG-44498-002,药品制造,HEPARIN SODIUM,原料药制造,未公开,2018-12-18,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2244498-002%22&limit=1
+MFG-46438-0059,药品制造,Glyburide,原料药制造,未公开,2012-03-01,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2246438-0059%22&limit=1
+MFG-47234-1255,药品制造,alogliptin and metformin hydrochloride,其他药品制造,未公开,2013-02-05,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2247234-1255%22&limit=1
+MFG-48589-0006,药品制造,Nifedipine,原料药制造,未公开,2009-10-23,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2248589-0006%22&limit=1
+MFG-49452-1705,药品制造,Carbamazepine,原料药制造,未公开,1991-05-01,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2249452-1705%22&limit=1
+MFG-49587-105,药品制造,Entacapone,原料药制造,未公开,2014-12-22,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2249587-105%22&limit=1
+MFG-50137-2930,药品制造,CLEVIDIPINE,原料药制造,未公开,2008-08-01,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2250137-2930%22&limit=1
+MFG-52919-005,药品制造,Water,其他药品制造,未公开,2019-08-07,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2252919-005%22&limit=1
+MFG-54893-0095,药品制造,Indoximod,原料药制造,未公开,2020-02-28,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2254893-0095%22&limit=1
+MFG-76420-037,药品制造,Lidocaine,处方药制造,未公开,2013-09-15,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2276420-037%22&limit=1
+MFG-76420-396,药品制造,Dexamethasone Sodium Phosphate,处方药制造,未公开,2011-05-11,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2276420-396%22&limit=1
+MFG-76420-783,药品制造,Diazepam,处方药制造,未公开,1986-12-10,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2276420-783%22&limit=1
+MFG-79481-0085,药品制造,meijer APPLE SCENTED Hand Sanitizer,非处方药制造,未公开,2026-04-08,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2279481-0085%22&limit=1
+MFG-79643-010,药品制造,Methyl Salicylate,非处方药制造,未公开,2025-02-01,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2279643-010%22&limit=1
+MFG-79903-167,药品制造,Benzalkonium Chloride,非处方药制造,未公开,2021-11-18,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2279903-167%22&limit=1
+MFG-79929-008,药品制造,Norgestimate and ethinyl estradiol,处方药制造,未公开,2024-03-31,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2279929-008%22&limit=1
+MFG-80425-0105,药品制造,Prednisone,处方药制造,未公开,2001-08-29,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2280425-0105%22&limit=1
+MFG-80425-0371,药品制造,Desonide,处方药制造,未公开,2023-12-07,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2280425-0371%22&limit=1
+MFG-80489-757,药品制造,Drs. Pharmacy Triple Antibiotic Plus,非处方药制造,未公开,2021-09-05,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2280489-757%22&limit=1
+MFG-80684-126,药品制造,B Pure Moisturizing Hand Sanitizer Coconut Lime Scented,非处方药制造,未公开,2025-01-29,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2280684-126%22&limit=1
+MFG-81033-103,药品制造,Dextromethorphan HBr and Guaifenesin Oral Solution,非处方药制造,未公开,2024-12-02,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2281033-103%22&limit=1
+MFG-81352-321,药品制造,SANTO REMEDIOS Piel Eterna Radiance Sunscreen Primer SPF-42,非处方药制造,未公开,2022-03-21,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2281352-321%22&limit=1
+MFG-81665-202,药品制造,CARBOPROST TROMETHAMINE,处方药制造,未公开,2025-05-15,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2281665-202%22&limit=1
+MFG-82009-020,药品制造,Rosuvastatin Calcium,处方药制造,未公开,2022-03-09,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2282009-020%22&limit=1
+MFG-82088-285,药品制造,Odacite Mineral Drops Sheer Sunscreen,非处方药制造,未公开,2023-12-11,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2282088-285%22&limit=1
+MFG-82260-045,药品制造,Timolol Maleate,处方药制造,未公开,2022-06-23,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2282260-045%22&limit=1
+MFG-82442-503,药品制造,UP AND UP MUCUS RELIEF,非处方药制造,未公开,2025-09-17,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2282442-503%22&limit=1
+MFG-82619-112,药品制造,RIZATRIPTAN BENZOATE,处方药制造,未公开,2012-12-31,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2282619-112%22&limit=1
+MFG-82715-110,药品制造,GOLDEN ROSE GLOW KISS TINTED LIP BALM STRAWBERRY,非处方药制造,未公开,2022-07-22,已过期,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2282715-110%22&limit=1
+MFG-82804-078,药品制造,esomeprazole magnesium,处方药制造,未公开,2021-03-19,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2282804-078%22&limit=1
+MFG-82804-959,药品制造,Glipizide,处方药制造,未公开,2025-05-01,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2282804-959%22&limit=1
+MFG-82913-005,药品制造,AutoBrush bubblegum,非处方药制造,未公开,2026-01-01,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2282913-005%22&limit=1
+MFG-82969-2046,药品制造,Bestmade Natural Products BM46,非处方药制造,未公开,2015-01-01,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2282969-2046%22&limit=1
+MFG-83027-0033,药品制造,Cellular Liquescence,非处方药制造,未公开,2023-04-17,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2283027-0033%22&limit=1
+MFG-83071-120,药品制造,Dr.Jucre Rebirth Eye,非处方药制造,未公开,2024-11-30,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2283071-120%22&limit=1
+MFG-83249-015,药品制造,RMS SUNCOVERUP SUPER TINT SPF 50 TAWNY,非处方药制造,未公开,2024-09-01,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2283249-015%22&limit=1
+MFG-83324-015,药品制造,Nighttime Sleep-Aid,非处方药制造,未公开,2024-03-19,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2283324-015%22&limit=1
+MFG-83324-293,药品制造,Quality Choice Laxative,非处方药制造,未公开,2010-06-01,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2283324-293%22&limit=1
+MFG-83559-013,药品制造,CAPSAICIN HEAT Patch,非处方药制造,未公开,2026-01-31,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2283559-013%22&limit=1
+MFG-83691-006,药品制造,Citrus Cleansing Foot Soak and Body Soak,非处方药制造,未公开,2025-03-28,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2283691-006%22&limit=1
+MFG-83787-103,药品制造,ZELSUVMI,处方药制造,未公开,2025-04-04,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2283787-103%22&limit=1
+MFG-83939-0021,药品制造,Phenazopyridine Hydrochloride,处方药制造,未公开,2011-02-01,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2283939-0021%22&limit=1
+MFG-84045-006,药品制造,Zohar Fluoride Anti Cavity Fresh Mint Flavor,非处方药制造,未公开,2024-03-15,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2284045-006%22&limit=1
+MFG-84126-166,药品制造,Secret Visions of Sugarplums Invisible Antiperspirant/Deodorant,非处方药制造,未公开,2025-07-01,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2284126-166%22&limit=1
+MFG-84126-650,药品制造,Crest Pro-Health Nightly Bacteria Shield,非处方药制造,未公开,2026-01-01,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2284126-650%22&limit=1
+MFG-84222-006,药品制造,inblair Moisturizer SPF 15,非处方药制造,未公开,2025-04-29,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2284222-006%22&limit=1
+MFG-84387-006,药品制造,TRIPLET ANTIBIOTIC,非处方药制造,未公开,2024-11-12,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2284387-006%22&limit=1
+MFG-84530-100,药品制造,the beach people SPF 15,非处方药制造,未公开,2024-07-10,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2284530-100%22&limit=1
+MFG-84614-001,药品制造,5% MINOXIDIL HAIR REGROWTH SERUM With Biotin,非处方药制造,未公开,2024-08-02,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2284614-001%22&limit=1
+MFG-84778-099,药品制造,5% Minoxidil HAIR GROWTH SPARY,非处方药制造,未公开,2025-08-22,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2284778-099%22&limit=1
+MFG-84989-009,药品制造,XIMONTH GLP-1 Patches,非处方药制造,未公开,2025-08-23,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2284989-009%22&limit=1
+MFG-85119-001,药品制造,Australian Care Magic Hirudin Peptid,非处方药制造,未公开,2025-01-10,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2285119-001%22&limit=1
+MFG-85213-005,药品制造,HIONFURT Motion Sickness,非处方药制造,未公开,2025-02-16,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2285213-005%22&limit=1
+MFG-85248-200,药品制造,Beukow Antifungal Pen,非处方药制造,未公开,2026-05-06,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2285248-200%22&limit=1
+MFG-85327-202,药品制造,Sheer Mineral Sunscreen,非处方药制造,未公开,2021-12-15,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2285327-202%22&limit=1
+MFG-85398-032,药品制造,Hermon Jock Itch Antifungal Treatment Cream,非处方药制造,未公开,2026-01-01,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2285398-032%22&limit=1
+MFG-85477-905,药品制造,Urea 41%,处方药制造,未公开,2025-06-11,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2285477-905%22&limit=1
+MFG-85766-032,药品制造,Diclofenac sodium,处方药制造,未公开,2022-09-26,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2285766-032%22&limit=1
+MFG-85782-013,药品制造,Dark 6-Pack Hand Sanitizer,非处方药制造,未公开,2025-08-17,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2285782-013%22&limit=1
+MFG-85816-6030,药品制造,BM EGIOLAX PLUS,非处方药制造,未公开,2015-01-01,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2285816-6030%22&limit=1
+MFG-85943-002,药品制造,Men scented sunscreen SPF 50 beachman SLAM,非处方药制造,未公开,2025-08-06,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2285943-002%22&limit=1
+MFG-87054-105,药品制造,medlot pain relief gel patch,非处方药制造,未公开,2026-01-01,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2287054-105%22&limit=1
+MFG-87152-003,药品制造,Gniby LIDOCAINE ANORECTAL HEMORRHOIDAL Numbing,非处方药制造,未公开,2026-02-11,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2287152-003%22&limit=1
+MFG-87251-009,药品制造,FIRST AID BURN,非处方药制造,未公开,2026-04-30,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2287251-009%22&limit=1
+MFG-87408-018,药品制造,Uauko Fungal Nail Treatment,非处方药制造,未公开,2026-05-02,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2287408-018%22&limit=1
+MFG-87540-001,药品制造,Hair Growth Serum,非处方药制造,未公开,2026-03-31,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2287540-001%22&limit=1
+MFG-87813-001,药品制造,Minoxidil Hair Regrowth Kit,非处方药制造,未公开,2026-06-25,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2287813-001%22&limit=1
+MFG-98132-754,药品制造,bareMinerals Complexion Rescue Broad Spectrum SPF 30 Suede 04,非处方药制造,未公开,2015-01-01,有效,美国食品药品监督管理局 NDC Directory,https://api.fda.gov/drug/ndc.json?search=product_ndc%3A%2298132-754%22&limit=1
+RND-NCT00038545,药品研发,Filgrastim SD/01;Paclitaxel;Topotecan,二期临床,United States,2001-05-18,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT00038545
+RND-NCT00200395,药品研发,Tarceva,二期临床,United States,2003-07-02,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT00200395
+RND-NCT00388739,药品研发,Intervention: Budesonide;Usual care: albuterol + systemic steroids,未分期研发,United States,2006-11-01,已撤回,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT00388739
+RND-NCT00903422,药品研发,eltrombopag olamine,一期临床,United States / Brazil / Denmark,2009-05-14,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT00903422
+RND-NCT01131351,药品研发,Delamanid;Optimized Background Regimen (OBR),二期临床,Latvia / Lithuania,2010-02-19,已终止,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT01131351
+RND-NCT01198067,药品研发,Pomalidomide,一期临床,United States,2010-10-06,已终止,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT01198067
+RND-NCT01422707,药品研发,Hydrocortisone,一期临床,United States,2018-01-19,已撤回,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT01422707
+RND-NCT01521494,药品研发,PA21,二期临床,Japan,2012-01-11,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT01521494
+RND-NCT01861730,药品研发,AERAS-404;Placebo,二期临床,South Africa,2013-07-01,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT01861730
+RND-NCT02150967,药品研发,BGJ398 (infigratinib),二期临床,United States / Belgium / Germany,2014-07-23,已终止,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT02150967
+RND-NCT02322866,药品研发,Sarecycline;Placebo,三期临床,United States,2014-12-03,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT02322866
+RND-NCT02650401,药品研发,Entrectinib,二期临床,United States / Canada / China,2016-05-03,进行中（不再招募）,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT02650401
+RND-NCT02676466,药品研发,Losartan,二期临床,United States,2016-04-26,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT02676466
+RND-NCT02727777,药品研发,TAK228,二期临床,United States,2017-03-01,已终止,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT02727777
+RND-NCT02735902,药品研发,Vitamin K antagonist or direct oral anticoagulant treatment;Aspirin,四期临床,France,2017-06-01,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT02735902
+RND-NCT02811354,药品研发,AZD9291,二期临床,Hong Kong / Singapore / South Korea,2017-02-24,状态未知,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT02811354
+RND-NCT02818465,药品研发,Blood sample withdrawn,未分期研发,France,2015-03-30,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT02818465
+RND-NCT03003000,药品研发,ibuprofen;caffeine;placebo,三期临床,Germany / Russia,2016-12-20,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT03003000
+RND-NCT03015792,药品研发,Dexamethasone;Ibrutinib;Lenalidomide,一期临床,United States,2017-03-10,已终止,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT03015792
+RND-NCT03043365,药品研发,control fish oil;LCMUFA-rich saury oil,二期临床,United States,2017-06-15,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT03043365
+RND-NCT03066453,药品研发,Tobi Inhalant Product;Nebcin,三期临床,France,2017-06-13,已终止,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT03066453
+RND-NCT03069300,药品研发,N-acetyl cysteine (NAC),三期临床,United Kingdom,2015-10-01,状态未知,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT03069300
+RND-NCT03131895,药品研发,30 mg dexlansoprazole capsules manufactured at TOB;30 mg dexlansoprazole capsules manufactured at TPC;60 mg dexlansoprazole capsules manufactured at TOB,一期临床,United States,2017-04-25,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT03131895
+RND-NCT03157167,药品研发,Tc99m-tilmanocept,一期临床,United States,2017-12-01,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT03157167
+RND-NCT03208231,药品研发,VRC01;Combination Antiretroviral Therapy (cART),二期临床,Botswana / Brazil / Malawi,2018-08-06,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT03208231
+RND-NCT03245905,药品研发,Chidamide,二期临床,China,2017-08-20,状态未知,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT03245905
+RND-NCT03321981,药品研发,Zenocutuzumab;Trastuzumab;Vinorelbine,二期临床,United States / Belgium / France,2018-01-15,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT03321981
+RND-NCT03413436,药品研发,Lobaplatin;Cisplatin,四期临床,China,2018-01-31,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT03413436
+RND-NCT03652051,药品研发,AZR-MD-001 Low Dose;AZR-MD-001 Mid Dose;AZR-MD-001 High Dose,二期临床,Australia / Canada / New Zealand,2018-09-10,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT03652051
+RND-NCT03744767,药品研发,Spironolactone 50 MG,二期临床,未公开,2014-09-19,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT03744767
+RND-NCT03745729,药品研发,allopurinol sustained-release capsules;placebo capsules,四期临床,China,2019-03-01,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT03745729
+RND-NCT03768531,药品研发,Nivolumab;Cabrilizumab,二期临床,未公开,2019-06-14,已撤回,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT03768531
+RND-NCT03768557,药品研发,Minocycline,未分期研发,United Kingdom,2017-04-26,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT03768557
+RND-NCT03839875,药品研发,Gynomax® XL Vaginal Ovule,四期临床,Turkey (Türkiye),2019-04-03,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT03839875
+RND-NCT03844451,药品研发,Liposomal Bupivacaine;Bupivacaine and Epinephrine,四期临床,United States,2019-05-17,状态未知,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT03844451
+RND-NCT03925194,药品研发,Anakinra,二期临床,Germany,2022-12-01,招募中,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT03925194
+RND-NCT03969953,药品研发,Rivaroxaban 2.5 Mg Oral Tablet,三期临床,Australia / Belgium / Canada,2021-01-18,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT03969953
+RND-NCT03970694,药品研发,oxaliplatin+capecitabine,三期临床,China,2019-05-11,已终止,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT03970694
+RND-NCT04014777,药品研发,NGM621,一期临床,United States,2019-07-26,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT04014777
+RND-NCT04044131,药品研发,Metabolic Cofactor Supplementation;Sorbitol,二期临床,Turkey (Türkiye),2019-12-02,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT04044131
+RND-NCT04213612,药品研发,"pegylated liposomal doxorubicin, cyclophosphamide, vincristine,",一期临床,未公开,2019-12-30,状态未知,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT04213612
+RND-NCT04282629,药品研发,Milrinone Injection,二期临床,France,2021-07-25,招募中,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT04282629
+RND-NCT04294992,药品研发,Ondansetron 8mg,未分期研发,Egypt,2020-04-01,状态未知,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT04294992
+RND-NCT04304053,药品研发,Treatment and prophylaxis,三期临床,Spain,2020-03-18,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT04304053
+RND-NCT04386707,药品研发,"Three doses of experimental sIPV of lot 1 at the schedule of 2,3,4 months of age;Three doses of experimental sIPV of lot 2 at the schedule of 2,3,4 months of age;Three doses of experimental sIPV of lot 3 at the schedule of 2,3,4 months of age",三期临床,China,2020-05-11,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT04386707
+RND-NCT04404530,药品研发,Palynziq,未分期研发,United States,2019-10-08,招募中,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT04404530
+RND-NCT04545151,药品研发,Verapamil SR 120 mg;Placebo,二期临床,Austria / Belgium / France,2021-02-08,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT04545151
+RND-NCT04684628,药品研发,68Ga-PSMA PET/CT,三期临床,Canada,2020-12-09,已暂停,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT04684628
+RND-NCT04790812,药品研发,Celecoxib;Acetaminophen;Placebo,四期临床,United States,2021-04-22,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT04790812
+RND-NCT04808622,药品研发,Trans-Sodium Crocetinate;Placebo,一期临床,United States,2021-03-17,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT04808622
+RND-NCT04863222,药品研发,mineral trioxide aggregate (MTA),四期临床,United States,2021-11-12,招募中,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT04863222
+RND-NCT04919551,药品研发,vicagrel,一期临床,China,2021-08-24,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT04919551
+RND-NCT05015894,药品研发,NNC0480-0389,一期临床,Germany,2021-08-30,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT05015894
+RND-NCT05047783,药品研发,Masitinib Mesylate;Placebo,二期临床,France / Russia / South Africa,2021-11-23,状态未知,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT05047783
+RND-NCT05103605,药品研发,Osimertinib,未分期研发,France,2021-05-12,进行中（不再招募）,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT05103605
+RND-NCT05156645,药品研发,SCTA01 and SCTA01C;Placebo,二期临床,未公开,2022-01-15,已撤回,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT05156645
+RND-NCT05158192,药品研发,Diosmin/Hesperidin (90/10) 500 mg Test Drug;Diosmin/Hesperidin (90/10) 500 mg Reference Product,一期临床,India,2021-11-04,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT05158192
+RND-NCT05211167,药品研发,Human Erythropoiesis Injection (CHO cell);Recombinant Erythropoiesis Stimulating Protein Injection(CHO cell),三期临床,China,2021-07-01,状态未知,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT05211167
+RND-NCT05243329,药品研发,Psilocybin,二期临床,Canada,2022-10-03,状态未知,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT05243329
+RND-NCT05556967,药品研发,Immulina,三期临床,United States,2023-08-09,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT05556967
+RND-NCT05597722,药品研发,Amphetamine-Dextroamphetamine,四期临床,United States,2023-04-04,已终止,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT05597722
+RND-NCT05650567,药品研发,M5049 high dose;Placebo,二期临床,United States / Czechia / Greece,2023-01-19,已终止,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT05650567
+RND-NCT05673629,药品研发,Utidelone Injection in combination with AC;Docetaxel Injection in combination with AC,三期临床,China,2023-05-30,状态未知,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT05673629
+RND-NCT05691894,药品研发,18F-FAPI;68Ga-FAPI,一期临床,China,2022-11-02,状态未知,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT05691894
+RND-NCT05696977,药品研发,Cyclosporine Capsule,四期临床,Egypt,2022-04-17,状态未知,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT05696977
+RND-NCT05722951,药品研发,Levetiracetam &/or sodium valproate;Metformin,三期临床,Egypt,2022-10-18,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT05722951
+RND-NCT05805501,药品研发,Tobemstomig;Tiragolumab;Pembrolizumab,二期临床,United States / Australia / China,2023-04-21,进行中（不再招募）,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT05805501
+RND-NCT05845307,药品研发,Control Group;TTI-101,一期临床,未公开,2025-06-20,已撤回,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT05845307
+RND-NCT05914753,药品研发,"Epirubicin, Cyclophosphamide, Xihuang Pill, Docetaxel;Epirubicin, Cyclophosphamide, Docetaxel",未分期研发,未公开,2023-07-01,状态未知,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT05914753
+RND-NCT06033131,药品研发,Metformin ER;Placebo,三期临床,Finland / Norway / Sweden,2024-01-19,招募中,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT06033131
+RND-NCT06066957,药品研发,Letermovir 480 MG [Prevymis],二期临床,United States,2024-04-04,招募中,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT06066957
+RND-NCT06134765,药品研发,Bemalenograstim alfa,二期临床,China,2023-11-30,状态未知,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT06134765
+RND-NCT06172322,药品研发,NTQ1062 with Fulvestrant,一期临床,China,2023-12-28,状态未知,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT06172322
+RND-NCT06176222,药品研发,PRECEDEX INJ★ 2ML;Normal saline,四期临床,Taiwan,2023-12-28,状态未知,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT06176222
+RND-NCT06331728,药品研发,IGNX001;Placebo,一期临床,Australia,2024-09-01,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT06331728
+RND-NCT06354231,药品研发,DV;Toripalimab,二期临床,China,2023-07-20,招募中,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT06354231
+RND-NCT06389500,药品研发,Adebrelimab;Lenvatinib,二期临床,未公开,2024-05-01,尚未招募,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT06389500
+RND-NCT06486441,药品研发,Sacituzumab govitecan-hziy;Doxorubicin;Paclitaxel,三期临床,United States / Australia / Brazil,2024-08-28,进行中（不再招募）,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT06486441
+RND-NCT06572267,药品研发,Mepolizumab low dose group;Mepolizumab middle dose group;Mepolizumab high dose group,二期临床,China,2024-10-16,招募中,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT06572267
+RND-NCT06647602,药品研发,Euthyrox (levothyroxine);Cytomel (liothyronine),未分期研发,Netherlands,2026-09-01,尚未招募,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT06647602
+RND-NCT06658405,药品研发,"Human Papillomavirus 9-valent Vaccine, Recombinant",二期临床,France,2025-01-13,招募中,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT06658405
+RND-NCT06678581,药品研发,SAP-001;Placebo,一期临床,China,2023-05-29,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT06678581
+RND-NCT06737731,药品研发,SHR-1681,二期临床,China,2025-01-21,招募中,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT06737731
+RND-NCT06739122,药品研发,Dulaglutide,三期临床,United States / Argentina / Mexico,2025-01-10,招募中,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT06739122
+RND-NCT06747156,药品研发,ABO2203 Injection,一期临床,China,2024-12-23,招募中,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT06747156
+RND-NCT06757153,药品研发,NRG-103,一期临床,China,2024-12-19,招募中,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT06757153
+RND-NCT06783153,药品研发,Rifaximin 550 MG;Standard Care Chemoradiation,二期临床,Egypt,2025-01-20,尚未招募,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT06783153
+RND-NCT06901466,药品研发,Experimental: Rivaroxaban monotherapy;Active Comparator: Rivaroxaban+Clopidogrel,四期临床,China,2025-06-13,招募中,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT06901466
+RND-NCT07014254,药品研发,177Lu-CTR-FAPI nuclide-targeted therapy,未分期研发,China,2025-06-20,尚未招募,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT07014254
+RND-NCT07104383,药品研发,VK2735,三期临床,United States / Puerto Rico,2025-06-23,进行中（不再招募）,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT07104383
+RND-NCT07145645,药品研发,Voltaren Topical Gel;Ibuprofen Oral Suspension 100 mg/5mL;ORA-Blend Oral Suspension,三期临床,Canada,2026-04-02,招募中,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT07145645
+RND-NCT07146295,药品研发,Technetium (99mTc);Indocyanine Green,未分期研发,Netherlands,2025-04-18,招募中,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT07146295
+RND-NCT07220772,药品研发,Mibavademab,三期临床,Germany,2026-02-09,招募中,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT07220772
+RND-NCT07294612,药品研发,Autologous Platelet-Rich Fibrin,未分期研发,Uzbekistan,2022-01-01,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT07294612
+RND-NCT07396519,药品研发,Dronedarone Hydrochloride Tablets;MULTAQ® (Dronedarone Hydrochloride Tablets),未分期研发,China,2022-11-14,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT07396519
+RND-NCT07420530,药品研发,Carbon Dioxide,一期临床,United States,2026-04-20,招募中,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT07420530
+RND-NCT07451431,药品研发,Mirogabalin;Pregabalin,四期临床,Bangladesh,2025-10-01,招募中,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT07451431
+RND-NCT07469865,药品研发,Preservative-free artificial tears;Autologous serum eyedrops 20%;Autologous serum eyedrops 100%,未分期研发,Belgium,2021-11-30,已完成,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT07469865
+RND-NCT07656792,药品研发,BI 3031185;Placebo matching BI 3031185;Midazolam,一期临床,Japan,2026-07-15,尚未招募,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT07656792
+RND-NCT07668739,药品研发,Vericiguat,四期临床,South Korea,2026-07-01,尚未招募,美国 ClinicalTrials.gov,https://clinicaltrials.gov/study/NCT07668739
