@@ -15,14 +15,15 @@ import pandas as pd
 
 # ── 路径配置 ──
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
-RAW_CSV = PROJECT_ROOT / "data" / "crawler" / "portal_contents_raw.csv"
+RAW_CSV = PROJECT_ROOT / "data" / "crawler_and_scripts" / "portal_contents_raw.csv"
 CLEAN_CSV = PROJECT_ROOT / "data" / "clean" / "portal_contents.csv"
 REPORT_FILE = PROJECT_ROOT / "data" / "analysis" / "portal_content_quality_report.txt"
 
-# ── 固定列顺序 ──
+# ── 固定列顺序（对齐 Project13 指南 §5.5 字段规范）──
 COLUMNS = [
-    "title", "content_type", "category", "publish_date",
-    "summary", "source", "source_url", "security_level", "data_source"
+    "content_id", "title", "content_type", "category",
+    "publish_date", "source", "source_url", "summary",
+    "content", "status", "security_level", "data_source"
 ]
 
 # ── 类型映射 ──
@@ -30,9 +31,10 @@ TYPE_TO_CATEGORY = {
     "news": "新闻公告",
     "policy": "政策资讯",
     "knowledge": "健康知识",
+    "application": "应用",
 }
 
-VALID_CONTENT_TYPES = {"news", "policy", "knowledge"}
+VALID_CONTENT_TYPES = {"news", "policy", "knowledge", "application"}
 
 
 # ══════════════════════════════════════════════════════════════════
@@ -149,11 +151,16 @@ def main():
     df = pd.read_csv(RAW_CSV, encoding="utf-8-sig")
     stats["raw_total"] = len(df)
 
-    # 检查必需字段
-    missing_cols = set(COLUMNS) - set(df.columns)
+    # 检查必需字段（只验证核心字段，可选字段会自动补充）
+    required_cols = {"title", "content_type", "source_url"}
+    missing_cols = required_cols - set(df.columns)
     if missing_cols:
         print(f"错误: 缺少必需字段 — {missing_cols}", file=sys.stderr)
         sys.exit(1)
+    # 自动补充缺失的可选字段
+    for col in COLUMNS:
+        if col not in df.columns:
+            df[col] = ""
 
     print(f"读取原始数据: {len(df)} 条")
 
@@ -199,6 +206,23 @@ def main():
     df = df.drop(columns=["_summary_len"])
     stats["combo_dedup_removed"] = before_combo - len(df)
     print(f"组合字段去重: {stats['combo_dedup_removed']} 条")
+
+    # ── 5b. 生成 content_id（自增编号，从 1 开始）──
+    df = df.reset_index(drop=True)
+    df["content_id"] = [f"CONTENT_{i:05d}" for i in range(1, len(df) + 1)]
+
+    # ── 5c. 补充可选字段默认值 ──
+    if "content" not in df.columns:
+        df["content"] = ""
+    else:
+        df["content"] = df["content"].fillna("")
+
+    if "status" not in df.columns:
+        df["status"] = "published"
+    else:
+        df["status"] = df["status"].apply(
+            lambda x: x if pd.notna(x) and str(x).strip() in ("draft", "published") else "published"
+        )
 
     # ── 6. 日期规范化 ──
     date_before = df["publish_date"].notna() & (df["publish_date"].astype(str).str.strip() != "")
@@ -267,8 +291,11 @@ def main():
     news_count = (df["content_type"] == "news").sum()
     policy_count = (df["content_type"] == "policy").sum()
     knowledge_count = (df["content_type"] == "knowledge").sum()
+    application_count = (df["content_type"] == "application").sum()
     empty_summary = (df["summary"].isna() | (df["summary"].str.strip() == "")).sum()
     empty_date = (df["publish_date"].isna() | (df["publish_date"].astype(str).str.strip() == "")).sum()
+    empty_content = (df["content"].isna() | (df["content"].astype(str).str.strip() == "")).sum()
+    non_published = (df["status"] != "published").sum()
 
     has_dup_urls = not df["source_url"].is_unique
     has_empty_title = df["title"].isna().any() or (df["title"].str.strip() == "").any()
@@ -279,6 +306,8 @@ def main():
     ).all() if empty_date < clean_total else True
     all_types_present = news_count > 0 and policy_count > 0 and knowledge_count > 0
     all_crawler = (df["data_source"] == "crawler").all()
+    all_published = (df["status"] == "published").all()
+    content_id_unique = df["content_id"].is_unique
 
     report_lines = []
     report_lines.append("=" * 50)
@@ -307,8 +336,11 @@ def main():
     report_lines.append(f"news 记录数量: {news_count}")
     report_lines.append(f"policy 记录数量: {policy_count}")
     report_lines.append(f"knowledge 记录数量: {knowledge_count}")
+    report_lines.append(f"application 记录数量: {application_count}")
     report_lines.append(f"空摘要记录数量: {empty_summary}")
     report_lines.append(f"空发布日期记录数量: {empty_date}")
+    report_lines.append(f"空正文记录数量: {empty_content}")
+    report_lines.append(f"非 published 状态记录: {non_published}")
     report_lines.append("")
     report_lines.append("【质量检查结论】")
     report_lines.append(f"是否存在重复URL: {'是' if has_dup_urls else '否'}")
@@ -318,11 +350,50 @@ def main():
     report_lines.append(f"日期格式是否全部符合要求: {'是' if date_format_ok else '否'}")
     report_lines.append(f"三种内容类型是否均有数据: {'是' if all_types_present else '否'}")
     report_lines.append(f"正式数据中是否全部为 data_source=crawler: {'是' if all_crawler else '否'}")
+    report_lines.append(f"content_id 是否唯一: {'是' if content_id_unique else '否'}")
+    report_lines.append(f"状态是否全部为 published: {'是' if all_published else '否'}")
 
     REPORT_FILE.parent.mkdir(parents=True, exist_ok=True)
     REPORT_FILE.write_text("\n".join(report_lines), encoding="utf-8")
     print(f"质量报告已保存: {REPORT_FILE}")
     print("\n".join(report_lines))
+
+    # ── 13. 生成 data_resource 登记 SQL ──
+    sql_dir = PROJECT_ROOT / "sql"
+    sql_dir.mkdir(parents=True, exist_ok=True)
+    resource_sql = sql_dir / "data_resource_insert.sql"
+    insert_sql = f"""-- 门户内容数据 — data_resource 登记 (由 clean_portal_content.py 自动生成)
+-- 数据库: health_portal
+-- 生成时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+
+USE health_portal;
+
+INSERT INTO data_resource (resource_name, resource_type, department, source_type, file_format,
+    storage_location, hdfs_path, record_count, update_frequency, update_time,
+    security_level, resource_status, description)
+VALUES (
+    '门户内容数据',
+    '互联网公开信息',
+    '中国政府网/中国疾控中心',
+    '网页采集',
+    'CSV',
+    'data/clean/portal_contents.csv',
+    '/health_portal/clean/internet/portal_contents.csv',
+    {clean_total},
+    '按需更新',
+    '{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}',
+    '公开',
+    '已清洗',
+    '从中国政府网和中国疾控中心采集的新闻公告({news_count}条)、政策资讯({policy_count}条)、健康知识({knowledge_count}条)。'
+)
+ON DUPLICATE KEY UPDATE
+    record_count = VALUES(record_count),
+    update_time = VALUES(update_time),
+    resource_status = VALUES(resource_status),
+    description = VALUES(description);
+"""
+    resource_sql.write_text(insert_sql, encoding="utf-8")
+    print(f"data_resource 登记 SQL 已保存: {resource_sql}")
 
 
 if __name__ == "__main__":

@@ -35,15 +35,16 @@ from bs4 import BeautifulSoup
 
 # ── 路径配置 ──
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
-RAW_DATA_DIR = PROJECT_ROOT / "data" / "crawler"
+RAW_DATA_DIR = PROJECT_ROOT / "data" / "crawler_and_scripts"
 ANALYSIS_DIR = PROJECT_ROOT / "data" / "analysis"
 RAW_CSV = RAW_DATA_DIR / "portal_contents_raw.csv"
 LOG_FILE = ANALYSIS_DIR / "portal_content_spider.log"
 
-# ── 固定列顺序 ──
+# ── 固定列顺序（对齐 Project13 指南 §5.5 字段规范）──
 COLUMNS = [
-    "title", "content_type", "category", "publish_date",
-    "summary", "source", "source_url", "security_level", "data_source"
+    "content_id", "title", "content_type", "category",
+    "publish_date", "source", "source_url", "summary",
+    "content", "status", "security_level", "data_source"
 ]
 
 # ── 日志配置 ──
@@ -442,13 +443,16 @@ def crawl_gov(session):
                 continue
 
             records.append({
+                "content_id": "",
                 "title": title_clean,
                 "content_type": content_type,
                 "category": "政策资讯",
                 "publish_date": publish_date,
-                "summary": summary,
                 "source": source,
                 "source_url": detail_url,
+                "summary": summary,
+                "content": "",
+                "status": "published",
                 "security_level": "公开",
                 "data_source": "crawler",
             })
@@ -547,13 +551,16 @@ def crawl_chinacdc(session):
                 continue
 
             records.append({
+                "content_id": "",
                 "title": title_clean,
                 "content_type": content_type,
                 "category": "健康知识",
                 "publish_date": publish_date,
-                "summary": summary,
                 "source": source,
                 "source_url": detail_url,
+                "summary": summary,
+                "content": "",
+                "status": "published",
                 "security_level": "公开",
                 "data_source": "crawler",
             })
@@ -582,7 +589,7 @@ def crawl_nhc(session):
 # ══════════════════════════════════════════════════════════════════
 
 def save_raw_csv(records, path):
-    """保存到 CSV (UTF-8 BOM)，固定 9 列"""
+    """保存到 CSV (UTF-8 BOM)，固定 12 列"""
     df = pd.DataFrame(records, columns=COLUMNS)
     path.parent.mkdir(parents=True, exist_ok=True)
     df.to_csv(path, index=False, encoding="utf-8-sig")

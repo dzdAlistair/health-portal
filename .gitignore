@@ -9,9 +9,11 @@ venv/
 logs/
 *.log
 
-# 原始数据
+# 原始中间数据
 data/raw/
-data/clean/
+
+# 最终交付数据
+# data/clean/  — 已取消忽略，5 类 CSV 为项目交付物
 
 # IDE
 .vscode/
