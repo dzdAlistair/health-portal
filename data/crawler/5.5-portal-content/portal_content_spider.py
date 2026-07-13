@@ -296,9 +296,10 @@ def extract_detail(session, detail_url):
 
     # ── 来源提取 ──────────────────────────────────────────
     # 优先从 h5 等标签中提取 "来源：XXX 发布时间"
+    #   (?<!图片) 排除 "（图片来源：）" 被误识别为来源
     for tag in soup.find_all(["h5", "h4", "span", "div", "p"]):
         text = tag.get_text()
-        m = re.search(r"来源[：:]\s*(.+?)(?:\s+发布时间|\s+\d{4}|\s*$)", text)
+        m = re.search(r"(?<!图片)来源[：:]\s*(.+?)(?:\s+发布时间|\s+\d{4}|\s*$)", text)
         if m:
             source = m.group(1).strip()
             if len(source) > 50:
@@ -311,12 +312,25 @@ def extract_detail(session, detail_url):
             elem = soup.select_one(sel)
             if elem:
                 text = elem.get_text().strip()
-                m = re.search(r"来源[：:]\s*(.+?)(?:\s|$)", text)
+                m = re.search(r"(?<!图片)来源[：:]\s*(.+?)(?:\s|$)", text)
                 if m:
                     source = m.group(1).strip()
                     if len(source) > 50:
                         source = source[:50]
                 break
+
+    # 来源校验: 排除明显异常的提取结果
+    if source:
+        source = source.rstrip("，。、,.")
+        # 1. 过短（<2字符）→ 无效
+        # 2. 含版权关键词 → 大概率是版权声明文本
+        # 3. 英文占比 >80%（ASCII字母 > 中文）→ 非来源名称
+        copyright_words = ["版权", "免责", "所有文字", "音视频", "稿件"]
+        ascii_alpha = sum(1 for c in source if c.isascii() and c.isalpha())
+        chinese = sum(1 for c in source if '一' <= c <= '鿿')
+        is_english_text = ascii_alpha > 0 and chinese == 0 and ascii_alpha > len(source) * 0.5
+        if len(source) < 2 or any(w in source for w in copyright_words) or is_english_text:
+            source = ""
 
     # ── 摘要提取 ──────────────────────────────────────────
     # meta description
