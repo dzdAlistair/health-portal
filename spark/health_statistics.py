@@ -5,7 +5,7 @@ from pyspark.sql import functions as F
 odsDF = spark.read \
     .option("header", "true") \
     .option("encoding", "utf-8") \
-    .csv("hdfs://192.168.28.128:9000/health_portal/clean/health_statistics.csv")
+    .csv("hdfs://de2:9000/health_portal/clean/health_statistics.csv")
 
 # 原始数据探查
 print("原始数据总行数：", odsDF.count())
@@ -36,9 +36,9 @@ adsDF.show(10)
 dwdDF.write \
     .mode("overwrite") \
     .option("header", "true") \
-    .csv("file:///home/hadoop/dwd_health_stat")
+    .csv("file:///home/alistair/projects/health-portal/data/analysis/dwd_health_stat")
 
 adsDF.write \
     .mode("overwrite") \
     .option("header", "true") \
-    .csv("file:///home/hadoop/ads_health_stat")
+    .csv("file:///home/alistair/projects/health-portal/data/analysis/ads_health_stat")

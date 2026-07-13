@@ -2,7 +2,7 @@
 from pyspark.sql import functions as F
 
 # ========== ODS层：读取原始数据 ==========
-csv_path = "hdfs://192.168.28.128:9000/health_portal/clean/national_provincial_medical_resources_2014_2023.csv"
+csv_path = "hdfs://de2:9000/health_portal/clean/medical/medical_institutions.csv"
 odsDF = spark.read \
     .option("header", "true") \
     .option("inferSchema", "true") \
@@ -36,7 +36,7 @@ dwdDF.show(5)
 dwdDF.write \
     .mode("overwrite") \
     .option("header", "true") \
-    .csv("hdfs://192.168.28.128:9000/health_portal/output/dwd_medical_resource")
+    .csv("hdfs://de2:9000/health_portal/output/dwd_medical_resource")
 print("\n✅ DWD清洗明细文件落地完成：/health_portal/output/dwd_medical_resource")
 
 # ========== ADS层：省份年度聚合 ==========
@@ -57,5 +57,5 @@ adsDF.show(10)
 adsDF.write \
     .mode("overwrite") \
     .option("header", "true") \
-    .csv("hdfs://192.168.28.128:9000/health_portal/output/ads_medical_stat")
+    .csv("hdfs://de2:9000/health_portal/output/ads_medical_stat")
 print("\n✅ ADS大屏统计指标文件落地完成：/health_portal/output/ads_medical_stat")

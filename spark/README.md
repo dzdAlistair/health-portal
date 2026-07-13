@@ -62,7 +62,7 @@ scala
 
 ```scala
 // ========== ODS层：读取原始数据 ==========
-val csvPath = "hdfs://192.168.28.128:9000/health_portal/clean/national_provincial_medical_resources_2014_2023.csv"
+val csvPath = "hdfs://de2:9000/health_portal/clean/medical/medical_institutions.csv"
 val odsDF = spark.read
 .option("header", "true")
 .option("inferSchema", "true")
@@ -96,7 +96,7 @@ dwdDF.show(5)
 dwdDF.write
 .mode("overwrite")
 .option("header", "true")
-.csv("hdfs://192.168.28.128:9000/health_portal/output/dwd_medical_resource")
+.csv("hdfs://de2:9000/health_portal/output/dwd_medical_resource")
 println("\n✅ DWD清洗明细文件落地完成：/health_portal/output/dwd_medical_resource")
 
 // ========== ADS层：全周期省份聚合 ==========
@@ -117,7 +117,7 @@ adsDF.show(10)
 adsDF.write
 .mode("overwrite")
 .option("header", "true")
-.csv("hdfs://192.168.28.128:9000/health_portal/output/ads_medical_stat")
+.csv("hdfs://de2:9000/health_portal/output/ads_medical_stat")
 println("\n✅ ADS大屏统计指标文件落地完成：/health_portal/output/ads_medical_stat")
 
 // ========== 落地写入 ==========
@@ -178,7 +178,7 @@ scala
 val odsDF = spark.read
 .option("header","true")
 .option("encoding","utf-8")
-.csv("hdfs://192.168.28.128:9000/health_portal/clean/health_statistics.csv")
+.csv("hdfs://de2:9000/health_portal/clean/health_statistics.csv")
 // 原始数据探查
 odsDF.count()
 odsDF.show(10)
@@ -207,11 +207,11 @@ adsDF.show(10)
 dwdDF.write
 .mode("overwrite")
 .option("header","true")
-.csv("file:///home/hadoop/dwd_health_stat")
+.csv("file:///home/alistair/projects/health-portal/dwd_health_stat")
 adsDF.write
 .mode("overwrite")
 .option("header","true")
-.csv("file:///home/hadoop/ads_health_stat")
+.csv("file:///home/alistair/projects/health-portal/ads_health_stat")
 ```
 
 ### 5. 交付输出
@@ -264,7 +264,7 @@ scala
 val odsDF = spark.read
 .option("header","true")
 .option("encoding","utf-8")
-.csv("file:///home/hadoop/health_industry.csv")
+.csv("file:///home/alistair/projects/health-portal/health_industry.csv")
 odsDF.count()
 odsDF.show(10)
 
@@ -298,11 +298,11 @@ adsDF.show(10)
 dwdDF.write
 .mode("overwrite")
 .option("header","true")
-.csv("file:///home/hadoop/dwd_health_industry")
+.csv("file:///home/alistair/projects/health-portal/dwd_health_industry")
 adsDF.write
 .mode("overwrite")
 .option("header","true")
-.csv("file:///home/hadoop/ads_health_industry")
+.csv("file:///home/alistair/projects/health-portal/ads_health_industry")
 ```
 
 
@@ -364,7 +364,7 @@ scala
 val odsDF = spark.read
 .option("header","true")
 .option("encoding","utf-8")
-.csv("file:///home/hadoop/weather_environment.csv")
+.csv("file:///home/alistair/projects/health-portal/weather_environment.csv")
 odsDF.count()
 odsDF.show(10)
 // ========== DWD层：清洗校验 ==========
@@ -415,11 +415,11 @@ adsDF.show(10)
 dwdDF.write
 .mode("overwrite")
 .option("header","true")
-.csv("file:///home/hadoop/dwd_weather_environment")
+.csv("file:///home/alistair/projects/health-portal/dwd_weather_environment")
 adsDF.write
 .mode("overwrite")
 .option("header","true")
-.csv("file:///home/hadoop/ads_weather_environment")
+.csv("file:///home/alistair/projects/health-portal/ads_weather_environment")
 ```
 
 
@@ -476,7 +476,7 @@ scala
 val odsDF = spark.read
 .option("header","true")
 .option("encoding","utf-8")
-.csv("file:///home/hadoop/portal_contents_clean.csv")
+.csv("file:///home/alistair/projects/health-portal/portal_contents_clean.csv")
 // 原始数据探查
 odsDF.count()
 odsDF.show(10)
@@ -516,11 +516,11 @@ adsDF.show(10)
 dwdDF.write
 .mode("overwrite")
 .option("header","true")
-.csv("file:///home/hadoop/dwd_portal_contents")
+.csv("file:///home/alistair/projects/health-portal/dwd_portal_contents")
 adsDF.write
 .mode("overwrite")
 .option("header","true")
-.csv("file:///home/hadoop/ads_portal_contents")
+.csv("file:///home/alistair/projects/health-portal/ads_portal_contents")
 ```
 
 ## 5. 交付输出
