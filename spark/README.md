@@ -431,6 +431,106 @@ adsDF.write
 
 聚合报表：ads_weather_environment 文件夹（压缩为 zip 包）
 
+
+
+# 任务五：健康门户内容数据表处理
+
+## 1. 数据表基础信息
+
+数据文件：portal_contents_clean.csv
+
+核心字段：content_id（文献唯一编号）、content_type（文献类型）、title（文章官方标题）、category（规范化内容分类）、publish_date（发布日期）、source（发布机构）、source_url（文章原始网页地址）、status（发布状态）
+
+数据粒度：单条健康领域内容记录，覆盖科普、新闻、政策三类内容形态，涵盖疾控、医保、政府等多官方发布渠道，原始共 300 + 条记录
+
+## 2. DWD 层清洗策略
+
+核心字段非空过滤：编号、类型、标题、分类、发布日期、发布机构、原始链接、发布状态不能为空
+
+枚举值合法性校验：content_type 仅允许 knowledge/news/policy 三类取值；status 统一限定为 published；category 严格遵循 14 个受控分类，禁止自定义分类
+
+日期格式校验：publish_date 必须可转换为标准日期格式
+
+去重规则：按 content_id 主键去重，同一篇文献仅保留一条记录
+
+## 3. ADS 层聚合策略
+
+### 方案迭代说明
+
+初始方案：按发布日期 + 分类分组。因原始数据本身为单条内容粒度，聚合后行数压缩有限，无业务汇总价值
+
+最终落地方案：发布年月 + 内容类型 + 分类聚合
+
+分组维度：发布年月（格式 yyyy-MM） + 内容类型 + 内容分类
+
+聚合指标：月度文章总量、月度最早发布日期、月度最晚发布日期、月度去重发布机构数、月度有效记录天数
+
+聚合效果：原始 300 + 条月度明细压缩为百条以内统计数据，每条记录合并同分类同类型全月内容数据，可通过 article_total 核验逻辑生效
+
+## 4. 核心执行代码
+
+scala
+
+```scala
+// ========== ODS层：读取原始数据 ==========
+val odsDF = spark.read
+.option("header","true")
+.option("encoding","utf-8")
+.csv("file:///home/hadoop/portal_contents_clean.csv")
+// 原始数据探查
+odsDF.count()
+odsDF.show(10)
+
+// ========== DWD层：清洗校验 ==========
+val dwdDF = odsDF
+.filter(col("content_id").isNotNull)
+.filter(col("content_type").isNotNull)
+.filter(col("title").isNotNull)
+.filter(col("category").isNotNull)
+.filter(col("publish_date").isNotNull)
+.filter(col("source").isNotNull)
+.filter(col("source_url").isNotNull)
+.filter(col("status").isNotNull)
+.filter(col("content_type").isin("knowledge","news","policy"))
+.filter(col("status").isin("published"))
+.filter(col("category").isin("传染病","慢性非传染性疾病","免疫规划","公共卫生事件","烟草控制","营养与健康","环境健康","职业健康与中毒控制","放射卫生","中心要闻","工作动态","政策文件","规范性文件","政策解读"))
+.filter(col("publish_date").cast("date").isNotNull)
+.dropDuplicates("content_id")
+
+// ========== ADS层：分组聚合 ==========
+val adsDF = dwdDF
+.withColumn("publish_month", date_format(col("publish_date"), "yyyy-MM"))
+.groupBy("publish_month","content_type","category")
+.agg(
+  count("*").alias("article_total"),
+  min("publish_date").alias("first_publish_date"),
+  max("publish_date").alias("last_publish_date"),
+  countDistinct("source").alias("source_count"),
+  countDistinct("publish_date").alias("record_days")
+)
+.orderBy("publish_month","content_type","category")
+adsDF.count()
+adsDF.show(10)
+
+// ========== 落地写入 ==========
+dwdDF.write
+.mode("overwrite")
+.option("header","true")
+.csv("file:///home/hadoop/dwd_portal_contents")
+adsDF.write
+.mode("overwrite")
+.option("header","true")
+.csv("file:///home/hadoop/ads_portal_contents")
+```
+
+## 5. 交付输出
+
+原始文件：portal_contents_clean.csv
+
+清洗明细：dwd_portal_contents 文件夹（压缩为 zip 包）
+
+聚合报表：ads_portal_contents 文件夹（压缩为 zip 包）
+
 ## 团队交接说明
 
 
@@ -466,4 +566,6 @@ ADS 层行数 ＜ DWD 层行数，符合聚合压缩预期
 ### 4. 后续维护说明
 
 本文档覆盖的 4 张表为项目核心数据基础，后续新增数据表可直接套用本文档模板补充对应板块，保持整体文档结构统一。所有代码均可直接在 Spark Shell 中复制执行，无需额外依赖，环境兼容性与项目整体保持一致。
+
+
 
