@@ -134,3 +134,72 @@ def resource_delete(resource_id):
     execute("DELETE FROM data_resource WHERE resource_id = %s", (resource_id,))
     delete_cache('resource:list:*')
     return redirect(url_for('admin.resource_list'))
+
+
+# ─── 应用管理 CRUD ───
+@admin_bp.route('/apps')
+@login_required
+def app_list():
+    """应用列表页"""
+    apps = query_all("SELECT * FROM application_info ORDER BY sort ASC")
+    return render_template('admin/app_list.html', apps=apps)
+
+
+@admin_bp.route('/apps/add', methods=['GET', 'POST'])
+@login_required
+def app_add():
+    """新增应用"""
+    if request.method == 'POST':
+        data = request.form
+        execute("""
+            INSERT INTO application_info (app_name, app_desc, app_icon, app_url, sort, status)
+            VALUES (%s, %s, %s, %s, %s, %s)
+        """, (
+            data.get('app_name'), data.get('app_desc'), data.get('app_icon'),
+            data.get('app_url'), data.get('sort', 0), data.get('status', 1)
+        ))
+        return redirect(url_for('admin.app_list'))
+    return render_template('admin/app_form.html', app=None)
+
+
+@admin_bp.route('/apps/delete/<int:app_id>')
+@login_required
+def app_delete(app_id):
+    """删除应用"""
+    execute("DELETE FROM application_info WHERE app_id = %s", (app_id,))
+    return redirect(url_for('admin.app_list'))
+
+
+# ─── 用户管理 CRUD ───
+@admin_bp.route('/users')
+@login_required
+def user_list():
+    """用户列表页"""
+    users = query_all("SELECT user_id, username, role, status, create_time FROM sys_user ORDER BY user_id")
+    return render_template('admin/user_list.html', users=users)
+
+
+@admin_bp.route('/users/add', methods=['GET', 'POST'])
+@login_required
+def user_add():
+    """新增用户"""
+    if request.method == 'POST':
+        from services.auth import hash_password
+        data = request.form
+        execute("""
+            INSERT INTO sys_user (username, password_hash, role, status)
+            VALUES (%s, %s, %s, %s)
+        """, (
+            data.get('username'), hash_password(data.get('password')),
+            data.get('role', 'admin'), data.get('status', 1)
+        ))
+        return redirect(url_for('admin.user_list'))
+    return render_template('admin/user_form.html', user=None)
+
+
+@admin_bp.route('/users/delete/<int:user_id>')
+@login_required
+def user_delete(user_id):
+    """删除用户（不能删除自己）"""
+    execute("DELETE FROM sys_user WHERE user_id = %s AND user_id != 1", (user_id,))
+    return redirect(url_for('admin.user_list'))
