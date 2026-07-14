@@ -25,3 +25,4 @@ Thumbs.db
 
 # 敏感配置
 config.py
+*.crc
