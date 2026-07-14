@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>应用中心 — 第八组 健康大数据门户</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <style>
+        .page-header { background: linear-gradient(135deg, #6a1b9a 0%, #4a148c 100%); color: #fff; padding: 40px 0; text-align: center; }
+        .app-card { margin-bottom: 20px; transition: transform 0.2s, box-shadow 0.2s; }
+        .app-card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
+        .app-icon { width: 48px; height: 48px; border-radius: 12px; display: grid; place-items: center; font-size: 24px; background: linear-gradient(135deg, #667eea, #764ba2); color: #fff; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="/">🏥 第八组 健康大数据门户</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="/news">新闻公告</a></li>
+                <li class="nav-item"><a class="nav-link" href="/policy">政策资讯</a></li>
+                <li class="nav-item"><a class="nav-link" href="/knowledge">健康知识</a></li>
+                <li class="nav-item"><a class="nav-link active" href="/apps">应用中心</a></li>
+                <li class="nav-item"><a class="nav-link" href="/resources">数据资源</a></li>
+                <li class="nav-item"><a class="nav-link" href="/dashboard">数据大屏</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="page-header">
+    <div class="container">
+        <h2>🧩 应用中心</h2>
+        <p>健康大数据分析应用入口</p>
+    </div>
+</div>
+
+<div class="container mt-4">
+    <div class="row" id="appList">
+        {% if apps %}
+        {% for app in apps %}
+        <div class="col-md-4">
+            <a href="{{ app.app_url }}" class="card app-card text-decoration-none text-dark">
+                <div class="card-body d-flex align-items-center gap-3">
+                    <div class="app-icon">{{ '📊📈🩺📋📂📝'[loop.index0 % 6] if loop.index0 < 6 else '📦' }}</div>
+                    <div>
+                        <h5 class="mb-1">{{ app.app_name }}</h5>
+                        <p class="text-muted small mb-0">{{ app.app_desc or '' }}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+        {% else %}
+        <div class="col-12"><div class="alert alert-info">暂无应用，请通过后台管理添加。</div></div>
+        {% endif %}
+    </div>
+</div>
+
+<footer class="bg-light text-center text-muted py-3 mt-5">
+    <div class="container">
+        <small>本平台数据来源于公开信息，仅用于教学演示 | © 2026 第八组 健康大数据门户</small>
+    </div>
+</footer>
+
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/bootstrap.js"></script>
+</body>
+</html>

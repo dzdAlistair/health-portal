@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>政策资讯 — 第八组 健康大数据门户</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <style>
+        .page-header { background: linear-gradient(135deg, #0d47a1 0%, #1a237e 100%); color: #fff; padding: 40px 0; text-align: center; }
+        .policy-card { border-left: 4px solid #0d47a1; margin-bottom: 15px; transition: box-shadow 0.2s; }
+        .policy-card:hover { box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .policy-date { color: #999; font-size: 0.85em; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="/">🏥 第八组 健康大数据门户</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="/news">新闻公告</a></li>
+                <li class="nav-item"><a class="nav-link" href="/policy">政策资讯</a></li>
+                <li class="nav-item"><a class="nav-link" href="/knowledge">健康知识</a></li>
+                <li class="nav-item"><a class="nav-link" href="/apps">应用中心</a></li>
+                <li class="nav-item"><a class="nav-link" href="/resources">数据资源</a></li>
+                <li class="nav-item"><a class="nav-link" href="/dashboard">数据大屏</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="page-header">
+    <div class="container">
+        <h2>📋 政策资讯</h2>
+        <p>国家及地方卫生健康政策文件汇总</p>
+    </div>
+</div>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8" id="policyList">
+            <p class="text-muted text-center py-5">数据加载中...</p>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">📂 分类筛选</div>
+                <div class="card-body">
+                    <a href="#" class="btn btn-outline-primary btn-sm m-1">全部</a>
+                    <a href="#" class="btn btn-outline-secondary btn-sm m-1">国家政策</a>
+                    <a href="#" class="btn btn-outline-secondary btn-sm m-1">地方政策</a>
+                    <a href="#" class="btn btn-outline-secondary btn-sm m-1">行业规范</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-light text-center text-muted py-3 mt-5">
+    <div class="container">
+        <small>本平台数据来源于公开信息，仅用于教学演示 | © 2026 第八组 健康大数据门户</small>
+    </div>
+</footer>
+
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/bootstrap.js"></script>
+<script>
+fetch('/api/contents?type=policy')
+    .then(r => r.json())
+    .then(data => {
+        let html = '';
+        if (data.data && data.data.length > 0) {
+            data.data.forEach(item => {
+                html += '<div class="card policy-card"><div class="card-body">';
+                html += '<h5><a href="' + (item.source_url || '#') + '" target="_blank">' + item.title + '</a></h5>';
+                html += '<p class="text-muted">' + (item.summary || '') + '</p>';
+                html += '<span class="policy-date">📅 ' + (item.publishing_date || '') + '</span> ';
+                html += '<span>📎 来源: ' + (item.source || '') + '</span>';
+                html += '</div></div>';
+            });
+        } else {
+            html = '<div class="alert alert-info">暂无政策资讯，内容更新中...</div>';
+        }
+        document.getElementById('policyList').innerHTML = html;
+    })
+    .catch(() => {
+        document.getElementById('policyList').innerHTML = '<div class="alert alert-warning">数据加载失败，请确保后端服务已启动</div>';
+    });
+</script>
+</body>
+</html>
