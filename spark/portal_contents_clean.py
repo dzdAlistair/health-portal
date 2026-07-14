@@ -18,15 +18,18 @@ odsDF.show(10)
 
 # ========== DWD层：清洗校验 ==========
 dwdDF = odsDF \
+    .filter(col("content_id").isNotNull()) \
     .filter(col("content_type").isNotNull()) \
     .filter(col("title").isNotNull()) \
     .filter(col("category").isNotNull()) \
     .filter(col("publish_date").isNotNull()) \
     .filter(col("source").isNotNull()) \
     .filter(col("source_url").isNotNull()) \
+    .filter(col("status").isNotNull()) \
     .filter(col("content_type").isin("knowledge", "news", "policy")) \
+    .filter(col("status").isin("published")) \
     .filter(col("publish_date").cast("date").isNotNull()) \
-    .dropDuplicates(["title", "source_url"])
+    .dropDuplicates(["content_id"])
 
 # 清洗后校验
 print("清洗后数据行数:", dwdDF.count())
