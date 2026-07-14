@@ -21,24 +21,25 @@ def list_contents():
 
     try:
         sql = """
-            SELECT content_id, content_type, title, summary, source, source_url,
-                   publishing_date, views
-            FROM portal_content
-            WHERE status = 1
+            SELECT c.content_id, c.content_type, c.title, c.summary, c.source, c.source_url,
+                   c.publishing_date, c.views, cc.cate_name AS category
+            FROM portal_content c
+            LEFT JOIN content_category cc ON c.category_id = cc.cate_id
+            WHERE c.status = 1
         """
-        count_sql = "SELECT COUNT(*) as total FROM portal_content WHERE status = 1"
+        count_sql = "SELECT COUNT(*) as total FROM portal_content c WHERE c.status = 1"
         params = []
         count_params = []
 
         if content_type in ('news', 'policy', 'knowledge'):
-            sql += " AND content_type = %s"
-            count_sql += " AND content_type = %s"
+            sql += " AND c.content_type = %s"
+            count_sql += " AND c.content_type = %s"
             params.append(content_type)
             count_params.append(content_type)
 
         total = query_one(count_sql, count_params)['total']
 
-        sql += " ORDER BY publishing_date DESC LIMIT %s OFFSET %s"
+        sql += " ORDER BY c.publishing_date DESC LIMIT %s OFFSET %s"
         params.extend([page_size, offset])
 
         rows = query_all(sql, tuple(params))
