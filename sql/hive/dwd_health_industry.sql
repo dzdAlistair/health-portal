@@ -33,7 +33,7 @@ SELECT DISTINCT
     product_name,
     category,
     registrant_region,
-    CAST(approval_date AS DATE) AS approval_date,
+    try_cast(approval_date AS DATE) AS approval_date,
     status,
     source,
     source_url
@@ -45,7 +45,7 @@ WHERE industry_id IS NOT NULL
   AND approval_date IS NOT NULL
   AND status IS NOT NULL
   AND industry_type IN ('医疗器械', '药品制造', '药品研发')
-  AND CAST(approval_date AS DATE) IS NOT NULL;
+  AND try_cast(approval_date AS DATE) IS NOT NULL;
 
 SELECT COUNT(*) AS dwd_row_count FROM dwd_health_industry;
 SELECT * FROM dwd_health_industry LIMIT 5;

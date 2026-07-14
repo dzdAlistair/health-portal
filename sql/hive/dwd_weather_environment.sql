@@ -26,12 +26,12 @@ STORED AS TEXTFILE;
 
 INSERT OVERWRITE TABLE dwd_weather_environment
 SELECT DISTINCT
-    CAST(record_date AS DATE) AS record_date,
+    try_cast(record_date AS DATE) AS record_date,
     region,
-    CAST(temperature AS DOUBLE) AS temperature,
-    CAST(humidity AS DOUBLE) AS humidity,
-    CAST(precipitation AS DOUBLE) AS precipitation,
-    CAST(wind_speed AS DOUBLE) AS wind_speed,
+    try_cast(temperature AS DOUBLE) AS temperature,
+    try_cast(humidity AS DOUBLE) AS humidity,
+    try_cast(precipitation AS DOUBLE) AS precipitation,
+    try_cast(wind_speed AS DOUBLE) AS wind_speed,
     source
 FROM ods_weather_environment
 WHERE record_date IS NOT NULL
@@ -40,11 +40,11 @@ WHERE record_date IS NOT NULL
   AND humidity IS NOT NULL
   AND precipitation IS NOT NULL
   AND wind_speed IS NOT NULL
-  AND CAST(temperature AS DOUBLE) IS NOT NULL
-  AND CAST(humidity AS DOUBLE) IS NOT NULL
-  AND CAST(precipitation AS DOUBLE) IS NOT NULL
-  AND CAST(wind_speed AS DOUBLE) IS NOT NULL
-  AND CAST(record_date AS DATE) IS NOT NULL;
+  AND try_cast(temperature AS DOUBLE) IS NOT NULL
+  AND try_cast(humidity AS DOUBLE) IS NOT NULL
+  AND try_cast(precipitation AS DOUBLE) IS NOT NULL
+  AND try_cast(wind_speed AS DOUBLE) IS NOT NULL
+  AND try_cast(record_date AS DATE) IS NOT NULL;
 
 SELECT COUNT(*) AS dwd_row_count FROM dwd_weather_environment;
 SELECT * FROM dwd_weather_environment LIMIT 5;

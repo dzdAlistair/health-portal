@@ -32,7 +32,7 @@ SELECT DISTINCT
     content_type,
     title,
     category,
-    CAST(publish_date AS DATE) AS publish_date,
+    try_cast(publish_date AS DATE) AS publish_date,
     source,
     source_url,
     status
@@ -47,7 +47,7 @@ WHERE content_id IS NOT NULL
   AND status IS NOT NULL
   AND content_type IN ('knowledge', 'news', 'policy')
   AND status = 'published'
-  AND CAST(publish_date AS DATE) IS NOT NULL;
+  AND try_cast(publish_date AS DATE) IS NOT NULL;
 
 SELECT COUNT(*) AS dwd_row_count FROM dwd_portal_contents;
 SELECT * FROM dwd_portal_contents LIMIT 5;

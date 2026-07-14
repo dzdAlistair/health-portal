@@ -43,33 +43,33 @@ STORED AS TEXTFILE;
 INSERT OVERWRITE TABLE dwd_medical_resource
 SELECT
     record_id,
-    CAST(year AS INT) AS year,
+    try_cast(year AS INT) AS year,
     province_code,
     province,
-    CAST(medical_health_institutions AS BIGINT),
-    CAST(hospitals AS BIGINT),
-    CAST(primary_healthcare_institutions AS BIGINT),
-    CAST(specialized_public_health_institutions AS BIGINT),
-    CAST(medical_health_beds AS BIGINT),
-    CAST(hospital_beds AS BIGINT),
-    CAST(primary_healthcare_beds AS BIGINT),
-    CAST(health_technicians AS BIGINT),
-    CAST(licensed_assistant_physicians AS BIGINT),
-    CAST(registered_nurses AS BIGINT),
-    CAST(permanent_population AS BIGINT),
-    CAST(beds_per_1000_people AS DOUBLE),
-    CAST(physicians_per_1000_people AS DOUBLE),
-    CAST(nurses_per_1000_people AS DOUBLE),
-    CAST(institutions_per_10000_people AS DOUBLE),
-    CAST(hospital_beds_share AS DOUBLE),
-    CAST(primary_institution_share AS DOUBLE),
+    try_cast(medical_health_institutions AS BIGINT),
+    try_cast(hospitals AS BIGINT),
+    try_cast(primary_healthcare_institutions AS BIGINT),
+    try_cast(specialized_public_health_institutions AS BIGINT),
+    try_cast(medical_health_beds AS BIGINT),
+    try_cast(hospital_beds AS BIGINT),
+    try_cast(primary_healthcare_beds AS BIGINT),
+    try_cast(health_technicians AS BIGINT),
+    try_cast(licensed_assistant_physicians AS BIGINT),
+    try_cast(registered_nurses AS BIGINT),
+    try_cast(permanent_population AS BIGINT),
+    try_cast(beds_per_1000_people AS DOUBLE),
+    try_cast(physicians_per_1000_people AS DOUBLE),
+    try_cast(nurses_per_1000_people AS DOUBLE),
+    try_cast(institutions_per_10000_people AS DOUBLE),
+    try_cast(hospital_beds_share AS DOUBLE),
+    try_cast(primary_institution_share AS DOUBLE),
     source,
     update_date
 FROM ods_medical_resource
 WHERE record_id IS NOT NULL
   AND year IS NOT NULL
   AND province IS NOT NULL
-  AND CAST(year AS INT) BETWEEN 2014 AND 2023;
+  AND try_cast(year AS INT) BETWEEN 2014 AND 2023;
 
 -- 验证：DWD 行数 ≤ ODS 行数
 SELECT COUNT(*) AS dwd_row_count FROM dwd_medical_resource;

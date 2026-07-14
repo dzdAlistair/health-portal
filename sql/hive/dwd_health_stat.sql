@@ -26,10 +26,10 @@ STORED AS TEXTFILE;
 
 INSERT OVERWRITE TABLE dwd_health_stat
 SELECT DISTINCT
-    CAST(year AS INT) AS year,
+    try_cast(year AS INT) AS year,
     category,
     indicator_name,
-    CAST(indicator_value AS DOUBLE) AS indicator_value,
+    try_cast(indicator_value AS DOUBLE) AS indicator_value,
     unit,
     source_url,
     retrieved_date
@@ -38,8 +38,8 @@ WHERE year IS NOT NULL
   AND category IS NOT NULL
   AND indicator_name IS NOT NULL
   AND indicator_value IS NOT NULL
-  AND CAST(year AS INT) BETWEEN 1990 AND 2025
-  AND CAST(indicator_value AS DOUBLE) IS NOT NULL;
+  AND try_cast(year AS INT) BETWEEN 1990 AND 2025
+  AND try_cast(indicator_value AS DOUBLE) IS NOT NULL;
 
 SELECT COUNT(*) AS dwd_row_count FROM dwd_health_stat;
 SELECT * FROM dwd_health_stat LIMIT 5;
