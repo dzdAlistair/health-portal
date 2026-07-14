@@ -37,23 +37,41 @@ def bridge_institution_by_region():
 
 def bridge_institution_type():
     """生成 institution_type.csv (name, value)
-    TODO: 需要原始医疗机构类型数据，暂时从 HDFS ADS 估算
+    从 DWD 清洗层读取 hospitals / primary_healthcare_institutions /
+    specialized_public_health_institutions 三列，做全国汇总。
+
+    DWD CSV 含 31 省 × 10 年 = 310 行明细，每行有三类机构分列。
+    此处将 310 行分别按三类求和，得到饼图所需的全国机构类型分布。
     """
-    # 从省份聚合数据推算出全国各类机构总数较为困难
-    # 此处生成占位数据，待成员3补充机构类型维度数据后替换
+    import glob
+    candidates = glob.glob(os.path.join(
+        ANALYSIS_DIR, '5.1医疗资源数据', 'dwd_medical_resource',
+        '**', '*.csv'), recursive=True)
+    dwd_csv = candidates[0] if candidates else None
+
+    if dwd_csv is None or not os.path.exists(dwd_csv):
+        print("[WARN] DWD 医疗资源 CSV 未找到，使用占位数据")
+        types = [('医院', 328301), ('基层医疗卫生机构', 9539508), ('专业公共卫生机构', 198034)]
+        df = pd.DataFrame(types, columns=['name', 'value'])
+        out = os.path.join(ANALYSIS_DIR, 'institution_type.csv')
+        df.to_csv(out, index=False, encoding='utf-8')
+        print(f"[OK] {out} ({len(df)} rows) [占位 — DWD 文件缺失]")
+        return True
+
+    df = pd.read_csv(dwd_csv, encoding='utf-8')
+    hosp = int(df['hospitals'].sum())
+    primary = int(df['primary_healthcare_institutions'].sum())
+    specialized = int(df['specialized_public_health_institutions'].sum())
+
     types = [
-        ('综合医院', 3890),
-        ('专科医院', 2150),
-        ('社区卫生服务中心', 9800),
-        ('乡镇卫生院', 35200),
-        ('村卫生室', 608000),
-        ('门诊部', 11200),
-        ('妇幼保健机构', 3050),
+        ('医院', hosp),
+        ('基层医疗卫生机构', primary),
+        ('专业公共卫生机构', specialized),
     ]
-    df = pd.DataFrame(types, columns=['name', 'value'])
+    result = pd.DataFrame(types, columns=['name', 'value'])
     out = os.path.join(ANALYSIS_DIR, 'institution_type.csv')
-    df.to_csv(out, index=False, encoding='utf-8')
-    print(f"[OK] {out} ({len(df)} rows) [注: 占位数据，待成员3更新]")
+    result.to_csv(out, index=False, encoding='utf-8')
+    print(f"[OK] {out} ({len(result)} rows, 全国汇总 {hosp + primary + specialized} 家机构, from DWD)")
     return True
 
 
@@ -115,23 +133,53 @@ def bridge_content_trend():
 
 def bridge_resource_category():
     """生成 resource_category.csv (name, value)
-    TODO: 应从 MySQL resource_category 表读取，暂时生成占位数据
+    从 MySQL resource_category + data_resource 统计各分类资源数量，回退到占位
     """
-    categories = [
-        ('传染病数据', 45),
-        ('慢性病数据', 38),
-        ('免疫规划数据', 30),
-        ('公共卫生数据', 42),
-        ('环境健康数据', 25),
-        ('气象数据', 60),
-        ('健康产业数据', 35),
-        ('门户内容数据', 124),
-    ]
-    df = pd.DataFrame(categories, columns=['name', 'value'])
     out = os.path.join(ANALYSIS_DIR, 'resource_category.csv')
-    df.to_csv(out, index=False, encoding='utf-8')
-    print(f"[OK] {out} ({len(df)} rows) [注: 占位数据，待接入MySQL]")
-    return True
+
+    try:
+        import pymysql
+        conn = pymysql.connect(
+            host='127.0.0.1', port=3306,
+            user='portal', password='portal123',
+            database='health_portal', charset='utf8mb4',
+            cursorclass=pymysql.cursors.DictCursor,
+        )
+        try:
+            with conn.cursor() as cur:
+                cur.execute("""
+                    SELECT rc.cate_name AS name, COUNT(dr.resource_id) AS value
+                    FROM resource_category rc
+                    LEFT JOIN data_resource dr
+                        ON rc.cate_id = dr.category_id
+                        AND dr.resource_status = '已发布'
+                    WHERE rc.status = 1
+                    GROUP BY rc.cate_id, rc.cate_name
+                    ORDER BY rc.sort
+                """)
+                rows = cur.fetchall()
+        finally:
+            conn.close()
+
+        if rows:
+            df = pd.DataFrame(rows, columns=['name', 'value'])
+            df.to_csv(out, index=False, encoding='utf-8')
+            print(f"[OK] {out} ({len(df)} rows, from MySQL)")
+            return True
+        else:
+            print("[WARN] MySQL resource_category 为空")
+            return False
+    except Exception as e:
+        print(f"[WARN] MySQL 连接失败: {e}")
+        # 回退 — resource_category 表中共5个分类
+        categories = [
+            ('医疗资源', 2), ('健康统计', 1), ('健康产业', 1),
+            ('气象环境', 1), ('互联网信息', 1),
+        ]
+        df = pd.DataFrame(categories, columns=['name', 'value'])
+        df.to_csv(out, index=False, encoding='utf-8')
+        print(f"[OK] {out} ({len(df)} rows) [回退占位]")
+        return True
 
 
 def main():

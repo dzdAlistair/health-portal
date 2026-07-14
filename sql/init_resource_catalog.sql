@@ -139,4 +139,4 @@ INSERT INTO `portal_content` (`content_type`, `category_id`, `title`, `summary`,
 INSERT INTO `data_resource` (`resource_name`, `resource_type`, `category_id`, `source_type`, `file_format`, `record_count`, `security_level`, `resource_status`, `description`) VALUES
 ('全国医疗机构基础数据集', '结构化数据', 1, '公开数据下载', 'CSV', 35862, '公开', '已发布', '包含全国各级医疗机构的名称、地址、等级、床位等基础信息。'),
 ('全国居民健康统计年报', '统计数据', 2, '官方发布', 'XLSX', 1258, '公开', '已发布', '涵盖历年人口健康指标、慢性病患病率、医疗服务利用等统计数据。'),
-('健康产业市场规模数据', '产业数据', 3, 'CSV', 86, '公开', '已发布', '包含医疗健康、养老、保健品等细分产业的市场规模与增速数据。');
+('健康产业市场规模数据', '产业数据', 3, '公开数据下载', 'CSV', 86, '公开', '已发布', '包含医疗健康、养老、保健品等细分产业的市场规模与增速数据。');
