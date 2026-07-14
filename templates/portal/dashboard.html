@@ -583,6 +583,237 @@
                 line-height: 1.8;
             }
         }
+        body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        linear-gradient(rgba(53, 194, 214, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(53, 194, 214, 0.04) 1px, transparent 1px),
+        radial-gradient(circle at 18% 12%, rgba(53, 194, 214, 0.18), transparent 30%),
+        radial-gradient(circle at 82% 18%, rgba(79, 209, 156, 0.1), transparent 28%);
+    background-size: 42px 42px, 42px 42px, auto, auto;
+}
+
+.topbar,
+.page-heading,
+.metric-strip,
+.panel {
+    animation: pageRise 620ms ease both;
+}
+
+.panel {
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.22);
+}
+
+.panel::before,
+.metric::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0;
+    background: linear-gradient(120deg, transparent, rgba(53, 194, 214, 0.12), transparent);
+    transform: translateX(-120%);
+    transition: opacity 180ms ease;
+}
+
+.panel:hover::before,
+.metric:hover::before {
+    opacity: 1;
+    animation: scanLight 1100ms ease;
+}
+
+.metric {
+    overflow: hidden;
+    transition: transform 180ms ease, background 180ms ease;
+}
+
+.metric:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.018);
+}
+
+.metric-value {
+    text-shadow: 0 0 18px rgba(53, 194, 214, 0.18);
+}
+
+.panel[data-status="loading"] .chart-shell::before {
+    content: "";
+    position: absolute;
+    inset: 22px;
+    border-radius: 6px;
+    background:
+        linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.06), transparent),
+        linear-gradient(rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.035));
+    background-size: 180px 100%, 100% 100%;
+    animation: skeletonMove 1.25s infinite linear;
+}
+
+.status-dot {
+    animation: breatheDot 1.6s ease-in-out infinite;
+}
+
+@keyframes pageRise {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scanLight {
+    from { transform: translateX(-120%); }
+    to { transform: translateX(120%); }
+}
+
+@keyframes skeletonMove {
+    from { background-position: -180px 0, 0 0; }
+    to { background-position: calc(100% + 180px) 0, 0 0; }
+}
+
+@keyframes breatheDot {
+    0%, 100% { box-shadow: 0 0 0 4px rgba(232, 182, 92, 0.12); }
+    50% { box-shadow: 0 0 0 8px rgba(232, 182, 92, 0.05); }
+}
+.panel-tools {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 7px;
+    flex: 0 0 auto;
+}
+
+.mini-btn {
+    width: 28px;
+    height: 28px;
+    display: inline-grid;
+    place-items: center;
+    color: var(--muted);
+    background: #0d1216;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 160ms ease, border-color 160ms ease, background 160ms ease, transform 160ms ease;
+}
+
+.mini-btn:hover {
+    color: var(--text);
+    border-color: var(--cyan);
+    background: #18242b;
+    transform: translateY(-1px);
+}
+
+.mini-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.45;
+}
+
+.chart-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 80;
+    display: none;
+    padding: 28px;
+    background: rgba(4, 8, 11, 0.82);
+    backdrop-filter: blur(16px);
+}
+
+.chart-modal.active {
+    display: grid;
+    place-items: center;
+    animation: modalFade 180ms ease both;
+}
+
+.modal-card {
+    width: min(1180px, 96vw);
+    height: min(720px, 86vh);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: #10171c;
+    border: 1px solid var(--line-strong);
+    border-radius: 8px;
+    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.45);
+}
+
+.modal-head {
+    min-height: 72px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--line);
+}
+
+.modal-kicker {
+    margin: 0 0 5px;
+    color: var(--cyan);
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.modal-head h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.modal-close {
+    width: 34px;
+    height: 34px;
+    color: var(--text);
+    background: #151f26;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    border-color: var(--cyan);
+}
+
+.modal-chart {
+    flex: 1;
+    min-height: 0;
+}
+
+@keyframes modalFade {
+    from {
+        opacity: 0;
+        transform: scale(0.985);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 680px) {
+    .panel-tools {
+        gap: 5px;
+    }
+
+    .mini-btn {
+        width: 30px;
+        height: 30px;
+    }
+
+    .chart-modal {
+        padding: 12px;
+    }
+
+    .modal-card {
+        height: 86vh;
+    }
+}
     </style>
 </head>
 
@@ -665,7 +896,12 @@
                         <p>REGIONAL INSTITUTION DISTRIBUTION</p>
                     </div>
                 </div>
-                <span class="source-tag">institution_by_region.csv</span>
+                <div class="panel-tools">
+    <span class="source-tag">institution_by_region.csv</span>
+    <button class="mini-btn" type="button" data-action="refresh" data-key="institutionRegion" title="刷新当前图表">↻</button>
+    <button class="mini-btn" type="button" data-action="expand" data-key="institutionRegion" title="放大查看">⛶</button>
+    <button class="mini-btn" type="button" data-action="download" data-key="institutionRegion" title="下载图片">↓</button>
+</div>
             </header>
             <div class="chart-shell">
                 <div id="chart_institution_region" class="chart"></div>
@@ -686,7 +922,12 @@
                         <p>INSTITUTION TYPE COMPOSITION</p>
                     </div>
                 </div>
-                <span class="source-tag">institution_type.csv</span>
+                <div class="panel-tools">
+    <span class="source-tag">institution_type.csv</span>
+    <button class="mini-btn" type="button" data-action="refresh" data-key="institutionType" title="刷新当前图表">↻</button>
+    <button class="mini-btn" type="button" data-action="expand" data-key="institutionType" title="放大查看">⛶</button>
+    <button class="mini-btn" type="button" data-action="download" data-key="institutionType" title="下载图片">↓</button>
+</div>
             </header>
             <div class="chart-shell">
                 <div id="chart_institution_type" class="chart"></div>
@@ -707,7 +948,12 @@
                         <p>REGIONAL MEDICAL RESOURCE CAPACITY</p>
                     </div>
                 </div>
-                <span class="source-tag">medical_resources.csv</span>
+                <div class="panel-tools">
+    <span class="source-tag">medical_resources.csv</span>
+    <button class="mini-btn" type="button" data-action="refresh" data-key="medicalResources" title="刷新当前图表">↻</button>
+    <button class="mini-btn" type="button" data-action="expand" data-key="medicalResources" title="放大查看">⛶</button>
+    <button class="mini-btn" type="button" data-action="download" data-key="medicalResources" title="下载图片">↓</button>
+</div>
             </header>
             <div class="chart-shell">
                 <div id="chart_medical_resources" class="chart"></div>
@@ -728,7 +974,12 @@
                         <p>RESOURCE CATEGORY SHARE</p>
                     </div>
                 </div>
-                <span class="source-tag">resource_category.csv</span>
+                <div class="panel-tools">
+    <span class="source-tag">resource_category.csv</span>
+    <button class="mini-btn" type="button" data-action="refresh" data-key="resourceCategory" title="刷新当前图表">↻</button>
+    <button class="mini-btn" type="button" data-action="expand" data-key="resourceCategory" title="放大查看">⛶</button>
+    <button class="mini-btn" type="button" data-action="download" data-key="resourceCategory" title="下载图片">↓</button>
+</div>
             </header>
             <div class="chart-shell">
                 <div id="chart_resource_category" class="chart"></div>
@@ -749,7 +1000,12 @@
                         <p>PORTAL CONTENT RELEASE TREND</p>
                     </div>
                 </div>
-                <span class="source-tag">content_trend.csv</span>
+                <div class="panel-tools">
+    <span class="source-tag">content_trend.csv</span>
+    <button class="mini-btn" type="button" data-action="refresh" data-key="contentTrend" title="刷新当前图表">↻</button>
+    <button class="mini-btn" type="button" data-action="expand" data-key="contentTrend" title="放大查看">⛶</button>
+    <button class="mini-btn" type="button" data-action="download" data-key="contentTrend" title="下载图片">↓</button>
+</div>
             </header>
             <div class="chart-shell">
                 <div id="chart_content_trend" class="chart"></div>
@@ -767,6 +1023,19 @@
         <span>接口异常或文件缺失时，页面将保留空状态，不显示虚构数据</span>
     </footer>
 </main>
+
+<div id="chartModal" class="chart-modal" aria-hidden="true">
+    <div class="modal-card">
+        <div class="modal-head">
+            <div>
+                <p class="modal-kicker">Chart Focus Mode</p>
+                <h3 id="modalTitle">图表放大查看</h3>
+            </div>
+            <button id="modalClose" class="modal-close" type="button" title="关闭">×</button>
+        </div>
+        <div id="modalChart" class="modal-chart"></div>
+    </div>
+</div>
 
 <script>
 (function () {
@@ -848,7 +1117,98 @@
                     charts[key].resize();
                 });
             }, 100);
+                    document.querySelectorAll(".mini-btn").forEach(function (button) {
+            button.addEventListener("click", function () {
+                var action = button.getAttribute("data-action");
+                var key = button.getAttribute("data-key");
+
+                if (action === "refresh") {
+                    button.disabled = true;
+                    loadOne(key, true).finally(function () {
+                        button.disabled = false;
+                        updateServiceStatus();
+                        updateMetrics();
+                    });
+                }
+
+                if (action === "expand") {
+                    openChartModal(key);
+                }
+
+                if (action === "download") {
+                    downloadChart(key);
+                }
+            });
         });
+
+        document.getElementById("modalClose").addEventListener("click", closeChartModal);
+        document.getElementById("chartModal").addEventListener("click", function (event) {
+            if (event.target.id === "chartModal") {
+                closeChartModal();
+            }
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                closeChartModal();
+            }
+        });
+        });
+    }
+        var modalChart = null;
+
+    function openChartModal(key) {
+        var chart = charts[key];
+        var panel = document.querySelector('[data-key="' + key + '"]');
+        var title = panel ? panel.querySelector("h3").textContent : "图表放大查看";
+        var modal = document.getElementById("chartModal");
+
+        if (!chart || !panel || panel.getAttribute("data-status") !== "ready") {
+            return;
+        }
+
+        document.getElementById("modalTitle").textContent = title;
+        modal.classList.add("active");
+        modal.setAttribute("aria-hidden", "false");
+
+        if (!modalChart) {
+            modalChart = echarts.init(document.getElementById("modalChart"));
+        }
+
+        modalChart.clear();
+        modalChart.setOption(chart.getOption(), true);
+
+        setTimeout(function () {
+            modalChart.resize();
+        }, 80);
+    }
+
+    function closeChartModal() {
+        var modal = document.getElementById("chartModal");
+        modal.classList.remove("active");
+        modal.setAttribute("aria-hidden", "true");
+
+        if (modalChart) {
+            modalChart.clear();
+        }
+    }
+
+    function downloadChart(key) {
+        var chart = charts[key];
+        var panel = document.querySelector('[data-key="' + key + '"]');
+
+        if (!chart || !panel || panel.getAttribute("data-status") !== "ready") {
+            return;
+        }
+
+        var link = document.createElement("a");
+        link.download = key + ".png";
+        link.href = chart.getDataURL({
+            type: "png",
+            pixelRatio: 2,
+            backgroundColor: "#11171c"
+        });
+        link.click();
     }
 
     function loadAll() {
@@ -918,7 +1278,7 @@
 
                 setPanelStatus(
                     key,
-                    missing ? "empty" : "error",,
+                    missing ? "empty" : "error",
                     missing ? "分析数据暂未生成" : "分析接口连接失败",
                     missing
                         ? "等待成员三提供对应 CSV 统计结果"
@@ -999,20 +1359,51 @@
         );
     }
 
-    function setMetric(id, value, unit) {
-        var element = document.getElementById(id);
-        element.innerHTML =
-            value === null || !Number.isFinite(value)
-                ? '--<small class="metric-unit">' + unit + "</small>"
-                : formatNumber(value) +
-                  '<small class="metric-unit">' +
-                  unit +
-                  "</small>";
+    var metricCache = {};
+
+function setMetric(id, value, unit) {
+    var element = document.getElementById(id);
+
+    if (value === null || !Number.isFinite(value)) {
+        metricCache[id] = null;
+        element.innerHTML = '--<small class="metric-unit">' + unit + "</small>";
+        return;
     }
+
+    var start = Number.isFinite(metricCache[id]) ? metricCache[id] : 0;
+    var end = Number(value);
+    metricCache[id] = end;
+    animateMetric(element, start, end, unit);
+}
+
+function animateMetric(element, start, end, unit) {
+    var duration = 780;
+    var startedAt = performance.now();
+
+    function frame(now) {
+        var progress = Math.min((now - startedAt) / duration, 1);
+        var eased = 1 - Math.pow(1 - progress, 3);
+        var current = Math.round(start + (end - start) * eased);
+
+        element.innerHTML =
+            formatNumber(current) +
+            '<small class="metric-unit">' +
+            unit +
+            "</small>";
+
+        if (progress < 1) {
+            requestAnimationFrame(frame);
+        }
+    }
+
+    requestAnimationFrame(frame);
+}
 
     function renderInstitutionRegion(chart, data) {
         chart.setOption({
-            animationDuration: 700,
+            animationDuration: 1100,
+animationDurationUpdate: 650,
+animationEasing: "cubicOut",
             color: [colors[0]],
             tooltip: { trigger: "axis", axisPointer: { type: "shadow" } },
             grid: { left: 55, right: 24, top: 34, bottom: 55 },
@@ -1044,7 +1435,9 @@
 
     function renderInstitutionType(chart, data) {
         chart.setOption({
-            animationDuration: 700,
+            animationDuration: 1100,
+animationDurationUpdate: 650,
+animationEasing: "cubicOut",
             color: colors,
             tooltip: { trigger: "item", formatter: "{b}<br/>{c} 家 · {d}%" },
             legend: {
@@ -1077,7 +1470,9 @@
 
     function renderMedicalResources(chart, data) {
         chart.setOption({
-            animationDuration: 700,
+            animationDuration: 1100,
+animationDurationUpdate: 650,
+animationEasing: "cubicOut",
             color: [colors[0], colors[2], colors[1]],
             tooltip: { trigger: "axis", axisPointer: { type: "shadow" } },
             legend: {
@@ -1126,7 +1521,9 @@
 
     function renderResourceCategory(chart, data) {
         chart.setOption({
-            animationDuration: 700,
+            animationDuration: 1100,
+animationDurationUpdate: 650,
+animationEasing: "cubicOut",
             color: [colors[1], colors[0], colors[2], colors[3], colors[4]],
             tooltip: { trigger: "item", formatter: "{b}<br/>{c} 条 · {d}%" },
             series: [{
@@ -1155,7 +1552,9 @@
 
     function renderContentTrend(chart, data) {
         chart.setOption({
-            animationDuration: 750,
+            animationDuration: 1150,
+animationDurationUpdate: 650,
+animationEasing: "cubicOut",
             color: [colors[0], colors[2], colors[3]],
             tooltip: {
                 trigger: "axis",

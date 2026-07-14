@@ -5,84 +5,460 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>第八组 基于Hadoop的健康大数据门户平台与资源管理系统</title>
     <link rel="stylesheet" href="/static/css/bootstrap.css">
-    <link rel="stylesheet" href="/static/css/base.css">
     <style>
-        .hero { background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%); color: #fff; padding: 60px 0; text-align: center; }
-        .hero h1 { font-size: 2.2em; margin-bottom: 10px; }
-        .hero p { font-size: 1.1em; opacity: 0.85; }
-        .section-title { text-align: center; padding: 40px 0 20px; }
-        .card { margin-bottom: 20px; }
+        :root {
+            --bg: #071014;
+            --panel: rgba(15, 28, 35, 0.78);
+            --line: rgba(112, 214, 222, 0.2);
+            --text: #eef7f7;
+            --muted: #91a8ad;
+            --cyan: #36d3e5;
+            --green: #67dca8;
+            --amber: #f0c46c;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+            background:
+                linear-gradient(rgba(54, 211, 229, 0.035) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(54, 211, 229, 0.03) 1px, transparent 1px),
+                radial-gradient(circle at 18% 12%, rgba(54, 211, 229, 0.18), transparent 28%),
+                radial-gradient(circle at 82% 22%, rgba(103, 220, 168, 0.12), transparent 30%),
+                #071014;
+            background-size: 44px 44px, 44px 44px, auto, auto;
+        }
+
+        a { text-decoration: none; }
+
+        .portal-nav {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(7, 16, 20, 0.88);
+            backdrop-filter: blur(16px);
+        }
+
+        .nav-inner {
+            width: min(1180px, calc(100% - 36px));
+            margin: 0 auto;
+            min-height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text);
+            font-size: 20px;
+            font-weight: 720;
+        }
+
+        .brand-mark {
+            width: 34px;
+            height: 34px;
+            display: grid;
+            place-items: center;
+            border: 1px solid rgba(54, 211, 229, 0.55);
+            border-radius: 8px;
+            color: var(--cyan);
+            box-shadow: 0 0 24px rgba(54, 211, 229, 0.18);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .nav-links a {
+            display: block;
+            padding: 9px 12px;
+            color: var(--muted);
+            border-radius: 6px;
+            transition: color 160ms ease, background 160ms ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--text);
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        .hero {
+            width: min(1180px, calc(100% - 36px));
+            margin: 0 auto;
+            padding: 50px 0 34px;
+            display: grid;
+            grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+            align-items: center;
+            gap: 42px;
+            animation: pageRise 620ms ease both;
+        }
+
+        .eyebrow {
+            margin: 0 0 14px;
+            color: var(--cyan);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            margin: 0;
+            max-width: 760px;
+            font-size: 42px;
+            line-height: 1.16;
+            font-weight: 780;
+        }
+
+        .hero p {
+            max-width: 690px;
+            margin: 20px 0 0;
+            color: var(--muted);
+            font-size: 17px;
+            line-height: 1.9;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .primary-btn,
+        .ghost-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 42px;
+            padding: 0 18px;
+            border-radius: 7px;
+            font-weight: 650;
+            transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+        }
+
+        .primary-btn {
+            color: #041114;
+            background: linear-gradient(135deg, var(--cyan), var(--green));
+            box-shadow: 0 14px 34px rgba(54, 211, 229, 0.18);
+        }
+
+        .ghost-btn {
+            color: var(--text);
+            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .primary-btn:hover,
+        .ghost-btn:hover {
+            transform: translateY(-2px);
+            color: inherit;
+        }
+
+        .signal-card {
+            position: relative;
+            min-height: 260px;
+            padding: 24px;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            background: var(--panel);
+            box-shadow: 0 24px 80px rgba(0, 0, 0, 0.32);
+        }
+
+        .signal-card::before {
+            content: "";
+            position: absolute;
+            inset: 20px;
+            border: 1px solid rgba(54, 211, 229, 0.12);
+            border-radius: 8px;
+        }
+
+        .signal-card::after {
+          content: "";
+          position: absolute;
+          top: -60%;
+          left: -30%;
+          width: 70%;
+          height: 220%;
+          background: linear-gradient(90deg, transparent, rgba(54, 211, 229, 0.14), transparent);
+          transform: rotate(18deg);
+          animation: signalSweep 4.8s ease-in-out infinite;
+        }
+
+        .signal-row {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            gap: 14px;
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        }
+
+        .signal-row:last-child { border-bottom: 0; }
+
+        .signal-label {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .signal-value {
+            color: var(--text);
+            font-weight: 760;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .section {
+            width: min(1180px, calc(100% - 36px));
+            margin: 0 auto;
+            padding: 0 0 60px;
+        }
+
+        .section-title {
+            margin-bottom: 24px;
+        }
+
+        .section-title h2 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 760;
+        }
+
+        .section-title p {
+            margin: 8px 0 0;
+            color: var(--muted);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .feature-card {
+            position: relative;
+            min-height: 210px;
+            padding: 24px;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            background: rgba(15, 28, 35, 0.72);
+            transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+        }
+
+        .feature-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            background: linear-gradient(120deg, transparent, rgba(54, 211, 229, 0.13), transparent);
+            transform: translateX(-120%);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(54, 211, 229, 0.55);
+            background: rgba(17, 35, 43, 0.86);
+        }
+
+        .feature-card:hover::after {
+            opacity: 1;
+            animation: scanLight 1100ms ease;
+        }
+
+        .feature-icon {
+            width: 42px;
+            height: 42px;
+            display: grid;
+            place-items: center;
+            margin-bottom: 18px;
+            border-radius: 9px;
+            color: var(--cyan);
+            border: 1px solid rgba(54, 211, 229, 0.35);
+            background: rgba(54, 211, 229, 0.08);
+            font-size: 22px;
+        }
+
+        .feature-card h3 {
+            margin: 0;
+            font-size: 20px;
+            font-weight: 720;
+        }
+
+        .feature-card p {
+            min-height: 54px;
+            margin: 12px 0 22px;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        .card-link {
+            color: var(--cyan);
+            font-weight: 700;
+        }
+
+        .portal-footer {
+            padding: 20px;
+            color: var(--muted);
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
+            background: rgba(0, 0, 0, 0.16);
+        }
+
+        @keyframes pageRise {
+            from { opacity: 0; transform: translateY(14px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes scanLight {
+            from { transform: translateX(-120%); }
+            to { transform: translateX(120%); }
+        }
+
+        @keyframes signalSweep {
+           0%, 45% {
+               transform: translateX(-80%) rotate(18deg);
+                opacity: 0;
+              }
+            60% {
+              opacity: 1;
+            }
+            100% {
+             transform: translateX(260%) rotate(18deg);
+              opacity: 0;
+            }
+          }
+
+        @media (max-width: 900px) {
+            .nav-inner,
+            .hero {
+                display: block;
+            }
+
+            .nav-links {
+                margin-top: 10px;
+                flex-wrap: wrap;
+            }
+
+            .hero {
+                padding-top: 42px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .signal-card {
+                margin-top: 30px;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
-<body>
 
-<!-- 导航栏 -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="/">🏥 第八组 健康大数据门户</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="/news">新闻公告</a></li>
-                <li class="nav-item"><a class="nav-link" href="/policy">政策资讯</a></li>
-                <li class="nav-item"><a class="nav-link" href="/knowledge">健康知识</a></li>
-                <li class="nav-item"><a class="nav-link" href="/apps">应用中心</a></li>
-                <li class="nav-item"><a class="nav-link" href="/resources">数据资源</a></li>
-                <li class="nav-item"><a class="nav-link" href="/dashboard">数据大屏</a></li>
-            </ul>
-        </div>
+<body>
+<nav class="portal-nav">
+    <div class="nav-inner">
+        <a class="brand" href="/">
+            <span class="brand-mark">✚</span>
+            <span>第八组 健康大数据门户</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="/news">新闻公告</a></li>
+            <li><a href="/policy">政策资讯</a></li>
+            <li><a href="/knowledge">健康知识</a></li>
+            <li><a href="/apps">应用中心</a></li>
+            <li><a href="/resources">数据资源</a></li>
+            <li><a href="/dashboard">数据大屏</a></li>
+        </ul>
     </div>
 </nav>
 
-<!-- 头部 -->
-<div class="hero">
-    <div class="container">
-        <h1>健康大数据应用创新研发中心</h1>
-        <p>汇集医疗资源 · 健康产业 · 气象环境 · 健康统计 · 互联网公开信息</p>
-    </div>
-</div>
+<main>
+    <section class="hero">
+        <div>
+            <p class="eyebrow">Health Data Portal</p>
+            <h1>基于 Hadoop 的健康大数据门户平台与资源管理系统</h1>
+            <p>
+                汇集医疗资源、健康产业、气象环境、健康统计与互联网公开信息，
+                面向门户浏览、资源目录维护和数据可视化分析提供统一入口。
+            </p>
+            <div class="hero-actions">
+                <a class="primary-btn" href="/dashboard">进入数据大屏</a>
+                <a class="ghost-btn" href="/resources">查看数据资源</a>
+            </div>
+        </div>
 
-<!-- 主要内容 -->
-<div class="container">
-    <div class="section-title"><h2>平台核心功能</h2></div>
-    <div class="row mt-3">
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body text-center">
-                    <h5>📰 新闻公告</h5>
-                    <p>卫生健康领域最新动态与政策解读。</p>
-                    <a href="/news" class="btn btn-outline-primary btn-sm">查看详情</a>
-                </div>
+        <aside class="signal-card" aria-label="平台运行概览">
+            <div class="signal-row">
+                <span class="signal-label">数据分析服务</span>
+                <span class="signal-value">API 驱动</span>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body text-center">
-                    <h5>💊 健康知识库</h5>
-                    <p>疾病预防、营养健康等科普知识。</p>
-                    <a href="/knowledge" class="btn btn-outline-primary btn-sm">浏览知识</a>
-                </div>
+            <div class="signal-row">
+                <span class="signal-label">资源管理模块</span>
+                <span class="signal-value">目录维护</span>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body text-center">
-                    <h5>📊 数据大屏</h5>
-                    <p>多维度健康数据可视化分析。</p>
-                    <a href="/dashboard" class="btn btn-outline-primary btn-sm">查看大屏</a>
-                </div>
+            <div class="signal-row">
+                <span class="signal-label">可视化能力</span>
+                <span class="signal-value">ECharts</span>
             </div>
-        </div>
-    </div>
-</div>
+            <div class="signal-row">
+                <span class="signal-label">项目分组</span>
+                <span class="signal-value">第八组</span>
+            </div>
+        </aside>
+    </section>
 
-<!-- 底部声明 -->
-<footer class="bg-light text-center text-muted py-3 mt-5">
-    <div class="container">
-        <small>本平台数据来源于公开信息，仅用于教学演示 | © 2026 第八组 健康大数据门户</small>
-    </div>
+    <section class="section">
+        <div class="section-title">
+            <h2>平台核心功能</h2>
+            <p>围绕内容发布、知识浏览、数据资源与分析大屏构建门户能力。</p>
+        </div>
+
+        <div class="feature-grid">
+            <article class="feature-card">
+                <div class="feature-icon">▦</div>
+                <h3>新闻公告</h3>
+                <p>展示卫生健康领域动态、平台公告与政策解读入口。</p>
+                <a class="card-link" href="/news">查看详情 →</a>
+            </article>
+
+            <article class="feature-card">
+                <div class="feature-icon">●</div>
+                <h3>健康知识库</h3>
+                <p>提供疾病预防、营养健康、健康科普等内容浏览。</p>
+                <a class="card-link" href="/knowledge">浏览知识 →</a>
+            </article>
+
+            <article class="feature-card">
+                <div class="feature-icon">▤</div>
+                <h3>数据大屏</h3>
+                <p>通过 Flask 分析接口读取真实统计结果，完成多维可视化展示。</p>
+                <a class="card-link" href="/dashboard">查看大屏 →</a>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer class="portal-footer">
+    <small>本平台数据来源于公开信息，仅用于教学演示 | © 2026 第八组 健康大数据门户</small>
 </footer>
 
 <script src="/static/js/jquery.js"></script>
