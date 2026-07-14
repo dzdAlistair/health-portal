@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>健康数据可视化中心</title>
+    <link rel="stylesheet" href="/static/css/base.css">
     <script src="/static/js/echarts.js"></script>
 
     <style>
         :root {
-            --bg: #090d10;
+            --bg: #071827;
             --surface: #11171c;
             --surface-2: #161e24;
             --line: #29343d;
@@ -818,6 +819,18 @@
 </head>
 
 <body>
+<nav class="portal-nav">
+    <a class="portal-brand" href="{{ url_for('portal.index') }}">健康大数据门户平台</a>
+    <div>
+        <a href="{{ url_for('portal.news') }}">新闻公告</a>
+        <a href="{{ url_for('portal.policy') }}">政策资讯</a>
+        <a href="{{ url_for('portal.knowledge') }}">健康知识</a>
+        <a href="{{ url_for('portal.apps') }}">应用中心</a>
+        <a href="{{ url_for('portal.resources') }}">数据资源</a>
+        <a href="{{ url_for('portal.dashboard') }}" class="active">数据大屏</a>
+    </div>
+</nav>
+
 <header class="topbar">
     <div class="brand">
         <div class="brand-mark" aria-hidden="true"></div>

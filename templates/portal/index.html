@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>第八组 基于Hadoop的健康大数据门户平台与资源管理系统</title>
     <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/base.css">
     <style>
         :root {
-            --bg: #071014;
+            --bg: #071827;
             --panel: rgba(15, 28, 35, 0.78);
-            --line: rgba(112, 214, 222, 0.2);
-            --text: #eef7f7;
-            --muted: #91a8ad;
-            --cyan: #36d3e5;
+            --line: rgba(255, 255, 255, 0.14);
+            --text: #edf7ff;
+            --muted: #9fb5c9;
+            --cyan: #47f0ff;
             --green: #67dca8;
             --amber: #f0c46c;
         }
@@ -24,43 +25,33 @@
             min-height: 100vh;
             color: var(--text);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
-            background:
-                linear-gradient(rgba(54, 211, 229, 0.035) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(54, 211, 229, 0.03) 1px, transparent 1px),
-                radial-gradient(circle at 18% 12%, rgba(54, 211, 229, 0.18), transparent 28%),
-                radial-gradient(circle at 82% 22%, rgba(103, 220, 168, 0.12), transparent 30%),
-                #071014;
-            background-size: 44px 44px, 44px 44px, auto, auto;
         }
 
         a { text-decoration: none; }
 
         .portal-nav {
-            position: sticky;
-            top: 0;
-            z-index: 10;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-            background: rgba(7, 16, 20, 0.88);
-            backdrop-filter: blur(16px);
-        }
-
-        .nav-inner {
-            width: min(1180px, calc(100% - 36px));
-            margin: 0 auto;
-            min-height: 72px;
+            height: 72px;
+            padding: 0 48px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 24px;
+            border-bottom: 1px solid var(--line);
+            background: rgba(4, 15, 26, .72);
+            backdrop-filter: blur(16px);
+            position: sticky;
+            top: 0;
+            z-index: 20;
         }
 
-        .brand {
+        .portal-brand {
             display: flex;
             align-items: center;
             gap: 12px;
-            color: var(--text);
+            color: #fff;
             font-size: 20px;
-            font-weight: 720;
+            font-weight: 700;
+            letter-spacing: .5px;
+            text-decoration: none;
         }
 
         .brand-mark {
@@ -68,32 +59,24 @@
             height: 34px;
             display: grid;
             place-items: center;
-            border: 1px solid rgba(54, 211, 229, 0.55);
+            border: 1px solid rgba(53, 167, 255, 0.55);
             border-radius: 8px;
             color: var(--cyan);
-            box-shadow: 0 0 24px rgba(54, 211, 229, 0.18);
+            box-shadow: 0 0 24px rgba(53, 167, 255, 0.18);
         }
 
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            margin: 0;
-            padding: 0;
-            list-style: none;
+        .portal-nav a {
+            color: #cfe7ff;
+            margin-left: 24px;
+            text-decoration: none;
+            transition: .25s;
+            font-size: 15px;
         }
 
-        .nav-links a {
-            display: block;
-            padding: 9px 12px;
-            color: var(--muted);
-            border-radius: 6px;
-            transition: color 160ms ease, background 160ms ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--text);
-            background: rgba(255, 255, 255, 0.06);
+        .portal-nav a:hover,
+        .portal-nav a.active {
+            color: var(--cyan);
+            text-shadow: 0 0 16px rgba(71, 240, 255, .55);
         }
 
         .hero {
@@ -344,17 +327,14 @@
           }
 
         @media (max-width: 900px) {
-            .nav-inner,
+            .portal-nav {
+                flex-wrap: wrap;
+                height: auto;
+                padding: 12px 20px;
+            }
+
             .hero {
                 display: block;
-            }
-
-            .nav-links {
-                margin-top: 10px;
-                flex-wrap: wrap;
-            }
-
-            .hero {
                 padding-top: 42px;
             }
 
@@ -375,19 +355,17 @@
 
 <body>
 <nav class="portal-nav">
-    <div class="nav-inner">
-        <a class="brand" href="{{ url_for('portal.index') }}">
-            <span class="brand-mark">✚</span>
-            <span>第八组 健康大数据门户</span>
-        </a>
-        <ul class="nav-links">
-            <li><a href="{{ url_for('portal.news') }}">新闻公告</a></li>
-            <li><a href="{{ url_for('portal.policy') }}">政策资讯</a></li>
-            <li><a href="{{ url_for('portal.knowledge') }}">健康知识</a></li>
-            <li><a href="{{ url_for('portal.apps') }}">应用中心</a></li>
-            <li><a href="{{ url_for('portal.resources') }}">数据资源</a></li>
-            <li><a href="{{ url_for('portal.dashboard') }}">数据大屏</a></li>
-        </ul>
+    <a class="portal-brand" href="{{ url_for('portal.index') }}">
+        <span class="brand-mark">✚</span>
+        <span>第八组 健康大数据门户</span>
+    </a>
+    <div>
+        <a href="{{ url_for('portal.news') }}">新闻公告</a>
+        <a href="{{ url_for('portal.policy') }}">政策资讯</a>
+        <a href="{{ url_for('portal.knowledge') }}">健康知识</a>
+        <a href="{{ url_for('portal.apps') }}">应用中心</a>
+        <a href="{{ url_for('portal.resources') }}">数据资源</a>
+        <a href="{{ url_for('portal.dashboard') }}">数据大屏</a>
     </div>
 </nav>
 
