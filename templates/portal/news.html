@@ -385,11 +385,14 @@
             });
         });
 
+        let retryCount = 0;
+        const MAX_RETRIES = 3;
+
         function loadResources() {
             const controller = new AbortController();
             const timeoutId = setTimeout(function () {
                 controller.abort();
-            }, 5000);
+            }, 15000);
 
             fetch(apiUrl, { signal: controller.signal })
                 .then(function (response) {
@@ -419,13 +422,20 @@
                     }
 
                     allItems = normalizeList(result.payload);
+                    console.log('loadResources OK: allItems.length=' + allItems.length);
                     renderList();
                 })
                 .catch(function (error) {
                     clearTimeout(timeoutId);
-                    console.warn('资源接口暂不可用：', error);
-                    allItems = [];
-                    renderList();
+                    console.warn('资源接口暂不可用 (retry=' + retryCount + ')：', error);
+                    if (retryCount < MAX_RETRIES) {
+                        retryCount++;
+                        document.getElementById('dataStatus').textContent = '正在重试 (' + retryCount + '/' + MAX_RETRIES + ')...';
+                        setTimeout(loadResources, 2000);
+                    } else {
+                        allItems = [];
+                        renderList();
+                    }
                 });
         }
 

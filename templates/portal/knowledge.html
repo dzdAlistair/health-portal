@@ -393,11 +393,14 @@
             });
         });
 
+        let retryCount = 0;
+        const MAX_RETRIES = 3;
+
         function loadResources() {
             const controller = new AbortController();
             const timeoutId = setTimeout(function () {
                 controller.abort();
-            }, 5000);
+            }, 15000);
 
             fetch(apiUrl, { signal: controller.signal })
                 .then(function (response) {
@@ -419,15 +422,22 @@
                     }
 
                     allItems = normalizeList(result.payload);
+                    console.log('loadResources OK: allItems.length=' + allItems.length);
                     emptyReason = '等待成员4补充数据后，这里会自动渲染。';
                     renderList();
                 })
                 .catch(function (error) {
                     clearTimeout(timeoutId);
-                    console.warn('资源接口暂不可用：', error);
-                    allItems = [];
-                    emptyReason = '当前接口暂不可用或数据库权限未配置，修复后会自动渲染。';
-                    renderList();
+                    console.warn('资源接口暂不可用 (retry=' + retryCount + ')：', error);
+                    if (retryCount < MAX_RETRIES) {
+                        retryCount++;
+                        document.getElementById('dataStatus').textContent = '正在重试 (' + retryCount + '/' + MAX_RETRIES + ')...';
+                        setTimeout(loadResources, 2000);
+                    } else {
+                        allItems = [];
+                        emptyReason = '当前接口暂不可用或数据库权限未配置，修复后会自动渲染。';
+                        renderList();
+                    }
                 });
         }
 
