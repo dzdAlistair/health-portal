@@ -344,10 +344,7 @@
 
             if (!visibleItems.length) {
                 list.className = 'empty-state';
-                list.innerHTML = `
-                    <strong>当前暂无可展示内容</strong>
-                    <span>接口已按文档请求：${apiUrl}。等待成员4补充数据后，这里会自动渲染。</span>
-                `;
+                list.innerHTML = '<strong>当前暂无可展示内容</strong>';
                 return;
             }
 
