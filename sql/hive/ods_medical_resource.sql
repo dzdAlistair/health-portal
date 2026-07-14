@@ -7,8 +7,7 @@
 CREATE DATABASE IF NOT EXISTS health_portal;
 USE health_portal;
 
-DROP TABLE IF EXISTS ods_medical_resource;
-CREATE EXTERNAL TABLE ods_medical_resource (
+CREATE EXTERNAL TABLE IF NOT EXISTS ods_medical_resource (
     record_id                           STRING  COMMENT '记录唯一编号 (CN-省份代码-年份)',
     year                                STRING  COMMENT '数据年份',
     province_code                       STRING  COMMENT '省级行政区代码',

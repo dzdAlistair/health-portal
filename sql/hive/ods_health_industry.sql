@@ -7,8 +7,7 @@
 CREATE DATABASE IF NOT EXISTS health_portal;
 USE health_portal;
 
-DROP TABLE IF EXISTS ods_health_industry;
-CREATE EXTERNAL TABLE ods_health_industry (
+CREATE EXTERNAL TABLE IF NOT EXISTS ods_health_industry (
     industry_id      STRING  COMMENT '备案ID',
     industry_type    STRING  COMMENT '产业类型 (医疗器械/药品制造/药品研发)',
     product_name     STRING  COMMENT '产品名称',

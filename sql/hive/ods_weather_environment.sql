@@ -7,8 +7,7 @@
 CREATE DATABASE IF NOT EXISTS health_portal;
 USE health_portal;
 
-DROP TABLE IF EXISTS ods_weather_environment;
-CREATE EXTERNAL TABLE ods_weather_environment (
+CREATE EXTERNAL TABLE IF NOT EXISTS ods_weather_environment (
     record_date   STRING  COMMENT '记录日期',
     region        STRING  COMMENT '城市名称',
     temperature   STRING  COMMENT '气温(℃)',

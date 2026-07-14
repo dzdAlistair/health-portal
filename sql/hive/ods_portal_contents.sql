@@ -7,8 +7,7 @@
 CREATE DATABASE IF NOT EXISTS health_portal;
 USE health_portal;
 
-DROP TABLE IF EXISTS ods_portal_contents;
-CREATE EXTERNAL TABLE ods_portal_contents (
+CREATE EXTERNAL TABLE IF NOT EXISTS ods_portal_contents (
     content_id   STRING  COMMENT '内容唯一编号',
     content_type STRING  COMMENT '内容类型 (news/policy/knowledge)',
     title        STRING  COMMENT '文章标题',

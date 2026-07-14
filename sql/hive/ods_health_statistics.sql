@@ -7,8 +7,7 @@
 CREATE DATABASE IF NOT EXISTS health_portal;
 USE health_portal;
 
-DROP TABLE IF EXISTS ods_health_statistics;
-CREATE EXTERNAL TABLE ods_health_statistics (
+CREATE EXTERNAL TABLE IF NOT EXISTS ods_health_statistics (
     year            STRING  COMMENT '统计年份',
     category        STRING  COMMENT '指标大类 (如 一类农村/中城市)',
     indicator_name  STRING  COMMENT '指标名称',
