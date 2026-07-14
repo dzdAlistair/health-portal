@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>新增资源 — 第八组 后台</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="/admin/">🏥 管理后台</a>
+    <div class="nav">
+        <a class="nav-link text-white" href="/admin/">仪表盘</a>
+        <a class="nav-link text-white" href="/admin/content">内容管理</a>
+        <a class="nav-link text-white" href="/admin/resource">资源管理</a>
+        <a class="btn btn-outline-light btn-sm ml-2" href="/admin/logout">退出</a>
+    </div>
+</nav>
+
+<div class="container mt-4">
+    <h4 class="mb-4">➕ 新增数据资源</h4>
+    <form method="post">
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label>资源名称</label>
+                <input type="text" name="resource_name" class="form-control" required>
+            </div>
+            <div class="form-group col-md-3">
+                <label>资源类型</label>
+                <select name="resource_type" class="form-control">
+                    <option value="结构化数据">结构化数据</option>
+                    <option value="统计数据">统计数据</option>
+                    <option value="产业数据">产业数据</option>
+                    <option value="文本内容">文本内容</option>
+                </select>
+            </div>
+            <div class="form-group col-md-3">
+                <label>分类</label>
+                <select name="category_id" class="form-control" required>
+                    {% for cate in categories %}
+                    <option value="{{ cate.cate_id }}">{{ cate.cate_name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                <label>数据获取方式</label>
+                <select name="source_type" class="form-control">
+                    <option value="公开数据下载">公开数据下载</option>
+                    <option value="官方发布">官方发布</option>
+                    <option value="API接口">API接口</option>
+                    <option value="网页采集">网页采集</option>
+                </select>
+            </div>
+            <div class="form-group col-md-2">
+                <label>文件格式</label>
+                <select name="file_format" class="form-control">
+                    <option value="CSV">CSV</option>
+                    <option value="JSON">JSON</option>
+                    <option value="XLSX">XLSX</option>
+                </select>
+            </div>
+            <div class="form-group col-md-2">
+                <label>数据条数</label>
+                <input type="number" name="record_count" class="form-control" value="0">
+            </div>
+            <div class="form-group col-md-2">
+                <label>安全等级</label>
+                <select name="security_level" class="form-control">
+                    <option value="公开">公开</option>
+                    <option value="内部">内部</option>
+                    <option value="受限">受限</option>
+                </select>
+            </div>
+            <div class="form-group col-md-2">
+                <label>状态</label>
+                <select name="resource_status" class="form-control">
+                    <option value="已发布">已发布</option>
+                    <option value="草稿">草稿</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>描述</label>
+            <textarea name="description" class="form-control" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">保存</button>
+        <a href="/admin/resource" class="btn btn-secondary">取消</a>
+    </form>
+</div>
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/bootstrap.js"></script>
+</body>
+</html>

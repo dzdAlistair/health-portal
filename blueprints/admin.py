@@ -65,12 +65,12 @@ def content_add():
     if request.method == 'POST':
         data = request.form
         execute("""
-            INSERT INTO portal_content (content_type, category_id, title, summary, content, source, publish_date, status)
+            INSERT INTO portal_content (content_type, category_id, title, summary, content, source, publishing_date, status)
             VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
         """, (
             data.get('content_type'), data.get('category_id'), data.get('title'),
             data.get('summary'), data.get('content'), data.get('source'),
-            data.get('publish_date'), data.get('status', 0)
+            data.get('publishing_date'), data.get('status', 0)
         ))
         # 清缓存
         delete_cache('portal:latest:*')

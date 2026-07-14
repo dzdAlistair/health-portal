@@ -1,9 +1,53 @@
-"""数据资源路由 — 资源目录API"""
+"""数据资源路由 — 资源目录API + 门户内容API"""
 from flask import Blueprint, jsonify, request
-from services.db import query_all
+from services.db import query_all, query_one
 from services.redis_cache import get_cache, set_cache
 
 resource_bp = Blueprint('resource', __name__)
+
+
+@resource_bp.route('/contents')
+def list_contents():
+    """门户内容列表 API（新闻/政策/知识），支持按类型筛选"""
+    content_type = request.args.get('type', '')
+    page = request.args.get('page', 1, type=int)
+    page_size = request.args.get('pageSize', 12, type=int)
+    offset = (page - 1) * page_size
+
+    cache_key = f'portal:contents:{content_type}:{page}:{page_size}'
+    cached = get_cache(cache_key)
+    if cached:
+        return jsonify({'code': 200, 'msg': 'success', **cached})
+
+    try:
+        sql = """
+            SELECT content_id, content_type, title, summary, source, source_url,
+                   publishing_date, views
+            FROM portal_content
+            WHERE status = 1
+        """
+        count_sql = "SELECT COUNT(*) as total FROM portal_content WHERE status = 1"
+        params = []
+        count_params = []
+
+        if content_type in ('news', 'policy', 'knowledge'):
+            sql += " AND content_type = %s"
+            count_sql += " AND content_type = %s"
+            params.append(content_type)
+            count_params.append(content_type)
+
+        total = query_one(count_sql, count_params)['total']
+
+        sql += " ORDER BY publishing_date DESC LIMIT %s OFFSET %s"
+        params.extend([page_size, offset])
+
+        rows = query_all(sql, tuple(params))
+
+        result = {'data': rows, 'total': total, 'page': page, 'pageSize': page_size}
+        set_cache(cache_key, result, 1800)
+        return jsonify({'code': 200, 'msg': 'success', **result})
+    except Exception as e:
+        return jsonify({'code': 500, 'msg': str(e), 'data': None})
 
 
 @resource_bp.route('/resources')
