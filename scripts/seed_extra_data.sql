@@ -16,8 +16,8 @@ INSERT INTO data_resource (resource_name, resource_type, category_id, source_typ
 TRUNCATE TABLE application_info;
 INSERT INTO application_info (app_name, app_desc, app_icon, app_url, sort, status) VALUES
 ('数据大屏', '多维度健康数据可视化分析，机构分布、医疗资源、内容趋势等5大图表。', NULL, '/dashboard', 1, 1),
-('疫情监测', '传染病实时监测与预警，支持按地域、病种、时间维度查询。', NULL, '/apps', 2, 1),
-('慢病管理', '高血压、糖尿病等慢性病登记管理与统计分析。', NULL, '/apps', 3, 1),
-('健康档案', '居民电子健康档案查询与数据统计，支持历史趋势分析。', NULL, '/apps', 4, 1),
+('疫情监测', '传染病实时监测与预警，支持按地域、病种、时间维度查询。', NULL, '/dashboard', 2, 1),
+('慢病管理', '高血压、糖尿病等慢性病登记管理与统计分析。', NULL, '/dashboard', 3, 1),
+('健康档案', '居民电子健康档案查询与数据统计，支持历史趋势分析。', NULL, '/resources', 4, 1),
 ('资源目录', '健康大数据资源目录，按安全等级分类浏览与下载。', NULL, '/resources', 5, 1),
 ('内容管理', '健康门户内容发布管理，新闻、政策、知识分类维护。', NULL, '/admin/content', 6, 1);
