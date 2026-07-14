@@ -18,24 +18,15 @@ odsDF.show(10)
 
 # ========== DWD层：清洗校验 ==========
 dwdDF = odsDF \
-    .filter(col("content_id").isNotNull()) \
     .filter(col("content_type").isNotNull()) \
     .filter(col("title").isNotNull()) \
     .filter(col("category").isNotNull()) \
     .filter(col("publish_date").isNotNull()) \
     .filter(col("source").isNotNull()) \
     .filter(col("source_url").isNotNull()) \
-    .filter(col("status").isNotNull()) \
     .filter(col("content_type").isin("knowledge", "news", "policy")) \
-    .filter(col("status").isin("published")) \
-    .filter(col("category").isin(
-        "传染病", "慢性非传染性疾病", "免疫规划", "公共卫生事件",
-        "烟草控制", "营养与健康", "环境健康", "职业健康与中毒控制",
-        "放射卫生", "中心要闻", "工作动态", "政策文件",
-        "规范性文件", "政策解读"
-    )) \
     .filter(col("publish_date").cast("date").isNotNull()) \
-    .dropDuplicates(["content_id"])
+    .dropDuplicates(["title", "source_url"])
 
 # 清洗后校验
 print("清洗后数据行数:", dwdDF.count())
