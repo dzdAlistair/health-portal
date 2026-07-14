@@ -11,8 +11,7 @@
 CREATE DATABASE IF NOT EXISTS health_portal;
 USE health_portal;
 
-DROP TABLE IF EXISTS dwd_medical_resource;
-CREATE TABLE dwd_medical_resource (
+CREATE TABLE IF NOT EXISTS dwd_medical_resource (
     record_id                           STRING  COMMENT '记录唯一编号',
     year                                INT     COMMENT '数据年份',
     province_code                       STRING  COMMENT '省级行政区代码',

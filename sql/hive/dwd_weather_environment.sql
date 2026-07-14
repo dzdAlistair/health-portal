@@ -11,8 +11,7 @@
 CREATE DATABASE IF NOT EXISTS health_portal;
 USE health_portal;
 
-DROP TABLE IF EXISTS dwd_weather_environment;
-CREATE TABLE dwd_weather_environment (
+CREATE TABLE IF NOT EXISTS dwd_weather_environment (
     record_date   DATE    COMMENT '记录日期',
     region        STRING  COMMENT '城市名称',
     temperature   DOUBLE  COMMENT '气温(℃)',

@@ -11,8 +11,7 @@
 CREATE DATABASE IF NOT EXISTS health_portal;
 USE health_portal;
 
-DROP TABLE IF EXISTS dwd_health_stat;
-CREATE TABLE dwd_health_stat (
+CREATE TABLE IF NOT EXISTS dwd_health_stat (
     year            INT     COMMENT '统计年份',
     category        STRING  COMMENT '指标大类',
     indicator_name  STRING  COMMENT '指标名称',

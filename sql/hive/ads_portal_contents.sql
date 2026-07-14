@@ -9,8 +9,7 @@
 CREATE DATABASE IF NOT EXISTS health_portal;
 USE health_portal;
 
-DROP TABLE IF EXISTS ads_portal_contents;
-CREATE TABLE ads_portal_contents (
+CREATE TABLE IF NOT EXISTS ads_portal_contents (
     publish_month STRING COMMENT '发布月份 (yyyy-MM)',
     content_type  STRING COMMENT '内容类型 (news/policy/knowledge)',
     category      STRING COMMENT '内容分类',

@@ -10,8 +10,7 @@
 CREATE DATABASE IF NOT EXISTS health_portal;
 USE health_portal;
 
-DROP TABLE IF EXISTS ads_medical_stat;
-CREATE TABLE ads_medical_stat (
+CREATE TABLE IF NOT EXISTS ads_medical_stat (
     province           STRING COMMENT '省份名称',
     year               INT    COMMENT '年份',
     total_institutions BIGINT COMMENT '医疗机构总数',

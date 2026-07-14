@@ -12,8 +12,7 @@
 CREATE DATABASE IF NOT EXISTS health_portal;
 USE health_portal;
 
-DROP TABLE IF EXISTS dwd_portal_contents;
-CREATE TABLE dwd_portal_contents (
+CREATE TABLE IF NOT EXISTS dwd_portal_contents (
     content_id   STRING  COMMENT '内容唯一编号',
     content_type STRING  COMMENT '内容类型',
     title        STRING  COMMENT '文章标题',

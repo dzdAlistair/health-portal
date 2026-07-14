@@ -9,8 +9,7 @@
 CREATE DATABASE IF NOT EXISTS health_portal;
 USE health_portal;
 
-DROP TABLE IF EXISTS ads_health_industry;
-CREATE TABLE ads_health_industry (
+CREATE TABLE IF NOT EXISTS ads_health_industry (
     industry_type          STRING COMMENT '产业类型',
     category               STRING COMMENT '产品品类',
     total_product_count    BIGINT COMMENT '产品备案总数',

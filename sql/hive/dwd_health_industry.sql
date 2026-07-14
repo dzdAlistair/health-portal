@@ -11,8 +11,7 @@
 CREATE DATABASE IF NOT EXISTS health_portal;
 USE health_portal;
 
-DROP TABLE IF EXISTS dwd_health_industry;
-CREATE TABLE dwd_health_industry (
+CREATE TABLE IF NOT EXISTS dwd_health_industry (
     industry_id      STRING  COMMENT '备案ID',
     industry_type    STRING  COMMENT '产业类型',
     product_name     STRING  COMMENT '产品名称',

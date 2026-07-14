@@ -9,8 +9,7 @@
 CREATE DATABASE IF NOT EXISTS health_portal;
 USE health_portal;
 
-DROP TABLE IF EXISTS ads_weather_environment;
-CREATE TABLE ads_weather_environment (
+CREATE TABLE IF NOT EXISTS ads_weather_environment (
     record_quarter      STRING COMMENT '记录季度 (yyyy-Qn)',
     region              STRING COMMENT '城市名称',
     avg_temperature     DOUBLE COMMENT '季度平均气温',

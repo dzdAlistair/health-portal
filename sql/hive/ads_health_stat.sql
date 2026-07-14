@@ -8,8 +8,7 @@
 CREATE DATABASE IF NOT EXISTS health_portal;
 USE health_portal;
 
-DROP TABLE IF EXISTS ads_health_stat;
-CREATE TABLE ads_health_stat (
+CREATE TABLE IF NOT EXISTS ads_health_stat (
     year               INT    COMMENT '统计年份',
     category           STRING COMMENT '指标大类',
     total_indicator_val DOUBLE COMMENT '指标数值总和',
