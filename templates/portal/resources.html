@@ -187,13 +187,13 @@
     <nav class="portal-nav">
         <div class="portal-brand">健康大数据门户平台</div>
         <div>
-            <a href="/">首页</a>
-            <a href="/news">新闻公告</a>
-            <a href="/policy">政策资讯</a>
-            <a href="/knowledge">健康知识</a>
-            <a href="/apps">应用中心</a>
-            <a href="/resources" class="active">数据资源</a>
-            <a href="/dashboard">数据大屏</a>
+            <a href="{{ url_for('portal.index') }}">首页</a>
+            <a href="{{ url_for('portal.news') }}">新闻公告</a>
+            <a href="{{ url_for('portal.policy') }}">政策资讯</a>
+            <a href="{{ url_for('portal.knowledge') }}">健康知识</a>
+            <a href="{{ url_for('portal.apps') }}">应用中心</a>
+            <a href="{{ url_for('portal.resources') }}" class="active">数据资源</a>
+            <a href="{{ url_for('portal.dashboard') }}">数据大屏</a>
         </div>
     </nav>
 

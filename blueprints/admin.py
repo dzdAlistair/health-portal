@@ -83,10 +83,11 @@ def content_add():
 @admin_bp.route('/content/delete/<int:content_id>')
 @login_required
 def content_delete(content_id):
-    """删除内容"""
+    """删除内容 — 保留 type 参数回到原 tab"""
+    type_param = request.args.get('type', '')
     execute("DELETE FROM portal_content WHERE content_id = %s", (content_id,))
     delete_cache('portal:latest:*')
-    return redirect(url_for('admin.content_list'))
+    return redirect(url_for('admin.content_list', type=type_param))
 
 
 # ─── 资源管理 CRUD ───

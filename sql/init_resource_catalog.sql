@@ -44,7 +44,7 @@ CREATE TABLE `content_category` (
 DROP TABLE IF EXISTS `portal_content`;
 CREATE TABLE `portal_content` (
   `content_id` int NOT NULL AUTO_INCREMENT COMMENT '内容ID',
-  `content_type` varchar(20) NOT NULL COMMENT '内容类型：news/policy/knowledge/application',
+  `content_type` varchar(20) NOT NULL COMMENT '内容类型：news/policy/knowledge',
   `category_id` int DEFAULT NULL COMMENT '所属分类ID',
   `title` varchar(200) NOT NULL COMMENT '标题',
   `summary` varchar(500) DEFAULT NULL COMMENT '摘要',

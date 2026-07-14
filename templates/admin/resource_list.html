@@ -7,19 +7,19 @@
 </head>
 <body>
 <nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="/admin/">🏥 管理后台</a>
+    <a class="navbar-brand" href="{{ url_for('admin.dashboard') }}">🏥 管理后台</a>
     <div class="nav">
-        <a class="nav-link text-white" href="/admin/">仪表盘</a>
-        <a class="nav-link text-white" href="/admin/content">内容管理</a>
-        <a class="nav-link text-white active" href="/admin/resource">资源管理</a>
-        <a class="btn btn-outline-light btn-sm ml-2" href="/admin/logout">退出</a>
+        <a class="nav-link text-white" href="{{ url_for('admin.dashboard') }}">仪表盘</a>
+        <a class="nav-link text-white" href="{{ url_for('admin.content_list') }}">内容管理</a>
+        <a class="nav-link text-white active" href="{{ url_for('admin.resource_list') }}">资源管理</a>
+        <a class="btn btn-outline-light btn-sm ml-2" href="{{ url_for('admin.logout') }}">退出</a>
     </div>
 </nav>
 
 <div class="container mt-4">
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h4>📦 数据资源目录</h4>
-        <a href="/admin/resource/add" class="btn btn-primary btn-sm">+ 新增资源</a>
+        <a href="{{ url_for('admin.resource_add') }}" class="btn btn-primary btn-sm">+ 新增资源</a>
     </div>
 
     <table class="table table-striped table-hover">
@@ -55,7 +55,7 @@
                     {% endif %}
                 </td>
                 <td>
-                    <a href="/admin/resource/delete/{{ r.resource_id }}" class="btn btn-danger btn-sm" onclick="return confirm('确认删除？')">删除</a>
+                    <a href="{{ url_for('admin.resource_delete', resource_id=r.resource_id) }}" class="btn btn-danger btn-sm" onclick="return confirm('确认删除？')">删除</a>
                 </td>
             </tr>
             {% endfor %}

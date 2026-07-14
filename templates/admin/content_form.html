@@ -7,12 +7,12 @@
 </head>
 <body>
 <nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="/admin/">🏥 管理后台</a>
+    <a class="navbar-brand" href="{{ url_for('admin.dashboard') }}">🏥 管理后台</a>
     <div class="nav">
-        <a class="nav-link text-white" href="/admin/">仪表盘</a>
-        <a class="nav-link text-white" href="/admin/content">内容管理</a>
-        <a class="nav-link text-white" href="/admin/resource">资源管理</a>
-        <a class="btn btn-outline-light btn-sm ml-2" href="/admin/logout">退出</a>
+        <a class="nav-link text-white" href="{{ url_for('admin.dashboard') }}">仪表盘</a>
+        <a class="nav-link text-white" href="{{ url_for('admin.content_list') }}">内容管理</a>
+        <a class="nav-link text-white" href="{{ url_for('admin.resource_list') }}">资源管理</a>
+        <a class="btn btn-outline-light btn-sm ml-2" href="{{ url_for('admin.logout') }}">退出</a>
     </div>
 </nav>
 
@@ -65,7 +65,7 @@
             <input type="text" name="source" class="form-control">
         </div>
         <button type="submit" class="btn btn-primary">保存</button>
-        <a href="/admin/content" class="btn btn-secondary">取消</a>
+        <a href="{{ url_for('admin.content_list') }}" class="btn btn-secondary">取消</a>
     </form>
 </div>
 <script src="/static/js/jquery.js"></script>

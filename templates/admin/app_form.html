@@ -7,11 +7,11 @@
 </head>
 <body>
 <nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="/admin/">🏥 管理后台</a>
+    <a class="navbar-brand" href="{{ url_for('admin.dashboard') }}">🏥 管理后台</a>
     <div class="nav">
-        <a class="nav-link text-white" href="/admin/">仪表盘</a>
-        <a class="nav-link text-white" href="/admin/apps">应用管理</a>
-        <a class="btn btn-outline-light btn-sm ml-2" href="/admin/logout">退出</a>
+        <a class="nav-link text-white" href="{{ url_for('admin.dashboard') }}">仪表盘</a>
+        <a class="nav-link text-white" href="{{ url_for('admin.app_list') }}">应用管理</a>
+        <a class="btn btn-outline-light btn-sm ml-2" href="{{ url_for('admin.logout') }}">退出</a>
     </div>
 </nav>
 
@@ -48,7 +48,7 @@
             <input type="text" name="app_icon" class="form-control" placeholder="如 /static/images/app_icon.png（可选）">
         </div>
         <button type="submit" class="btn btn-primary">保存</button>
-        <a href="/admin/apps" class="btn btn-secondary">取消</a>
+        <a href="{{ url_for('admin.app_list') }}" class="btn btn-secondary">取消</a>
     </form>
 </div>
 <script src="/static/js/jquery.js"></script>

@@ -376,17 +376,17 @@
 <body>
 <nav class="portal-nav">
     <div class="nav-inner">
-        <a class="brand" href="/">
+        <a class="brand" href="{{ url_for('portal.index') }}">
             <span class="brand-mark">✚</span>
             <span>第八组 健康大数据门户</span>
         </a>
         <ul class="nav-links">
-            <li><a href="/news">新闻公告</a></li>
-            <li><a href="/policy">政策资讯</a></li>
-            <li><a href="/knowledge">健康知识</a></li>
-            <li><a href="/apps">应用中心</a></li>
-            <li><a href="/resources">数据资源</a></li>
-            <li><a href="/dashboard">数据大屏</a></li>
+            <li><a href="{{ url_for('portal.news') }}">新闻公告</a></li>
+            <li><a href="{{ url_for('portal.policy') }}">政策资讯</a></li>
+            <li><a href="{{ url_for('portal.knowledge') }}">健康知识</a></li>
+            <li><a href="{{ url_for('portal.apps') }}">应用中心</a></li>
+            <li><a href="{{ url_for('portal.resources') }}">数据资源</a></li>
+            <li><a href="{{ url_for('portal.dashboard') }}">数据大屏</a></li>
         </ul>
     </div>
 </nav>
@@ -401,8 +401,8 @@
                 面向门户浏览、资源目录维护和数据可视化分析提供统一入口。
             </p>
             <div class="hero-actions">
-                <a class="primary-btn" href="/dashboard">进入数据大屏</a>
-                <a class="ghost-btn" href="/resources">查看数据资源</a>
+                <a class="primary-btn" href="{{ url_for('portal.dashboard') }}">进入数据大屏</a>
+                <a class="ghost-btn" href="{{ url_for('portal.resources') }}">查看数据资源</a>
             </div>
         </div>
 
@@ -437,21 +437,21 @@
                 <div class="feature-icon">▦</div>
                 <h3>新闻公告</h3>
                 <p>展示卫生健康领域动态、平台公告与政策解读入口。</p>
-                <a class="card-link" href="/news">查看详情 →</a>
+                <a class="card-link" href="{{ url_for('portal.news') }}">查看详情 →</a>
             </article>
 
             <article class="feature-card">
                 <div class="feature-icon">●</div>
                 <h3>健康知识库</h3>
                 <p>提供疾病预防、营养健康、健康科普等内容浏览。</p>
-                <a class="card-link" href="/knowledge">浏览知识 →</a>
+                <a class="card-link" href="{{ url_for('portal.knowledge') }}">浏览知识 →</a>
             </article>
 
             <article class="feature-card">
                 <div class="feature-icon">▤</div>
                 <h3>数据大屏</h3>
                 <p>通过 Flask 分析接口读取真实统计结果，完成多维可视化展示。</p>
-                <a class="card-link" href="/dashboard">查看大屏 →</a>
+                <a class="card-link" href="{{ url_for('portal.dashboard') }}">查看大屏 →</a>
             </article>
         </div>
     </section>

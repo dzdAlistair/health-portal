@@ -97,18 +97,13 @@ def bridge_medical_resources():
 
 def bridge_content_trend():
     """从 #5 ADS 生成 content_trend.csv (month, news, policy, knowledge)"""
-    src = os.path.join(ANALYSIS_DIR, '5.5门户内容数据', 'ads_portal_contents',
-                       'part-00000-d9ee6a1a-1e8e-4306-9238-fa827d7b2fde-c000.csv')
-    if not os.path.exists(src):
-        # try glob
-        import glob
-        candidates = glob.glob(os.path.join(
-            ANALYSIS_DIR, '5.5门户内容数据', 'ads_portal_contents', 'part-*.csv'))
-        if candidates:
-            src = candidates[0]
-        else:
-            print(f"[WARN] 未找到 ADS 门户内容数据: {src}")
-            return False
+    import glob
+    candidates = glob.glob(os.path.join(
+        ANALYSIS_DIR, '5.5门户内容数据', 'ads_portal_contents', 'part-*.csv'))
+    if not candidates:
+        print("[WARN] 未找到 ADS 门户内容数据")
+        return False
+    src = candidates[0]
 
     df = pd.read_csv(src, encoding='utf-8')
     # pivot: publish_month x content_type → article_total
