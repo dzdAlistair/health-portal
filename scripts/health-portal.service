@@ -1,0 +1,21 @@
+[Unit]
+Description=Health Portal Flask Application
+After=network.target mysql.service redis-server.service
+Wants=mysql.service redis-server.service
+
+[Service]
+Type=simple
+User=alistair
+Group=alistair
+WorkingDirectory=/home/alistair/projects/health-portal
+ExecStart=/usr/bin/python3 /home/alistair/projects/health-portal/app.py
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=always
+RestartSec=5
+StandardOutput=append:/home/alistair/projects/health-portal/logs/flask.log
+StandardError=append:/home/alistair/projects/health-portal/logs/flask-error.log
+Environment=FLASK_ENV=production
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
