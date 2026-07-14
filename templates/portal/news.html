@@ -287,10 +287,9 @@
             <div class="section-title">
                 <h2>分类筛选</h2>
             </div>
-            <button class="category-btn active" data-category="全部">全部</button>
-            <button class="category-btn" data-category="行业动态">行业动态</button>
-            <button class="category-btn" data-category="通知公告">通知公告</button>
-            <button class="category-btn" data-category="政策解读">政策解读</button>
+            <div id="categoryButtons">
+                <button class="category-btn active" data-category="全部">全部</button>
+            </div>
         </aside>
     </main>
 
@@ -336,6 +335,37 @@
             ].join(' ');
             return text.indexOf(currentCategory) !== -1;
         }
+
+        function renderCategories() {
+            var container = document.getElementById('categoryButtons');
+            var seen = {};
+            var categories = [];
+            for (var i = 0; i < allItems.length; i++) {
+                var cat = allItems[i].category;
+                if (cat && !seen[cat]) {
+                    seen[cat] = true;
+                    categories.push(cat);
+                }
+            }
+            categories.sort();
+            var html = '<button class="category-btn active" data-category="全部">全部</button>';
+            for (var j = 0; j < categories.length; j++) {
+                html += '<button class="category-btn" data-category="' + escapeHtml(categories[j]) + '">' + escapeHtml(categories[j]) + '</button>';
+            }
+            container.innerHTML = html;
+        }
+
+        document.getElementById('categoryButtons').addEventListener('click', function (e) {
+            var btn = e.target.closest('.category-btn');
+            if (!btn) return;
+            var buttons = document.querySelectorAll('.category-btn');
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove('active');
+            }
+            btn.classList.add('active');
+            currentCategory = btn.dataset.category;
+            renderList();
+        });
         function renderList() {
             const list = document.getElementById('resourceList');
             const status = document.getElementById('dataStatus');
@@ -373,17 +403,6 @@
                 `;
             }).join('');
         }
-
-        document.querySelectorAll('.category-btn').forEach(function (button) {
-            button.addEventListener('click', function () {
-                document.querySelectorAll('.category-btn').forEach(function (btn) {
-                    btn.classList.remove('active');
-                });
-                button.classList.add('active');
-                currentCategory = button.dataset.category;
-                renderList();
-            });
-        });
 
         let retryCount = 0;
         const MAX_RETRIES = 3;
@@ -423,6 +442,7 @@
 
                     allItems = normalizeList(result.payload);
                     console.log('loadResources OK: allItems.length=' + allItems.length);
+                    renderCategories();
                     renderList();
                 })
                 .catch(function (error) {
