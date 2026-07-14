@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>应用中心 - 健康大数据门户平台</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <style>
+        body {
+            min-height: 100vh;
+            color: #edf7ff;
+            background:
+                radial-gradient(circle at 10% 12%, rgba(69, 140, 255, .26), transparent 34%),
+                radial-gradient(circle at 90% 8%, rgba(60, 255, 214, .15), transparent 32%),
+                linear-gradient(135deg, #061521 0%, #0b2438 48%, #08131f 100%);
+        }
+
+        .portal-nav {
+            height: 72px;
+            padding: 0 48px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255,255,255,.14);
+            background: rgba(4, 15, 26, .78);
+            backdrop-filter: blur(16px);
+            position: sticky;
+            top: 0;
+            z-index: 20;
+        }
+
+        .portal-brand {
+            color: #fff;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .portal-nav a {
+            color: #cfe7ff;
+            margin-left: 24px;
+            text-decoration: none;
+            transition: .25s;
+        }
+
+        .portal-nav a:hover,
+        .portal-nav a.active {
+            color: #47f0ff;
+            text-shadow: 0 0 16px rgba(71, 240, 255, .55);
+        }
+
+        .page-hero {
+            width: min(1180px, calc(100% - 40px));
+            margin: 34px auto 26px;
+            padding: 42px;
+            border-radius: 28px;
+            border: 1px solid rgba(255,255,255,.14);
+            background:
+                linear-gradient(135deg, rgba(74, 109, 255, .33), rgba(52, 238, 205, .13)),
+                rgba(255, 255, 255, .06);
+            box-shadow: 0 22px 70px rgba(0,0,0,.28);
+            animation: rise .55s ease both;
+        }
+
+        .page-hero h1 {
+            margin: 0 0 12px;
+            font-size: 34px;
+            font-weight: 800;
+        }
+
+        .page-hero p {
+            color: #d1e8ff;
+            line-height: 1.8;
+            margin: 0;
+            max-width: 760px;
+        }
+
+        .app-grid {
+            width: min(1180px, calc(100% - 40px));
+            margin: 0 auto 46px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .app-card {
+            padding: 24px;
+            border-radius: 26px;
+            border: 1px solid rgba(255,255,255,.13);
+            background: rgba(255,255,255,.075);
+            box-shadow: 0 16px 55px rgba(0,0,0,.22);
+            backdrop-filter: blur(16px);
+            transition: .25s ease;
+            animation: rise .45s ease both;
+            min-height: 235px;
+        }
+
+        .app-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(71,240,255,.42);
+            box-shadow: 0 20px 45px rgba(42, 161, 255, .18);
+        }
+
+        .app-icon {
+            width: 58px;
+            height: 58px;
+            border-radius: 20px;
+            display: grid;
+            place-items: center;
+            font-size: 28px;
+            margin-bottom: 18px;
+            background: linear-gradient(135deg, rgba(53,167,255,.34), rgba(71,240,255,.18));
+            border: 1px solid rgba(71,240,255,.26);
+        }
+
+        .app-card h3 {
+            font-size: 20px;
+            font-weight: 750;
+            margin: 0 0 10px;
+        }
+
+        .app-card p {
+            color: #adc5d8;
+            line-height: 1.75;
+            min-height: 74px;
+        }
+
+        .app-action {
+            display: inline-block;
+            padding: 10px 16px;
+            border-radius: 999px;
+            color: #061521;
+            background: linear-gradient(135deg, #47f0ff, #72ffbf);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .app-action:hover {
+            color: #061521;
+            text-decoration: none;
+            filter: brightness(1.06);
+        }
+
+        .app-action.disabled {
+            color: #aac0d2;
+            background: rgba(255,255,255,.08);
+            border: 1px solid rgba(255,255,255,.14);
+            pointer-events: none;
+        }
+
+        .portal-footer {
+            width: min(1180px, calc(100% - 40px));
+            margin: 0 auto 24px;
+            padding: 22px;
+            text-align: center;
+            color: #8fa9bd;
+            border-top: 1px solid rgba(255,255,255,.14);
+        }
+
+        @keyframes rise {
+            from { opacity: 0; transform: translateY(14px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 980px) {
+            .app-grid { grid-template-columns: 1fr; }
+            .portal-nav { padding: 0 20px; }
+            .portal-nav div:last-child { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="portal-nav">
+        <div class="portal-brand">健康大数据门户平台</div>
+        <div>
+            <a href="/">首页</a>
+            <a href="/news">新闻公告</a>
+            <a href="/policy">政策资讯</a>
+            <a href="/knowledge">健康知识</a>
+            <a href="/apps" class="active">应用中心</a>
+            <a href="/resources">数据资源</a>
+            <a href="/dashboard">数据大屏</a>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <h1>应用中心</h1>
+        <p>展示平台应用入口。当前页面不调用未确认接口，除数据大屏和已有页面外，其余模块以“待接入”状态展示，避免误导为已完成业务功能。</p>
+    </section>
+
+    <main class="app-grid">
+        <article class="app-card">
+            <div class="app-icon">📊</div>
+            <h3>数据大屏</h3>
+            <p>查看医疗资源、机构分布、内容趋势等可视化图表。</p>
+            <a class="app-action" href="/dashboard">进入应用</a>
+        </article>
+
+        <article class="app-card">
+            <div class="app-icon">🗂️</div>
+            <h3>数据资源目录</h3>
+            <p>查看平台已接入或待接入的数据资源目录信息。</p>
+            <a class="app-action" href="/resources">查看目录</a>
+        </article>
+
+        <article class="app-card">
+            <div class="app-icon">📰</div>
+            <h3>新闻公告</h3>
+            <p>查看健康医疗行业动态、通知公告与平台资讯。</p>
+            <a class="app-action" href="/news">查看内容</a>
+        </article>
+
+        <article class="app-card">
+            <div class="app-icon">📘</div>
+            <h3>政策资讯</h3>
+            <p>查看政策信息列表，具体内容由资源接口返回。</p>
+            <a class="app-action" href="/policy">查看政策</a>
+        </article>
+
+        <article class="app-card">
+            <div class="app-icon">🩺</div>
+            <h3>慢病管理</h3>
+            <p>预留应用入口，等待后续业务接口和功能页面接入。</p>
+            <span class="app-action disabled">待接入</span>
+        </article>
+
+        <article class="app-card">
+            <div class="app-icon">🧾</div>
+            <h3>健康档案查询</h3>
+            <p>预留应用入口，当前不展示虚构个人档案数据。</p>
+            <span class="app-action disabled">待接入</span>
+        </article>
+    </main>
+
+    <footer class="portal-footer">
+        Project13 基于 Hadoop 的健康大数据门户平台与资源管理系统 · 第八组
+    </footer>
+
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/bootstrap.js"></script>
+</body>
+</html>

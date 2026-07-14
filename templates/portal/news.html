@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新闻公告 - 健康大数据门户平台</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <style>
+        :root {
+            --bg: #071827;
+            --card: rgba(255, 255, 255, 0.08);
+            --line: rgba(255, 255, 255, 0.14);
+            --text: #edf7ff;
+            --muted: #9fb5c9;
+            --blue: #35a7ff;
+            --cyan: #47f0ff;
+        }
+
+        body {
+            background:
+                radial-gradient(circle at 12% 10%, rgba(53, 167, 255, .26), transparent 34%),
+                radial-gradient(circle at 88% 12%, rgba(71, 240, 255, .16), transparent 30%),
+                linear-gradient(135deg, #061521 0%, #0b2438 48%, #08131f 100%);
+            color: var(--text);
+            min-height: 100vh;
+        }
+
+        .portal-nav {
+            height: 72px;
+            padding: 0 48px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--line);
+            background: rgba(4, 15, 26, .72);
+            backdrop-filter: blur(16px);
+            position: sticky;
+            top: 0;
+            z-index: 20;
+        }
+
+        .portal-brand {
+            color: #fff;
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: .5px;
+        }
+
+        .portal-nav a {
+            color: #cfe7ff;
+            margin-left: 24px;
+            text-decoration: none;
+            transition: .25s;
+        }
+
+        .portal-nav a:hover,
+        .portal-nav a.active {
+            color: var(--cyan);
+            text-shadow: 0 0 16px rgba(71, 240, 255, .55);
+        }
+
+        .page-hero {
+            margin: 34px auto 24px;
+            width: min(1180px, calc(100% - 40px));
+            padding: 42px;
+            border: 1px solid var(--line);
+            border-radius: 28px;
+            background:
+                linear-gradient(135deg, rgba(38, 120, 255, .35), rgba(21, 214, 255, .15)),
+                rgba(255, 255, 255, .06);
+            box-shadow: 0 22px 70px rgba(0, 0, 0, .28);
+            animation: rise .55s ease both;
+        }
+
+        .page-hero h1 {
+            margin: 0 0 12px;
+            font-size: 34px;
+            font-weight: 800;
+        }
+
+        .page-hero p {
+            color: #d1e8ff;
+            font-size: 15px;
+            max-width: 720px;
+            margin: 0;
+            line-height: 1.8;
+        }
+
+        .content-wrap {
+            width: min(1180px, calc(100% - 40px));
+            margin: 0 auto 46px;
+            display: grid;
+            grid-template-columns: 1fr 285px;
+            gap: 24px;
+        }
+
+        .list-card,
+        .side-card {
+            border: 1px solid var(--line);
+            border-radius: 24px;
+            background: rgba(255, 255, 255, .075);
+            box-shadow: 0 16px 55px rgba(0, 0, 0, .24);
+            backdrop-filter: blur(16px);
+        }
+
+        .list-card {
+            padding: 22px;
+            min-height: 420px;
+        }
+
+        .side-card {
+            padding: 20px;
+            height: fit-content;
+            position: sticky;
+            top: 94px;
+        }
+
+        .section-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+
+        .section-title h2 {
+            font-size: 20px;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .status-pill {
+            color: #b6d7f3;
+            border: 1px solid rgba(71, 240, 255, .26);
+            background: rgba(71, 240, 255, .08);
+            border-radius: 999px;
+            padding: 6px 12px;
+            font-size: 12px;
+        }
+
+        .resource-item {
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, .1);
+            border-radius: 20px;
+            background: rgba(255, 255, 255, .06);
+            margin-bottom: 14px;
+            transition: .25s ease;
+            animation: rise .45s ease both;
+        }
+
+        .resource-item:hover {
+            transform: translateY(-4px);
+            border-color: rgba(71, 240, 255, .38);
+            box-shadow: 0 14px 34px rgba(25, 155, 255, .16);
+        }
+
+        .resource-item h3 {
+            margin: 0 0 10px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .resource-item p {
+            margin: 0 0 14px;
+            color: #bdd2e5;
+            line-height: 1.75;
+        }
+
+        .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 18px;
+            color: #90a9be;
+            font-size: 13px;
+        }
+
+        .source-link {
+            color: var(--cyan);
+            text-decoration: none;
+        }
+
+        .category-btn {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 12px 14px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, .12);
+            background: rgba(255, 255, 255, .06);
+            color: #d7ecff;
+            text-align: left;
+            transition: .22s;
+        }
+
+        .category-btn:hover,
+        .category-btn.active {
+            background: linear-gradient(135deg, rgba(53, 167, 255, .32), rgba(71, 240, 255, .15));
+            border-color: rgba(71, 240, 255, .45);
+            color: #fff;
+        }
+
+        .empty-state,
+        .loading-state {
+            padding: 76px 20px;
+            text-align: center;
+            color: #aec6da;
+        }
+
+        .empty-state strong,
+        .loading-state strong {
+            display: block;
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .portal-footer {
+            width: min(1180px, calc(100% - 40px));
+            margin: 0 auto 24px;
+            padding: 22px;
+            text-align: center;
+            color: #8fa9bd;
+            border-top: 1px solid var(--line);
+        }
+
+        @keyframes rise {
+            from {
+                opacity: 0;
+                transform: translateY(14px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .portal-nav {
+                padding: 0 20px;
+            }
+
+            .portal-nav div:last-child {
+                display: none;
+            }
+
+            .content-wrap {
+                grid-template-columns: 1fr;
+            }
+
+            .side-card {
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="portal-nav">
+        <div class="portal-brand">健康大数据门户平台</div>
+        <div>
+            <a href="/">首页</a>
+            <a href="/news" class="active">新闻公告</a>
+            <a href="/policy">政策资讯</a>
+            <a href="/knowledge">健康知识</a>
+            <a href="/apps">应用中心</a>
+            <a href="/resources">数据资源</a>
+            <a href="/dashboard">数据大屏</a>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <h1>新闻公告</h1>
+        <p>聚合健康医疗行业动态、平台通知与政策解读内容。页面数据来自成员4提供的资源接口，接口暂无数据时不会编造内容。</p>
+    </section>
+
+    <main class="content-wrap">
+        <section class="list-card">
+            <div class="section-title">
+                <h2>内容列表</h2>
+                <span class="status-pill" id="dataStatus">正在加载</span>
+            </div>
+            <div id="resourceList" class="loading-state">
+                <strong>正在读取接口数据</strong>
+                <span>请求 /api/resources?type=news</span>
+            </div>
+        </section>
+
+        <aside class="side-card">
+            <div class="section-title">
+                <h2>分类筛选</h2>
+            </div>
+            <button class="category-btn active" data-category="全部">全部</button>
+            <button class="category-btn" data-category="行业动态">行业动态</button>
+            <button class="category-btn" data-category="通知公告">通知公告</button>
+            <button class="category-btn" data-category="政策解读">政策解读</button>
+        </aside>
+    </main>
+
+    <footer class="portal-footer">
+        Project13 基于 Hadoop 的健康大数据门户平台与资源管理系统 · 第八组
+    </footer>
+
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/bootstrap.js"></script>
+    <script>
+        const apiUrl = '/api/resources?type=news';
+        let allItems = [];
+        let currentCategory = '全部';
+
+        function escapeHtml(value) {
+            return String(value || '').replace(/[&<>"']/g, function (char) {
+                return {
+                    '&': '&amp;',
+                    '<': '&lt;',
+                    '>': '&gt;',
+                    '"': '&quot;',
+                    "'": '&#39;'
+                }[char];
+            });
+        }
+
+        function normalizeList(payload) {
+            if (Array.isArray(payload)) return payload;
+            if (Array.isArray(payload.data)) return payload.data;
+            if (Array.isArray(payload.items)) return payload.items;
+            if (Array.isArray(payload.resources)) return payload.resources;
+            if (Array.isArray(payload.records)) return payload.records;
+            return [];
+        }
+
+        function matchesCategory(item) {
+            if (currentCategory === '全部') return true;
+            const text = [
+                item.category,
+                item.resource_type,
+                item.title,
+                item.summary
+            ].join(' ');
+            return text.indexOf(currentCategory) !== -1;
+        }
+        function renderList() {
+            const list = document.getElementById('resourceList');
+            const status = document.getElementById('dataStatus');
+            const visibleItems = allItems.filter(matchesCategory);
+
+            status.textContent = visibleItems.length ? `已加载 ${visibleItems.length} 条` : '暂无数据';
+
+            if (!visibleItems.length) {
+                list.className = 'empty-state';
+                list.innerHTML = `
+                    <strong>当前暂无可展示内容</strong>
+                    <span>接口已按文档请求：${apiUrl}。等待成员4补充数据后，这里会自动渲染。</span>
+                `;
+                return;
+            }
+
+            list.className = '';
+            list.innerHTML = visibleItems.map(function (item) {
+                const title = escapeHtml(item.title || item.resource_name || '未命名内容');
+                const summary = escapeHtml(item.summary || item.description || '暂无摘要');
+                const date = escapeHtml(item.publish_date || item.create_time || item.updated_at || '日期待补充');
+                const source = escapeHtml(item.source || '来源待补充');
+                const sourceUrl = item.source_url ? escapeHtml(item.source_url) : '';
+
+                return `
+                    <article class="resource-item">
+                        <h3>${title}</h3>
+                        <p>${summary}</p>
+                        <div class="meta">
+                            <span>发布日期：${date}</span>
+                            <span>来源：${source}</span>
+                            ${sourceUrl ? `<a class="source-link" href="${sourceUrl}" target="_blank" rel="noopener">查看原文</a>` : ''}
+                        </div>
+                    </article>
+                `;
+            }).join('');
+        }
+
+        document.querySelectorAll('.category-btn').forEach(function (button) {
+            button.addEventListener('click', function () {
+                document.querySelectorAll('.category-btn').forEach(function (btn) {
+                    btn.classList.remove('active');
+                });
+                button.classList.add('active');
+                currentCategory = button.dataset.category;
+                renderList();
+            });
+        });
+
+        function loadResources() {
+            const controller = new AbortController();
+            const timeoutId = setTimeout(function () {
+                controller.abort();
+            }, 5000);
+
+            fetch(apiUrl, { signal: controller.signal })
+                .then(function (response) {
+                    return response.json().catch(function () {
+                        return {};
+                    }).then(function (payload) {
+                        return {
+                            response: response,
+                            payload: payload
+                        };
+                    });
+                })
+                .then(function (result) {
+                    clearTimeout(timeoutId);
+
+                    if (!result.response.ok) {
+                        throw new Error('接口状态异常：' + result.response.status);
+                    }
+
+                    if (
+                        result.payload &&
+                        typeof result.payload.code !== 'undefined' &&
+                        Number(result.payload.code) !== 200 &&
+                        Number(result.payload.code) !== 0
+                    ) {
+                        throw new Error(result.payload.msg || '接口返回业务错误');
+                    }
+
+                    allItems = normalizeList(result.payload);
+                    renderList();
+                })
+                .catch(function (error) {
+                    clearTimeout(timeoutId);
+                    console.warn('资源接口暂不可用：', error);
+                    allItems = [];
+                    renderList();
+                });
+        }
+
+        loadResources();
+    </script>
+</body>
+</html>
